@@ -1,48 +1,81 @@
 \chapter{ Validation } \label{chap:validation}
+	Validating the collected data and the subsequently identified patterns cannot be made in a formal way.
 
+	The only course of action available is therefore to measure the effects that applying the gathered information has in a real world situation. In order to do so, measurements must be made before and after the application.
 
-Validating the collected data and the subsequently identified patterns cannot be made in a formal way.
+	\section{Ventureoak}
 
-The only course of action available is therefore to measure the effects that applying the gathered information has in a real world situation. In order to do so, measurements must be made before and after the application.
+	VentureOak is a startup currently operating at UPTEC, Porto that started its activity in 2014. 
 
-\section{Criteria}
+	Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases.  
 
-Having a wide are of application and focusing its attention in several areas and domains, measuring the success of adopting DevOps can be difficult. In this work the evaluation of the success factor will be divided into two main categories having each a set of criteria for acceptance:
+	At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market.
+
+	Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually made up of only developers. 
+
+	Operations at Ventureoak are done by one of the employees. This member of the company accumulates most of the operations responsibilities and these are usually done manually. 
+
+\section{Methodology} \label{chap:validation:sec:methodology}
+	
+	During the month of May, in order to validate the gathered information, one of the projects that will be being developed at that time will be chosen. In this project an attempt to partial or fully automate the work flow will me made. 
+
+	During this attempt a set of indicators will be extracted periodically - once each week. This extraction will be made during two weeks time and two sets of indicators will be gathered:
+
+	\begin{itemize}
+		\item{Objective Indicators} - Indicators in this category are for instance the deployment frequency or time and will be gathered by direct observation.
+
+		\item{Subjective Indicators} - Subjective indicators will be gathered by asking - in the form of 
+questionnaires - teams members and management what is their impression about the current changes. They will also be asked to quantify how much better/worse they think they are in a different set of indicators.
+
+	\end{itemize}
+
+	At the end of each week questionnaires will be made and based on them a plan of action will be written that will aim to solve possible dissatisfactions felt by both team and management and improve direct measurement indicators. 
+
+	Additionally teams will be allowed to give suggestions about what they think should change or in what direction to go. These opinions will also be considered when creating the action plan. 
+
+\section{Indicators \& Acceptance Criteria}
+
+	Having a wide are of application and focusing its attention in several areas and domains, measuring the success of adopting DevOps can be difficult. In this work the evaluation of the success factor will be divided into two main categories having each a set of criteria for acceptance:
 
 
 	\begin{itemize}
-        \item{ Technical aspects }
+        \item{ Objective indicators }
         	\begin{itemize}
 				\item{Deployment Frequency} - Deploying an application is the process by which software can be made available to the customer. By increasing the deployment frequency teams can more frequently transmit value to the customer. 
                 
 				\item{Deployment Time} - Deployment time is of great importance as it enables companies to quickly respond to change. 
                 
+				\item{Set Up Time} - Being able to quickly set up new environments is crucial in order for teams to bring new developers in quickly and effectively.
+
 				\item{Infrastructure Elasticity} - Being able to quickly and in an automated way increase or decrease the infrastructure size can mean the difference between success and failure. 
-                
+
 			\end{itemize}
             
             
-        \item{ Organizational aspects }
+        \item{ Subjective indicators }
         	\begin{itemize}
-				\item{Team satisfaction} - Team satisfaction is essential as it promotes more motivated professionals and better results.
+
+        		\item{Team cohesion \& communication} - Teams should be able to communicate and feel as if they are one. This enables them to better react to change.
+
+				\item{Team satisfaction} - Team satisfaction is essential as it promotes more motivated professionals and better results. 
                 
 				\item{ Managerial satisfaction } - The satisfaction of the managerial team is of great importance as it usually reflects the current state of the business. 
                 
 			\end{itemize}
 
 	\end{itemize}
-
-
-	For the previous criteria the following acceptance and rejection metrics will be used: 
+	\pagebreak
+	For the previous indicators the following acceptance and rejection criteria will be used: 
     
 		\begin{table}[h!]
 			\centering
-            \caption{Technological Criteria}
+            \caption{Objective Indicators}
 			\label{tab1}
 			\begin{tabular}{|l|c|c|}
                	\hline
- 				Criteria & Acceptance & Rejection  \\ \hline
+ 				Indicator & Acceptance & Rejection  \\ \hline
  				Deployment Frequency & Increase  & Decrease   \\ \hline
+ 				Set Up Time & Decrease &  Increase  \\ \hline
  				Deployment Time & Decrease &  Increase  \\ \hline
  				Infrastructure Elasticity & Decrease & Increase \\ \hline 
 			\end{tabular}
@@ -52,15 +85,15 @@ Having a wide are of application and focusing its attention in several areas and
 
 		\begin{table}[h!]
 			\centering
-            \caption{Organizational Criteria}
+            \caption{Subjective Indicators}
 			\label{tab2}
 				\begin{tabular}{|l|c|c|}
                 	\hline
- 					Criteria & Acceptance & Rejection  \\ \hline
+ 					Indicator & Acceptance & Rejection  \\ \hline
  					Team satisfaction & Increase  & Decrease   \\ \hline
+ 					Team cohesion \& communication & Increase  & Decrease   \\ \hline
  					Managerial Satisfaction & Increase &  Decrease  \\ \hline
- 					Infrastructure Elasticity ( time to provision new resources) & Decrease & Increase \\ \hline 
 				\end{tabular}
 			\end{table}
 
-	
+		
