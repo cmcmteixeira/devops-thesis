@@ -1,0 +1,96 @@
+Produto
+----------
+	Historia:
+		Empresa comecou do 0, triedeti.pt.  
+	
+	Qual o produto que desenvolvem ?
+		SI para monitorizacao do porto de leixoes ( possivelmente vai expandir para coimbra)
+
+	Qua a escala do produto ?
+		121 utilizadores
+
+	Restricoes ?
+		.Cliente exige Base de dados Oracle
+		.Cliente impede acesso direto ao servidor de producao ( deployments sao feitos usando batches que sao dadas ao cliente para ele correr)
+
+	Definicao de requisitos tecnicos
+		Nenhuns .. so tem que funcionar
+
+Equipa/Equipas
+---------------
+
+	QA/Testers
+	----------
+		Equipa é especializada? Multidisciplinar?
+			Especializada
+			2 mulheres, 1 em Lisboa e outra no Porto
+
+		Interage com outras equipas ?
+			Sim ; 
+			Sistema de tickets/features para gerir trabalho; 
+			Comunicacao atraves de hangouts e ha 1 reuniao mensal com todas as pessoas presencialmente
+
+		Como e vista do ponto de vista externo
+			Sao autonomas, aquando do lancamento de uma versao tem que a testar. 
+
+		Gestao de trabalho 
+			Plataforma open project
+
+		Interacoes com outras equipas
+			Aceitam ou rejeitam versoes de developers/ features
+
+		Comunicacao intra equipa 
+			Usam Open Project
+
+	Desenvolvimento
+	---------------
+
+		Equipa é especializada? Multidisciplinar?
+			Especializada
+			2 grupos, 1 em Lisboa e outra no Porto
+
+		Interage com outras equipas ?
+			Sim
+			Tickets/Features atraves de plataforma(Open Project)
+			1 reuniao mensal com todas as pessoas presencialmente
+
+			Nota: As equipas separadas trabalham em modulos diferentes
+
+		Como e vista do ponto de vista externo?
+			Trabalho e definido por Project Manager externo ( a equipa e consultada e tem uma palavra a dizer )
+
+		Gestao de trabalho 
+			Plataforma open project
+
+		Interacoes com outras equipas
+			Pouca, versoes sao postas no ambiente de testes e passadas para a equipa de QA/Testers
+
+		Comunicacao intra equipa 
+			Comunicacao atraves de hangouts, e comunicacao presencial (hangouts serve para sincronizar equipas geograficamente separadas)
+
+	Pipeline
+	--------
+		Quanto tempo demora desde que o codigo...
+			Releases sao feitas de 1 em 1 semana
+
+		Porque estados passa passa
+			Desenvolvimento -> Testes -> Teste(Cliente) -> Producao
+
+		Ambiente de Desenvolvimento 
+			Visual Studio
+			Nao utilizam containers nem maq. virtuais
+		Ambiente de Testes
+			(Microsoft)
+		Ambiente de producao (testes cliente)
+
+		Ambiente de producao
+
+		Ambiente de Demonstracao
+
+	Panic / Error Handling / 
+
+		Se detetados em producao e graves -> para tudo e resolve-se
+
+		Se detetados em producao e nao graves -> proxima versao
+
+	

@@ -1,0 +1,79 @@
+--------------------
+SIG - Porto Leixoes
+2 anos e meio
+10 pessoas (2 polos)
+	Porto
+		2 programadore
+		1a tester
+	Leiria
+		1 tester
+		1 Project Manager
+		3 programadores
+
+	1 Project Manager externo do INESC / Consultor ( inovacao tecnologica/) - decisor
+
+	Escala - Porto de leixoes ( 3port )
+		121 utilizadores
+
+
+ Empresa comecou do 0 , triedeti.pt
+--------------------------------------
+
+reunioes Via hangouts, skype, 
+1 vez por mes reuniao presencial
+
+
+Infrastrutura
+----------------
+1 Base de dados 
+7 servicos( Micro servicos )
+9 servidores separados
+Servidor GIS
+Modo de acesso publico 
+Live Map.apdl.pt (publico)
+
+
+Ambientes
+----------
+Continuos deployment (cada 7 dias )
+
+
+Tarefas, Problemas, Sugestoes -> Versao ( com datas) -> Testes ( ambiente ) -> Testes com cliente -> Producao ( pa'ra o porto, 1h )
+
+Ambiente 
+
+--------------------
+
+
+Developers -> Testers ( comunicacao )
+	Comunicacao atraves de plataform (open tester)
+
+Testers -> Cliente
+	Cliente pode inserir problemas numa plataforma que passa pelos testers
+
+2 versoes em simultaneo
+
+Nao tem continuoes testing (testes sao feitos sobre a versao inteira)
+
+
+--------------------------------
+
+Deployment e' feito utilizando Microsoft Visual Studio
+Para o cliente , criar um batch que corre no cliente.
+
+--------------------------------
+
+Nada de monitorizacao,
+Erros -> Para tudo e resolve se ( se impeditivo ) , se nao segue fluxo 
+
+
+------------------------------
+
+Developers -> montaram e mantem a infraestrutura
+Gerem servidores (gerem maquinas )
+-------------------------------
+
+
+Rui Barros, Alexandre Carvalho	
+
+
