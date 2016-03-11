@@ -5,3 +5,44 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
+Pre-Commit
+----------
+	* What teams have influence in this phase ?
+2		[] Development
+		[] QA
+		[] Operations
+
+	* What technologies are used in this phase (Language,Frameworks)
+		- 
+	* Is version control used ? SVN , GIT ?
+		[] Yes
+		[] No
+		[] SVN
+		[] Git
+	* Are tests run locally before committing ? What tests are run ? Linters ?
+		. Yes
+		. No
+	* Is git flow implemented ? How is the version control process done ?
+		
+	* Are people responsible for modules of the project ?
+
+	* Do team members have knowledge of the entire project ?
+
+	* Are features assigned to developers or do they choose what to do ?
+Testing
+-------
+	* When are tests run ?
+	
+	* Where are tests run ? Locally , in a CI server ?
+	
+	* What tests are run ?
+	
+	* Does manual testing occur ?
+	
+	* What metrics are extracted from testing ?
+
+	* What are the rejection parameters ?
+
+Build
+-----
+	* How are builds 	 
