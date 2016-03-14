@@ -1,0 +1,10 @@
+mkdir "$(pwd)/interview/$1"
+mkdir "$(pwd)/interview/$1/form"
+
+cp -n "$(pwd)/form/Form-Macro" "$(pwd)/interview/$1/form/00Form-Macro"  
+cp -n "$(pwd)/form/Form-Questions-Company" "$(pwd)/interview/$1/form/01Form-Questions-Company"
+cp -n "$(pwd)/form/Form-Questions-Team-Development" "$(pwd)/interview/$1/form/02Form-Questions-Team-Development"
+cp -n "$(pwd)/form/Form-Questions-Team-QA" "$(pwd)/interview/$1/form/03Form-Questions-Team-QA"
+cp -n "$(pwd)/form/Form-Questions-Team-Operations" "$(pwd)/interview/$1/form/04Form-Questions-Team-Operations"
+cp -n "$(pwd)/form/Form-Questions-Architecture" "$(pwd)/interview/$1/form/05Form-Questions-Architecture"
+cp -n "$(pwd)/form/Form-Questions-Pipeline" "$(pwd)/interview/$1/form/06Form-Questions-Pipeline"
