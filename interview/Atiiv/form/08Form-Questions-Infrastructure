@@ -1,0 +1,15 @@
+* Is the cloud used ?
+	Digital Ocean ( 1 maquina )
+* Multi-Cloud-Provider 
+	. Yes ( usam um bucket na amazon p/ fotos)
+
+* Is virtualization used ?
+	[] Vagrant
+
+* How are servers configured ?
+	Nepia
+
+* What metrics are monitored ?
+	New Relic eestao a pensa usar uma cena de analytisc para frontend
+* Escalar
+	Verticalmente so

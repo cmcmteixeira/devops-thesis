@@ -1,0 +1,18 @@
+Logging
+--------
+
+What information is present in logs ?
+	New Relic
+	[] Invalid Inputs
+	[] Exeptions
+	[] Auth failures/success
+	[] Operations ( insert, delete , etc)
+	[] Database access
+	[] Suspect behaviours
+	[] System Logs
+	[] Http server logs
+
+	
+
+	
+	

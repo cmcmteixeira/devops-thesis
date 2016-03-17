@@ -1,0 +1,67 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------PIPELINE-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+Testes corridos manualmente,
+
+
+Pre-Commit 
+----------
+	* What teams have influence in this phase ?
+		[] Development
+		[] QA
+		[] Operations
+
+	* What technologies are used in this phase (Language,Frameworks)
+		- 
+	* Is version control used ? SVN , GIT ?
+		[] Yes
+		[] No
+		[] SVN
+		[] Git
+	* Are tests run locally before committing ? What tests are run ? Linters ?
+		. Yes
+		. No
+	* Is git flow implemented ? How is the version control process done ?
+		
+	* Are people responsible for modules of the project ?s
+
+	* Do team members have knowledge of the entire project ?
+
+	* Are features assigned to developers or do they choose what to do ?
+
+Testing
+-------
+	* When are tests run ?
+	
+	* Where are tests run ? Locally , in a CI server ?
+	
+	* What tests are run ?
+	
+	* Does manual testing occur ?
+		yes
+	* What metrics are extracted from testing ?
+		New Relic (api)
+		Heap Analytics
+	* What are the rejection parameters ?
+
+Build
+-----
+	N se aplica 
+
+	* What can make a build be rejected ?
+		N se aplica 
+	* Does the build advance to the next phases
+
+Integration
+-----------
+	Nada
+
+Deploying
+---------
+	Only Human
+

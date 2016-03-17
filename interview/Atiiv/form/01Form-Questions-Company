@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-------------------------------------ARCHITECTURE---------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+* Company Name ?
+	Atiiv
+* Company Age ?
+	1.5 anos
+* Number of employees ?
+	3 developers ( 1 muito recente, 1 a full time (helder), 1 que trata de development e vendas)
+* Number of simultaneous projects ?
+	1 , ATiiv ( tiveram outro projeto no passado)
+* Deployment frequency
+	Nao ha cadencia definida, fazem 1 deployment por feature
+	Produto ainda esta em fase beta
+	objectivo : 15 em 15 dias !  ( 1 por feature por agora)
+
+* Workload management software ?
+	asana

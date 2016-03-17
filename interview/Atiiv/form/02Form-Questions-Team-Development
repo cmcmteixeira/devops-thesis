@@ -1,0 +1,62 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+		. 2 (3 as vezes, depende do tamanho)
+	
+	* How many different projects does the Development Team handle ?
+		. 1 (So o atiiv)
+	
+	* What specialized people, other than developers work in the development team?
+		There are only developers
+	
+	* In the software delivery pipeline, where does the development team take part ?
+		[X] Code development
+		[X] Test development
+		[X] Automation processes
+		[X] Deployment
+		[X] Maintenance
+
+	* Who has influence in the development team ?
+		Dev. Team e autonoma, ha input do mercado sobre a forma de um 
+		2 tomam decisoes gerais em termos de feature , autonomo
+		
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git w/ git flow
+
+			* What tests does the development team develop ?
+				[X] Unitary on the backend
+
+			* Does the development team have the ability to deploy code to production?
+				. Yes
+
+
+		Organizational/Social
+		---------------------
+			* How does the development team manage the work yet to be done ?
+				asana
+
+			* How does the operations team manages communication internally
+				[] Directly (tem slack mas nao usam muito, whatsapp igual)
+
+			* Does the development team have a well structured hierarchy ? 
+				. No
+
+			* Does the development team have an internal supervisor/chief ?
+				. No
