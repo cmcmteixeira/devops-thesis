@@ -1,26 +1,23 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
--------------------------------------ARCHITECTURE---------------------------------------------
+----------------------------------------LOGGING-----------------------------------------------
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
-Architecture
----------------
-	How would you define your project from an architectural point of view ?
-		[] SOA
-		[] Monolithic Architecture
-		[] Microservice Oriented
-		[] Other...
+What information is present in logs ?
+	[] Invalid Inputs
+	[] Exeptions
+	[] Auth failures/success
+	[] Operations ( insert, delete , etc)
+	[] Database access
+	[] Suspect behaviours
+	[] System Logs
+	[] Http server logs
 
-	
+How are logs stored ?
+	. SaaS (papertrail, loggly, ...)
+	. Splunk
+	...
 
-	Does your project have different languages beeing used ?
-		. Yes
-		. No
 
-	
-
-	
-
-	

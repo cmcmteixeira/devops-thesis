@@ -5,22 +5,15 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
-Architecture
----------------
-	How would you define your project from an architectural point of view ?
-		[] SOA
-		[] Monolithic Architecture
-		[] Microservice Oriented
-		[] Other...
-
+* Company Name ?
 	
-
-	Does your project have different languages beeing used ?
-		. Yes
-		. No
-
+* Company Age ?
 	
-
+* Number of employees ?
 	
-
+* Number of simultaneous projects ?
+	
+* Deployment frequency
+	
+* Workload management software ?
 	

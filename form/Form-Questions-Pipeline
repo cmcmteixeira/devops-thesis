@@ -5,10 +5,10 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
-Pre-Commit
+Pre-Commit 
 ----------
 	* What teams have influence in this phase ?
-2		[] Development
+		[] Development
 		[] QA
 		[] Operations
 
@@ -24,11 +24,12 @@ Pre-Commit
 		. No
 	* Is git flow implemented ? How is the version control process done ?
 		
-	* Are people responsible for modules of the project ?
+	* Are people responsible for modules of the project ?s
 
 	* Do team members have knowledge of the entire project ?
 
 	* Are features assigned to developers or do they choose what to do ?
+
 Testing
 -------
 	* When are tests run ?
@@ -45,4 +46,36 @@ Testing
 
 Build
 -----
-	* How are builds 	 
+	* What is the build frequency ?
+		. 1 / month
+		. 2 / month
+		. 3 / month
+		...
+		150 / month 
+
+	* Where are builds done ?
+		. External Server
+		. Internal System
+		. Locally 
+
+	* What can make a build be rejected ?
+		[] Errors
+		[] Speed
+		[] Code Standarts
+		[] 
+	* Does the build advance to the next phases
+
+Integration
+-----------
+	* Is it automated ?
+	* What integration tests are run ?
+	* Is real world data used ?
+	* What are integration error rejection reasons ?
+
+Deploying
+---------
+	* Are there human controled checkpoints ?
+	* Is it automated ?
+	* What image is used ( the one that is tested) ?
+
+
