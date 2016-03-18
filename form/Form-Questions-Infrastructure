@@ -21,8 +21,6 @@
 	[] Ansible
 	[] Other
 
-
-
 * What metrics are monitored ?
 	[] Latency
 	[] Response Time
@@ -41,4 +39,9 @@
 	[] Automatically
 	[] Manually
 
-* Are there any 
+
+-------------------------------------------
+Long Questions
+
+If need arise, could you describe the lifting of new servers ? ( plz inlude technical details like how are new servers discovered...)
+

@@ -22,9 +22,10 @@ Pre-Commit
 	* Are tests run locally before committing ? What tests are run ? Linters ?
 		. Yes
 		. No
-	* Is git flow implemented ? How is the version control process done ?
+	
+	* Is git flow implemented ? How is the version control process done(branches, how does code go from one branch to another ...) ?
 		
-	* Are people responsible for modules of the project ?s
+	* Are there specific people responsible for only some modules of the project?
 
 	* Do team members have knowledge of the entire project ?
 
@@ -77,5 +78,13 @@ Deploying
 	* Are there human controled checkpoints ?
 	* Is it automated ?
 	* What image is used ( the one that is tested) ?
+
+
+-------------------------------------------
+Long Questions
+
+Could you describe how does a idea become software ? What steps exist and how is it performed ?
+
+
 
 
