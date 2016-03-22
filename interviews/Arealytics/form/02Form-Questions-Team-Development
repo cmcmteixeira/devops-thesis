@@ -1,0 +1,63 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+Git,
+Sem testes,
+Desenvolvimento only
+Dividem frontend backend
+
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+		2
+	
+	* How many different projects does the Development Team handle ?
+		1
+
+	* What specialized people, other than developers work in the development team?
+		[] Operations
+		[] QA
+		[] Other
+	
+	* In the software delivery pipeline, where does the development team take part ?
+		[] Code development
+		[] Test development
+		[] Automation processes
+		[] Deployment
+		[] Maintenance
+
+	* Who has influence in the development team ?
+		[] Management
+		[] The operations team
+		[] The QA team
+		[] Other
+
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git
+
+			* What tests does the development team develop ?
+				none
+			* Does the development team have the ability to deploy code to production?
+				n se aplica
+
+		Organizational/Social
+		---------------------
+			* How does the development team manage the work yet to be done ?
+				Asana 
+
+			* How does the operations team manages communication internally
+				Slack 
+
+
