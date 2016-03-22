@@ -1,0 +1,31 @@
+Date: 17 March 2016
+
+
+Atiiv is a company that develops a web platform for Personal Trainers to monitor, register and prescribe training plans to it's clients. 
+At the time of the interview the company was roughly 1.5 years old and had 4 colaborators. Of those 4 colaborators, 3 were developers and one was as a counselor (this forth colaborator was a personal trainer) providing input and sugestinons related to the product.
+
+Decisions on what to do or how to do it were made by the team and none of the members had a higher role than the rest of them.
+
+Workload and features were managed using Asana and code versions were managed using Git. Git workflow ( branches for individual features that feed a testing branch that in turn feed a production/master branch) was used .
+
+The developers had the hability to at any time access the live environment and deploy new features/code (this access was done using Laravel Forge). The developer team was also responsible for doing the QA and Ops functions.
+
+Members comunicated using Slack/WhatsApp but the majority of the communication was done directly.
+
+Atiiv didn't have a defined cadency for deploying features but an optimistic estimate would put the deploying rate at around 1 each 2 weeks. Deployment of new versions was done when a new feature was done and considered ready for production.
+
+The software pipeline developed by Atiiv consisted in 3 phases:
+
+	- Development
+		Development was done locally using a virtual machine in the developers machine. Vagrant was used to set up this virtual environment and a wrapper developed by the laravel community (Homestead) was also used.
+
+	- Testing
+		Unitary tests were run locally as well and were run before deploying. Manual testing was also done.
+		The unitary tests targeted mainly the backend module.
+
+	- Production
+		The production environment was set up using Laravel Forge. This PaaS tool managed the deployment and monitoring aspects of the platform. 
+		Monitoring was done using New Relic.
+
+
+The plaform was hosted in Digital Ocean a IaaS provider. Currently 1 server was used as well as a S3 Bucket in AWS to store user photos. Scalling(up/down) was not automated and needed manual intervetion. In the event of the need for scalling up only vertical scalling was available.
