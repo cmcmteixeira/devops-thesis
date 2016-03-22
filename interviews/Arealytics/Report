@@ -1,0 +1,16 @@
+Date: 22 March 2016
+
+
+Report: 
+
+Arealytics is a young company ( 5 month old in the time this interveiw as conducted) that wants to transform CCTV and other types of cameras into analytics tools. In order to do this, Arealytics developed a web platform that analises camera footage and tracks user movements throughout a store as well as interactions with displayed products.
+
+Arealytics had at the date of this interview two members. Both members had previous software backgrounds ( Electrotechnical Engineering ) and were developing the initial product.
+The product consisted in a web platform written in PHP(backend) and Javascript(frontend) that worked as a dashboard and displayed the treated/analysed data from the cameras. The interface with the cameras was established using the cloud/webservices.
+
+Because of it's tender age and small size, Arealytics didn't feel the need to invest in a well defined pipeline and therefore there was only one environment: development environment. 
+No automation mechanisms were indentified during the interview. 
+
+In order to manage the workload and tasks the Arealytics used Asana(a TODO like tool) and members communicated using Slack. The version control system used was GIT. 
+
+Tests were unexistent but Miguel(one of the team members of Arealytics) demonstrated interest in implementing them.
