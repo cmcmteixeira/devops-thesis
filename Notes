@@ -1,0 +1,32 @@
+Environment setup must take in consideration memory ammount, cpu cores , etc
+Hero developers, 
+Roles in the team
+Possible managements incentives
+
+
+Measurement & Metrics
+	(Choosing the wrong metrics can lead to the wrong incentives)
+
+	- Measuring individuals work may lead individuals to stop helping others 
+	- MTTR ( Mean time to repair )
+	- MTTD ( Mean time to detect )
+
+Automation
+	What is automated ?
+	What is not automated ? Why?
+	How owns the infrastructure ? What's their role?
+
+Monitoring
+	Availability
+	Capacity
+
+Tests
+	Smoke Tests
+
+
+Branch by Abstraction
+Feature Toggles
+Dark Launching
+Blue-Green Deployment
+
+eduardo.piairo@celfinet.com

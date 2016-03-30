@@ -2,3 +2,9 @@ Monitoring
 -----------
 nagios
 Ganglia
+Collectd
+Munin
+
+Pingdom
+New Relic
+Datadog
