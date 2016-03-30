@@ -8,7 +8,7 @@ Decisions on what to do or how to do it were made by the team and none of the me
 
 Workload and features were managed using Asana and code versions were managed using Git. Git workflow ( branches for individual features that feed a testing branch that in turn feed a production/master branch) was used .
 
-The developers had the hability to at any time access the live environment and deploy new features/code (this access was done using Laravel Forge). The developer team was also responsible for doing the QA and Ops functions.
+The developers had the ability to at any time access the live environment and deploy new features/code (this access was done using Laravel Forge). The developer team was also responsible for doing the QA and Ops functions.
 
 Members comunicated using Slack/WhatsApp but the majority of the communication was done directly.
 
