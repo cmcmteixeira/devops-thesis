@@ -1,0 +1,41 @@
+Logging
+--------
+
+What information is present in logs ?
+Taxa de utilizacao,
+Eficiencia
+Diversidade de clientes
+
+How are logs stored ?
+	Exportados
+	Live monitoring 
+
+
+How are logs deleted ?
+	Manter
+
+
+
+
+Monitoring
+----------
+	What metrics are extracted ?
+	
+	Why are they extracted?
+
+	When are they extracted ?
+
+	Monitoring infrastrutcture ?
+
+	How are log inf. extracted ?
+
+	Log volume ?
+
+
+Error Handling
+--------------
+	
+	
+
+	
+	

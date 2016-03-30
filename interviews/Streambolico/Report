@@ -1,0 +1,9 @@
+Date: 29/03/2015
+
+Streambolico is currently developing a solution that allows venus to live transmit live media to mobile devices in a efficient way. The company is working in it's product and has now 9 employees. This team juggles 5 projects simultaneously. All of the team members are developers but on member has the responsability of testing the software.
+
+In order to manage features/workload, Streambolico uses Bitrix24. The bitrix pipeline is managed using ~gitflow and Git.
+
+Tests are mostly done manually and some linters are also used. Builds are done weekly (features are usually ready after a 2 week period (1 implementation+1 testing)) but do not go live.
+
+Logs are retrieved from production environments either manually when the venue doesn't allow exterior access or remotely. Logs are usually kept without a termination date.

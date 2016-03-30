@@ -1,0 +1,78 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+~ 1 branch por feature
+
+
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+		. 
+
+	
+	* How many different projects does the Development Team handle ?
+		. 1
+
+	
+	* What specialized people, other than developers work in the development team?
+		[] Operations
+		[] QA
+		[] Other
+	
+	* In the software delivery pipeline, where does the development team take part ?
+		[] Code development
+		[] Test development
+		[] Automation processes
+		[] Deployment
+		[] Maintenance
+
+	* Who has influence in the development team ?
+		[] Management
+		[] The operations team
+		[] The QA team
+		[] Other
+
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git
+				. SVN
+				. Mercurial
+				. Other
+				. None
+
+			* What tests does the development team develop ?
+				Testes Manuais
+
+			* Does the development team have the ability to deploy code to production?
+				. Yes
+				. No
+				. Other
+
+
+		Organizational/Social
+		---------------------
+			* How does the development team manage the work yet to be done ?
+				[] Issues ( jira, pivotal tracker , ..)
+				[] Wall Board
+				[] Other
+
+			* How does the operations team manages communication internally
+				Fb, Slack
+
+			* Does the development team have a well structured hierarchy ? 
+				CTO/COO
+				3 Developers -> 3 Estagiarios
+
+			* Does the development team have an internal supervisor/chief ?
+				Democracia

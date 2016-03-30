@@ -1,0 +1,19 @@
+Date: 23/03/2016
+
+Hypelabs is currently developing a software framework designed to allow mobile devices to communicate in a shared network. The project is roughly 1 year old and is currently in developing phase.There are currently 7 employees.
+Hypelabs employees are all developers and organize ther workload using Post-it's in the wall. Features and problems are analysed and assigned by the team and features are organized in branches in a way similar to the gitflow ( one branch for each feature that is merged in a master branch ).
+
+The team communicates using Facebook or Slack.
+
+Tests are done manually and the responsibility of assuring the correct behaviour of the each feature falls to the people that made it.
+
+Given the nature of the product and the phase in wich the company is in, Hypelabs doesn't have a well defined pipeline, nevertheless, feature implementation follows the following states:
+
+	
+	State of the art
+		A state of the art relative to the feature being implemented is drafted
+	Implementation Proposal
+		A proposal, based on the state of the art, is made for the implementation of the feature
+	Team Discussion
+		The team discusses the proposal and if accepted the feature is implemented
+	Implementation
