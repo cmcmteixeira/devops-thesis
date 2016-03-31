@@ -1,0 +1,57 @@
+Logging
+--------
+NewRelic (Memoria/Live ou nao / ) / Nagios  
+Solucoes prorporisas
+
+Logs
+	- BI (utilizacao); base de dados(mongo, sql)
+	- Aplicacoes ( servidor, )
+
+
+What information is present in logs ?
+	[] Invalid Inputs
+	[] Exeptions
+	[] Auth failures/success
+	[] Operations ( insert, delete , etc)
+	[] Database access
+	[] Suspect behaviours
+	[] System Logs
+	[] Http server logs
+
+How are logs stored ?
+	. SaaS (papertrail, loggly, ...)
+	. Splunk
+	...
+
+How are logs deleted ?
+	. Time
+
+
+
+
+
+
+Monitoring
+----------
+	What metrics are extracted ?
+		
+	Why are they extracted?
+
+	When are they extracted ?
+
+	Monitoring infrastrutcture ?
+
+	How are log inf. extracted ?
+
+	Log volume ?
+
+
+Error Handling
+--------------
+	Automatic Rollbacks
+		(Base de dados complicado, roll front only.. se possivel fazer backup fazer backup (pode nao ser possivel por tempo);    )
+	
+
+Backups diarios 
+	
+	

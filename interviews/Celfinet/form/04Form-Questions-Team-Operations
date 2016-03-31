@@ -1,0 +1,83 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------OPS-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+Solutions manager
+VM (Azure)
+Escalar ( arquitetura..)
+Monitorizacao de maquinas
+Set ups maquinas ( instalar frameworks ) 
+
+
+
+Operations Team ( INfrastrutura)
+---------------
+	Characterization
+	----------------
+	How many people does the Operations Team have ?
+		. 4 ( 1 team leader)
+	
+	How many different projects does the Operations Team Handle ?
+
+	
+	What specialized people, other than operations work in the operations team??
+		[] Developers
+		[] QA
+		[] Other
+	
+	In the software delivery pipeline, where does the operations team take part ?
+		[] Pre-Commit
+		[] Build
+		[] Integration
+		[] Testing
+		[] Pre production
+		[] Deployment
+		[] Maintenance
+
+	Who influences the operations team ?
+		[] Management
+		[] The software development team
+		[] 
+		[] Other
+
+	Does the opeartions team have an internal  supervisor ?
+		. Yes
+		. No
+
+	Practices
+	---------
+		Technical
+		---------
+			What version control system does the development team use for handling scripts ?
+				. Git
+				. SVN
+				. Mercurial
+				. Other
+			
+			How does the operations team sets up servers ?
+
+			How are new servers lifted?
+				. Manually
+
+
+Maquina ( web azure ) / Criacao maquina
+Set up ambiente 
+	Automatico (chocolate)
+	Manual ( SQLserver, )
+
+Desenvolvimento ( bibliotecas )
+	Incluido pela equipa de dev
+	Mais manual
+
+Versoes node -> scrip( Operacoes )/ Versionado
+
+
+
+
+
+
+
+
+

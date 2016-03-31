@@ -1,0 +1,37 @@
+Celfinet is consultancy and software development company. The company started 2012 and has currently around 300 employees. 
+
+The product analysed consists in a monitoring and auditing solution for mobile networks. Teams working in this project usually have  5 - 8 members. Overall there are around 70-80 people allocated to this project.
+
+Work can be of two types, features or fixes/improvements. The first one is negociated with the client and are released in packages each quarter (3 months), the second are usually delivered every week in the end of each kanban cycle. In order to coordinate the work teams usually use TeamFoundation and to communicate (in order of less formality) TeamFoundation, Email and Skype.
+
+Celfinet structures themselves into 3 interconnected departments. Departments are QA, Development and Infrastructure/Operations.
+
+Celfinet is currently using mostly Git for version control, nevertheless some modules still use Mercurial of TFVC (migration to git is happening)
+
+Development is divided in teams. Each team is responsible and knows one module of the project and is responsible for implementing new features, fixing bugs or do improvments. Additionally the development team also develops unitary tests(NUnit) and is also responsible for providing the needed dependencies/libraries and instructions for the module to work. For each development team there is an informally and loosely allocated QA engineer that aims to provide advice to the team. The QA is nevertheless incentivized to be a bit distant from the implementation of the module in order to not be influenced by it.
+Development teams can have up to 10 members depending on the workload but usually teams have around 5 - 8 members
+
+QA teams test each module at the end of each sprint. The QA team uses SOAP UI, TSQLT. Each QA team has a team leader. 
+
+The infrastructure teams has the responsability of creating and setting up new servers based on the specifications provided by the development time. The infrastructure team has currently 4 members and a Team Leader. The infrastructure used is hosted in Azure and Octopus is used to handle deploys of newer versions of software. 
+Machines are lifted ~manually (using a web interface in the azure platform) and the installation of software needed for the module to run is installed manually (some scripts exists and are versioned but most of the work is manual). Chocolate is also sometimes used.
+
+The software pipeline has 5 states. They are :
+	Development
+
+	Integration
+		- The integration environment is used to check if features were correctly implemented and if there are some obvious erros like an UI error.
+
+	QC(Quality Control) 
+		- In this environmente functional tests and performance tests are runned
+		- This state is owned by the QA team 
+		- If the QA approves a release/version a token is provided to the development team that is now able to deploy the newer version.
+
+	Staging 
+		-  The project owner and sometimes the client have access to this stage. The objective of this stage is to provide the PO and clients with an environment to check the correct implementation of features.
+
+	Production
+
+Live modules are monitored using New Relic. Additionally some applications were developed by celfinet to monitor specific services and check their responses. Logs are extracted manually and used for BI purposes.
+In case of a failure or error a backup of the last version is always available. Nevertheless, if the error is not serious it is usually resolved in the followng version. Database migrations can sometimes be hard to rollback and changes to it are usually closely analysed by the dev and infrastructure team.
+

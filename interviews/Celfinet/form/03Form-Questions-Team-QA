@@ -1,0 +1,92 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------QA-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+QA tem tendencia modular
+Usam SOAP UI, TSQLT (unitarios e integracao)
+NUnit(C#) , MVC
+Team LEad QA
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	How many people does the QA Team have ?
+		. 5-8
+
+	
+	How many different projects does the QA Team handle ?
+		. 1
+
+	
+	What specialized people, other than developers work in the QA team?
+		[] Operations
+		[] Developers
+		[] Other
+	
+	*In the software delivery pipeline, where does the development team take part ?
+		[] Code development
+		[] Test development
+		[] Automation processes
+		[] Deployment
+		[] Maintenance
+
+
+	Practices
+	---------
+		Technical
+		---------
+			What version control system does the development team use for handling tests ?
+				. Soap
+
+			What tests does the development QA team develop ?
+				[] Unitary
+				[] Integration
+				[] User Acceptance
+
+			Does the QA team have the ability to deploy code to production?
+				. Yes
+				. No
+				. Other
+
+
+		Organizational/Social
+		---------------------
+			How does the QA team manage the work yet to be done ?
+				[] Issues ( jira, pivotal tracker , ..)
+				[] Wall Board
+				[] Other
+
+			How does the QA team manages communication internally
+				[] Directly
+				[] Chat (skype, slack ...)
+				[] Doesn't answer/Does not apply
+				[] Other
+
+			Does the QA team have a well structured hierarchy ? 
+				. Yes
+				. No
+				. Doesn't answer/Does not apply
+				. Other
+
+			Does the QA team have an internal supervisor/chief ?
+				. Yes
+				. No
+				. Other
+
+
+			Who has influence in the QA team ?
+				[] Management
+				[] The operations team
+				[] The development team
+				[] Other
+
+			Who communicates with the QA Team ?
+				[] Developers
+				[] Operations
+				[] Management
+

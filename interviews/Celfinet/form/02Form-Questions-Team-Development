@@ -1,0 +1,87 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+QC
+equipas associadas a modulos,
+equipa e' owner de componente ( desenvolvimento ate producao)
+equipa define processo deploy, 
+
+
+
+equipa de desenovlovimento ve QA como producao
+1 elemento de QA esta perto da equipa de desenvolvimento mas nao colabora diretament
+
+Pipeline
+Dev  -> Integracao -> QC -> Staging -> Producao
+
+Integracao
+	- Despiste de forma groceira ( Erros graves, partir UI, Testes PO, requisitos estao ok?)
+
+QC 
+	- Testes funcionais / Performance ( extensivamente )
+	- Tem que ser coordenado com equipa de QA
+	- 
+
+Staging 
+	-  PO tem acesso ou cliente ou rep. cliente ()
+
+Producao
+
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+		5 - 8 pessoas ( maior sao 10 pessoas)	
+	* How many different projects does the Development Team handle ?
+		1 modulo 
+	
+	* What specialized people, other than developers work in the development team?
+		[X] Operations
+		[] QA
+		[] Other
+	
+	* In the software delivery pipeline, where does the development team take part ?
+		[] Code development
+		[] Test development
+		[] Automation processes
+		[] Deployment
+		[] Maintenance
+
+	* Who has influence in the development team ?
+		[] Management
+		[] The operations team
+		[] The QA team
+		[] Other
+
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git, MErcurial ( migrar para git), TFVC
+
+			* What tests does the development team develop ?
+				[X] Unitary
+				[] Integration ( manuais e automaticos) QA mostly
+				[] User Acceptance, Manualmente pelo PO
+
+			* Does the development team have the ability to deploy code to production?
+				. Yes ()
+
+
+		Organizational/Social
+		---------------------
+			* How does the development team manage the work yet to be done ?
+				[] TF
+
+			* How does the operations team manages communication internally
+				[] Formalmente TFS, Mail, Skype
+
+			* Does the development team have a well structured hierarchy ? 
+				. Yes
