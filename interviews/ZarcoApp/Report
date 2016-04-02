@@ -1,0 +1,7 @@
+Zarco is a mobile app that aims to link travelers with traveling guides. The app started being developed in October 2015 and had at the time of this interview 8 employees.
+In order to manage the workload, the company uses kanban and a white boar.
+
+The team is divided in three modules, on for the iOS app, another for the Android app and another that works with the API.
+Internal communication is maintained using both Slack and direct communication.
+For version control and code management teams uses Git.
+Infrastructure is hosted in a AWS and  it consists in a web server and a bucket used for photos.

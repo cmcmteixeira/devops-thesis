@@ -1,0 +1,29 @@
+Logging
+--------
+FTP 
+
+
+
+Monitoring
+----------
+	What metrics are extracted ?
+	
+	Why are they extracted?
+
+	When are they extracted ?
+
+	Monitoring infrastrutcture ?
+
+	How are log inf. extracted ?
+
+	Log volume ?
+
+
+Error Handling
+--------------
+	Automatic Rollbacks
+		Rollfront
+	
+
+	
+	

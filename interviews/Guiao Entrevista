@@ -23,6 +23,10 @@ O: Tentar perceber que restrições impõe o produto para que seja possível con
 			- elasticity
 			- response time
 
+		P: Product Architecture (SOA, Mono,etc)
+
+
+
 Equipa/equipas
 O: Tentar perceber que equipas existem, como se relacionam e quais as suas funções. Ao mesmo tempo identificar o ambiente em que estas se integram.
 -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -77,7 +81,7 @@ Pipeline
 			P: Que equipa(s) está resposável por este estado e qual a função ?
 			O: Perceber como é que as equipas interferem e quem desempenha que papeís em que altura.
 
-			P:Que processos estão automatizados nesta fase?
+			P:Que processos estão automatizados nesta fase? Algum nao automatizado ? Porque ?
 			O:Perceber maturidade da adoção de DevOps.
 
 		{{endforeach}}
@@ -91,12 +95,26 @@ Deployment *
 		O: Perceber se usam virtualizacão, se usam containers , ...
 
 
+Infrastructure
+--------------
+	
+	P: What can make infrastructure scale up/down ?
+	O:
+
+	P: How is infrastructure increased ?
+	O: 
+
+	P: Como levantam infrastrutura e em que casos ? Automatico ?
+	O: Perceber que casos levam ao aumento da infrastrutura
+
+	P: Como fazer 
+	O: 
 
 Panic / Erros Handling / Monitoring
 -----------------------------------
 	- 
 		P: Que dados são recolhidos dos servidores em produção?
-		O: Perceber que dados são recolhidos e com que objetivo.
+		O: Perceber que dados são recolhidos e com que objetivo. Perceber tambem como sao tratados
 
 		P: O que são considerados erros? 
 		O: Perceber o que são erros. Se são servidores que não funcionam, se é o facto de tempo de resposta estar alto, ...
@@ -109,4 +127,8 @@ Panic / Erros Handling / Monitoring
 
 
 
+
+
 * Introduzir na definição da pipeline.
+
+
