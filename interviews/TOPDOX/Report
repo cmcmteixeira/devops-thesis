@@ -1,0 +1,21 @@
+TOPDOX is currently developing a platform that allows users to view/edit/manage documents in different formats and from different cloud providers in a single app. 
+Currently the company has around 200 000 users from several countries.
+In order to manage the work needed the team uses a Kanban board in Trello.
+
+TOPDOX has currently 5 mobile apps being developed at the same time alongsied a web app and an backend API. Teams are organized according to the app they are developing for and rotation between areas is encouraged. Team sizes range from 1 to 3 people and they are made up of developers.
+
+TOPDOX pipeline is different for each project being developed. The pipeline analysed here is the one relative to the backend api. 
+
+The first state is when a feature is finished by the developer. In this state, features are expected to work and be tested by the developer that implemented them. 
+
+After the first stage, another team member is supposed to review the feature implementation and if it is considered ok acept it in the development branch. 
+
+An integration in the staging environment is then automatically done using jenkins and if everithing is working the feature is pushed to production.
+
+The deploymenet project consists in pushing for each of the live servers (each server has a git server running) the new code. After each push pm2 ( a node.js process manager) restarts the server.
+
+The live servers are hosted in the Azure Platform and load balancing is managed by the platform. 
+
+Databases are maintained in different machines.
+
+In order to monitor the live servers the team uses New Relic and manually checks the logs present in the machine from time to time.

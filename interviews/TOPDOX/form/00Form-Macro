@@ -1,0 +1,68 @@
+ -------------------
+| Form - Macro View |
+ -------------------
+
+Product 
+
+
+
+Team & Inter-Team Organization (DONE)
+------------------------------
+	- The Operations Team
+		- Caracterize
+			-People Number
+			-Specialized vs. Integrated
+			- Inter Team Communication
+		- Practices
+			- Work Organization
+			- Who determines the work needed
+			- How to organize the workload 
+			- Tools
+
+ 	- The Development Team
+ 		- Caracterize
+ 		- Practices
+
+	- DevOps
+		- Operations/Development integration
+			- Who does what ?
+			- Who is responsible for what ?
+			- Who is in charge of what ?
+			- Who supervises what ?
+
+
+Architechture (DONE)
+-------------
+	- Cloud 
+		- SOA
+			- Monolithic Arch ? 
+			- SOA ? 
+			- Microservices ?
+
+Pipelines
+---------
+ 	- Phases
+ 		.Environments
+ 			'Development'
+ 			'Testing'
+ 			'Staging'
+ 			'Production'
+ 				Production
+				----------
+					- Monitoring
+					- Error Handling
+		.Steps 
+ 		.Custom Phases
+ 	- Automation
+	
+Security
+--------
+	- Access Control
+	- Developers access/Responsibility
+
+
+Management
+----------
+	- Obstacles Removed
+	- Team/Management Relation
+
