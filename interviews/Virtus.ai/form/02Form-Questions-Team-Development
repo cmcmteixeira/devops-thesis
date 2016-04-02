@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+	Divisoes por modulos/skills
+	UNitarios, Integracao,Manuais
+	
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+	
+	
+	* Who has influence in the development team ?
+		[] Management
+		[] The operations team
+		[] The QA team
+		[] Other
+
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git
+
+			* How does the operations team manages communication internally
+				[] Directly
+				[] Chat (skype, slack ...)
+
+			* Does the development team have a well structured hierarchy ? 
+				. No
+

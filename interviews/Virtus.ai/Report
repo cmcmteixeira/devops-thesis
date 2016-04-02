@@ -1,0 +1,13 @@
+
+Virtus.ai is a 6 months old software development company currently having 4 software developers. The company is currently juggling multiple projetcts wile developing their core product Netpuno.
+Netptuno is a cloud platform that allows retailers to search for products in a natural way.
+
+In order to manage the workload the team uses Trello organized in a Kanban way and Git is used for version control.
+
+Tests developed are unitary, integration and manual and they are run before each build is created.
+
+Communication is handled directly or using slack.
+
+From the live instances, user query's, tbe time the time the user uses the service.
+
+Infrastructure is managed using the Azure platform and Docker.

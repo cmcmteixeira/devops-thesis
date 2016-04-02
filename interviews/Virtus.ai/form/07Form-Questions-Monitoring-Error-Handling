@@ -1,0 +1,53 @@
+Logging
+--------
+Querys, Gamas, Tempo gasto,
+
+
+What information is present in logs ?
+	[] Invalid Inputs
+	[] Exeptions
+	[] Auth failures/success
+	[] Operations ( insert, delete , etc)
+	[] Database access
+	[] Suspect behaviours
+	[] System Logs
+	[] Http server logs
+
+How are logs stored ?
+	. SaaS (papertrail, loggly, ...)
+	. Splunk
+	...
+
+How are logs deleted ?
+	. Time
+	. Size
+	. Combination
+	. Never
+
+
+
+
+
+Monitoring
+----------
+	What metrics are extracted ?
+	
+	Why are they extracted?
+
+	When are they extracted ?
+
+	Monitoring infrastrutcture ?
+
+	How are log inf. extracted ?
+
+	Log volume ?
+
+
+Error Handling
+--------------
+	Automatic Rollbacks
+		Imagem anterior( semanalmente para BD)
+	
+
+	
+	

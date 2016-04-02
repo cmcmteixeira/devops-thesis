@@ -1,0 +1,48 @@
+* Is the cloud used ?
+	[] PaaS
+	[] IaaS
+	[] Self-Hosted
+
+* Multi-Cloud-Provider 
+	. Yes
+	. No
+
+* Multi-Cloud-Provider Management ?
+	Azure,..
+
+* Is virtualization used ?
+	[] Docker
+	[] Vagrant
+	[]
+
+* How are servers configured ?
+	[] Puppet
+	[] Chef
+	[] Ansible
+	[] Other
+
+* What metrics are monitored ?
+	[] Latency
+	[] Response Time
+	[] Other...
+
+* How is infrastructure lifted ?
+	[] Automatically
+	[] Manullay
+
+* Why is infrastructure lifted ?
+	[] User increase
+	[] Load increase
+	[] Other
+
+* Can infrastructure be scaled down ?
+	[] Automatically
+	[] Manually
+
+
+-------------------------------------------
+Long Questions
+
+If need arise, could you describe the lifting of new servers ? ( plz inlude technical details like how are new servers discovered...)
+
+	Machines are lifted manually ( vertical scalling is always enabled)
