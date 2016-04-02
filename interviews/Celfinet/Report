@@ -2,7 +2,7 @@ Celfinet is consultancy and software development company. The company started 20
 
 The product analysed consists in a monitoring and auditing solution for mobile networks. Teams working in this project usually have  5 - 8 members. Overall there are around 70-80 people allocated to this project.
 
-Work can be of two types, features or fixes/improvements. The first one is negociated with the client and are released in packages each quarter (3 months), the second are usually delivered every week in the end of each kanban cycle. In order to coordinate the work teams usually use TeamFoundation and to communicate (in order of less formality) TeamFoundation, Email and Skype.
+Work can be of two types, features or fixes/improvements. The first one is negociated with the client and are released in packages each quarter (3 months), the second are usually delivered every week in the end of each cycle. In order to coordinate the work teams usually use TeamFoundation and to communicate (in order of less formality) TeamFoundation, Email and Skype.
 
 Celfinet structures themselves into 3 interconnected departments. Departments are QA, Development and Infrastructure/Operations.
 
