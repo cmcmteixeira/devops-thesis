@@ -1,0 +1,33 @@
+Date: April 6th 2016
+
+Semasio product spreads across 13 european contries. The infrastructure handles around 12 thousand events each second and 4TB of data.
+
+Semasio structures their product using microservices. 
+
+Teams at semasio are organized by speciality, there is a QA team(2 members), an UI team(3 members) and a backend team(5 members). The company is nevertheless currently changing their organization to a more vertical set up. This aims to reduce the difficulty in handling features that cross cut the teams responsabilities(sometimes the UI team may need something from the backend team to finish their task and they have to wait for that).
+
+Communication is handled directly or using slack. For outside customers the team usually uses skype.
+
+Teams use SCRUM and Jira to manage their workload. Tasks and priorization is made by an external PO. Scrum cycles are 2 week long.
+
+The Semasio software pipeline has 6 states:
+	Todo
+		Features and tasks to be done
+	In Progress
+		A developer is currenlty only working in the feature. In this phase the developer is expected to increment the test suite and to check that it didn't break any previous tests
+	Ready to test
+		The feature was completed and validated by the developer.
+	Testing in pre-production
+		In this state, the QA team is expected to test if the functionalities were correctly implemented or not as well as see if response times or other performance metrics were not affected.
+	Waiting fo deployment
+		A feature is in a waiting list in order to be released.
+	Closed
+		The feature was released.
+
+	Semasio teams don't directly handle their infrastructure. An outside company does so. In order to deploy new code, a deploy slot is provided to the development team that instructs an operations engineer on how to deploy the new version of the software.
+
+	From the live instances, semasio extracts several metrics from Windows Performance Counters which log processes running, processor load...
+
+	Errors are of two types at Semasio. For metrics like service response time thresholds are defined, thresholds have two limits: Alert, Error. If an alert level error is detected an email is sent to the team. If an error error is detected a support person is called in order to fix the problem.
+
+	When in production, if a bug is detected in the first hours after the deployment is done an automatic rollback is made. If a substancial period of time has passed from the deployment instead of rollingback an hot fix is created and deployed. 

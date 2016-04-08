@@ -1,0 +1,90 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------PIPELINE-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+Pre-Commit 
+----------
+	* What teams have influence in this phase ?
+		[] Development
+		[] QA
+		[] Operations
+
+	* What technologies are used in this phase (Language,Frameworks)
+		- 
+	* Is version control used ? SVN , GIT ?
+		[] Yes
+		[] No
+		[] SVN
+		[] Git
+	* Are tests run locally before committing ? What tests are run ? Linters ?
+		. Yes
+		. No
+	
+	* Is git flow implemented ? How is the version control process done(branches, how does code go from one branch to another ...) ?
+		
+	* Are there specific people responsible for only some modules of the project?
+
+	* Do team members have knowledge of the entire project ?
+
+	* Are features assigned to developers or do they choose what to do ?
+
+Testing
+-------
+	* When are tests run ?
+	
+	* Where are tests run ? Locally , in a CI server ?
+	
+	* What tests are run ?
+	
+	* Does manual testing occur ?
+	
+	* What metrics are extracted from testing ?
+
+	* What are the rejection parameters ?
+
+Build
+-----
+	* What is the build frequency ?
+		. 1 / month
+		. 2 / month
+		. 3 / month
+		...
+		150 / month 
+
+	* Where are builds done ?
+		. External Server
+		. Internal System
+		. Locally 
+
+	* What can make a build be rejected ?
+		[] Errors
+		[] Speed
+		[] Code Standarts
+		[] 
+	* Does the build advance to the next phases
+
+Integration
+-----------
+	* Is it automated ?
+	* What integration tests are run ?
+	* Is real world data used ?
+	* What are integration error rejection reasons ?
+
+Deploying
+---------
+	* Are there human controled checkpoints ?
+	* Is it automated ?
+	* What image is used ( the one that is tested) ?
+
+
+-------------------------------------------
+Long Questions
+
+Could you describe how does a idea become software ? What steps exist and how is it performed ?
+
+
+
+

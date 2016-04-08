@@ -1,0 +1,94 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------OPS-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+
+
+Operations Team
+---------------
+	Characterization
+	----------------
+	How many people does the Operations Team have ?
+		. 1
+		. 2
+		. 3
+		...
+		.20
+	
+	How many different projects does the Operations Team Handle ?
+		. 1
+		. 2
+		. 3
+		...
+		.10
+	
+	What specialized people, other than operations work in the operations team??
+		[] Developers
+		[] QA
+		[] Other
+	
+	In the software delivery pipeline, where does the operations team take part ?
+		[] Pre-Commit
+		[] Build
+		[] Integration
+		[] Testing
+		[] Pre production
+		[] Deployment
+		[] Maintenance
+
+	Who influences the operations team ?
+		[] Management
+		[] The software development team
+		[] 
+		[] Other
+
+	Does the opeartions team have an internal  supervisor ?
+		. Yes
+		. No
+
+	Practices
+	---------
+		Technical
+		---------
+			What version control system does the development team use for handling scripts ?
+				. Git
+				. SVN
+				. Mercurial
+				. Other
+			
+			How does the operations team sets up servers ?
+				[] Manually
+				[] Scripts 
+				[] Puppet , Chef, ...
+				[] Other
+				[] Doesn't answer/Does not apply
+
+			How are new servers lifted?
+				. Automatically
+				. Manually
+
+
+		Organizational/Social
+		---------------------
+			How does the opeartions team manage the work yet to be done ?
+				. Issues ( jira, pivotal tracker , ..)
+
+			How does the operations team manages communication internally
+				[] Directly
+				[] Chat (skype, slack ...)
+				[] Doesn't answer/Does not apply
+				[] Other
+
+			Does the operations team have a well structured hierarchy ? 
+				. Yes
+				. No
+				. Doesn't answer/Does not apply
+				. Other
+
+
+
+

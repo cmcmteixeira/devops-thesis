@@ -1,0 +1,34 @@
+Product
+-------
+Abyssal software consists in a platform that allows rover operators to visualize underwater obstacles and infrastructure even though they are not visible(due to underwater conditions).
+
+Teams
+-----
+Teams at abyssal are mainly divided by are of specialization and have between 6-4 people. Nevertheless, some areas like the design team(1 member) for instance directly influences and interacts with several teams at the same time.
+Teams communicate both directly and using slack and use confluence as a collaboration platform.
+In order to manage their work, abyssal teams uses Scrum.
+
+Pipeline
+--------
+
+Pipeline at abyssal is structured in 4 states. 
+	Concept
+		An idea or feature is approoved by the PO
+	Design
+		The feature implementation is designed
+	Dev
+		Development is underway.
+		After each commit integration and unit tests are run, if a test fails the person who commited the code is notified(the continuous integration manager(team city) handles this) and a message is displayed in the team chat tool.
+	Done
+		When in done a feature is checked by a QA and the PO that check the design and functionality of the feature.
+
+Deployment is done manually(in case of the web infrastructure) and automatically(the application can auto update itself.)
+
+Infrastructure
+--------------
+Infrastructure management at abyssal is mostly done manually due to the fact that the load and user numbers upper bounds are well defined.
+Abyssal infrastructures is hosted in AWS(IaaS for software,SaaS for databases). Databases are managed by the provider.
+
+Logs are of two types. Logs from the severs are available trough the cloud provider, logs from running applications are stored in the machine and retrieved manually if needed.
+
+For abyssal errors can be of several types, the main ones are lack of space in disk or processing loads.

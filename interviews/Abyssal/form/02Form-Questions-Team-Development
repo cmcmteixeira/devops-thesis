@@ -1,0 +1,92 @@
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---------------------------------------DEV-TEAM-----------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+
+
+Development Team
+-----------------
+	Characterization
+	----------------
+	* How many people does the Development Team have ?
+		. 1
+		. 2
+		. 3
+		...
+		. 20
+	
+	* How many different projects does the Development Team handle ?
+		. 1
+		. 2
+		. 3
+		...
+		.10
+	
+	* What specialized people, other than developers work in the development team?
+		[] Operations
+		[] QA
+		[] Other
+	
+	* In the software delivery pipeline, where does the development team take part ?
+		[] Code development
+		[] Test development
+		[] Automation processes
+		[] Deployment
+		[] Maintenance
+
+	* Who has influence in the development team ?
+		[] Management
+		[] The operations team
+		[] The QA team
+		[] Other
+
+
+	Practices
+	---------
+		Technical
+		---------
+			* What version control system does the development team use for handling scripts ?
+				. Git
+				. SVN
+				. Mercurial
+				. Other
+				. None
+
+			* What tests does the development team develop ?
+				[] Unitary
+				[] Integration
+				[] User Acceptance
+
+			* Does the development team have the ability to deploy code to production?
+				. Yes
+				. No
+				. Other
+
+
+		Organizational/Social
+		---------------------
+			* How does the development team manage the work yet to be done ?
+				[] Issues ( jira, pivotal tracker , ..)
+				[] Wall Board
+				[] Other
+
+			* How does the operations team manages communication internally
+				[] Directly
+				[] Chat (skype, slack ...)
+				[] Doesn't answer/Does not apply
+				[] Other
+
+			* Does the development team have a well structured hierarchy ? 
+				. Yes
+				. No
+				. Doesn't answer/Does not apply
+				. Other
+
+			* Does the development team have an internal supervisor/chief ?
+				. Yes
+				. No
+				. Other
