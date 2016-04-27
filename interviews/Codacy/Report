@@ -1,0 +1,37 @@
+Usam docker,
+Deploys diarios
+7 componentes separados com BD's separadas para cada um
+Migraram recentemente de uma solucao monolitica para uma solucao de servicos
+Equipa de 18 pessoas ( Equipa de IT: 1 , Backend 6 , Frontend 1,  Business 3, Produto, Business)
+Usam Kanban + SCRUM ( solucao adapatada as suas necessidades)
+
+Technical Owner - Membro responsavel por um modulo (todos os membros contribuem para os diferentes modulos mas ha um owner que fica responsavel por assegurar a qualidade do codigo e de rever todos os commits desse modulo)
+
+Usam Bamboo para gerir pipeline(CI)
+	A cada push e' criada versao que corre todos os testes 
+
+~3 estados
+	Feature under development(Maquina do Developer)
+
+	Development()
+
+	Producao()
+		Usam beanstalk(PaaS)
+		
+		Usam AWS, fazem uma nova build em cada estado da pipeline, deploy e' feito fazendo pull da imagem do docker(AWS tem servico que automatiza isso)
+
+		Ok do deploy e feito manualmente
+
+	Algumas tarefas mais demoradas sao feitas lancando uma maquina so para obter um resultado
+
+	Se alteracoes forem (Breaking changes(alteracoes em protocolos de servicos)) : Lancam infrastrutura a parte e testam novamente
+
+	Fazem rolling updates
+
+	ELK stash ( Logging)
+
+	Ruxit (nao recomendam)
+
+	Usam Pager duty para receber notificacoes no telefone(it crew)
+
+

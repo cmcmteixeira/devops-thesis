@@ -1,0 +1,41 @@
+AddForcaster
+	- 
+AddStacks
+	- 
+
+Variaveis de ambiente -> credenciais e configs.
+1 pedido lidar com 10 000 000 de eventos(eventos sao linhas que significam +- 1 visita ao site)
+
+Equipa sao so deves mas partilham todas as tarefas
+Usa slack, um quadro com postits para gerir features
+Gitlab (Gitlab CI como servidor de CI)
+CEO e lead developer recebem e priorizam as features da parte dos clientes e passam para a equipa (features sao discutidas)
+
+
+Pipeline
+	Desenvolvimento
+
+	Integracao continua, se passar tudo(Corre testes) -> Code Review (se existir alguem mais por dentro da feature e' esse que faz code review, nao existe numero obrigatorio de code reviewers)
+
+	E autorizado o merge e corre novamente os testes desta vez no master
+
+	Avisos de problemas de CI sao feitos por email
+
+	Correm testes unitarios, testes de integracao, blackbox (Scala,Specs2)
+
+	Codigo pode ser posto em producao muito rapidamente
+
+	Nao tem CD (deployment e feito de tempos a tempos)
+
+
+	Usam Docker, AWS(nao estao dependentes), usam Mesos, Marathon Cluster(resolve problemas de descobrir servicos) / Faz scalling e rollouts
+
+	Monitorisam com Produtos da AWS, Pingdom
+
+	Erros sao se o servico estiver down, e se ex: mais de 95% dos pedidos demorar mais do que [5,10]s
+
+	Nao ha rollback, so hotfixes
+
+	
+
+

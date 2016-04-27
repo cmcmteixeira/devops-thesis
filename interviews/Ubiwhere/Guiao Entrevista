@@ -1,0 +1,167 @@
+Guião Entrevista
+----------------
+
+Gestor de projetos
+	Complicado fazer intervencoes sem que utilizadores sintam , sentir necessidade de atualizar o mais rapido possivel;
+
+Produto
+O: Tentar perceber que restrições impõe o produto para que seja possível contextualizar algumas das escolhas feitas pelas empresas/equipa.
+--------
+	- Caracterizacão
+		P: Qual o produto que desenvolvem ?
+		O: Procurar perceber em que consiste o produto
+			Web Mobile; (Citibrain)
+		P: Qual é a escala do produto ?
+		O: 
+			- Quantos utilizadores?
+				Sensores de parqueamento, minuto a minuto
+			- Quantos utilizadores em simultâneo ?
+			- Com que volume de dados lidam ?
+			- Alcance do mesmo (geográfico: quantos países, e quais) ?
+
+		P: Definicão de requisitos técnicos (macro) ? 
+		O: Tentar perceber se existem requisitos relacionados com 
+			- availability, 
+			- elasticity
+			- response time
+
+		P: Product Architecture (SOA, Mono,etc)
+			Microservicos
+
+
+
+Equipa/equipas
+O: Tentar perceber que equipas existem, como se relacionam e quais as suas funções. Ao mesmo tempo identificar o ambiente em que estas se integram.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+	- Caracterização
+		P: Quantas equipas?
+		1 equipa, Backend, Frontend, 1 Data Analytics, (5 pessoas);  QA transversal a varios projetos ( nao havia necessidade de estar a 10%)
+		{{foreach teams as team}}
+		
+			P: Qual o tamanho da equipa?
+			O: Tentar perceber qual é o tamanho. Perguntar se existe alguma razão para equipa ter o tamanho que tem.
+
+			P: Equipa é especializada? Multidisciplinar?
+			O: Perceber se as várias especialidades estão integradas e trabalham em conjunto ou se trabalham autonomamente.
+
+			P: Interage com as outras equipas ?
+			O: Perceber se equipas são autónomas ou se tem relações com outras equipas. Importante perceber se relações são de dependência
+				Slack;RedMine;SCRUm; PO establece contactos nas camaras e apresenta solucoes em feiras(adaptar plataforma a pilotos e demos)
+
+			P: Como é vista do ponto de vista externo ?
+			O: Perceber se são autónomas, se estão sujeitas a pressões externas.
+			
+			P: Metodologia para gestão de trabalho ?
+			O: Perceber se empresas usam meteodologias ágeis, waterfall, ...
+
+			P: Interacões com outras equipas  
+			O: Interagem? Como interagem? Para que interagem?
+
+			P: Comunicacão intra equipa.
+			O: Como se gere a comunicação ? Chat? Direto ? 
+
+		{{endforeach}}
+
+Pipeline
+--------
+	- Caracterização (Ajustar de acordo com a pipeline apresentada )
+			3 Ambientes(Docker)
+				Jenkins corre unitarios e integracao,testes funcionais (dificeis de manter) corre a cada commit no escritorio
+				Ovirt
+				Git proprio
+				Passa codigo,
+				Pull do docker
+				antes de staging tb corre testes
+				Transicao Manual
+
+				Desenvolvimento
+					Jenkins
+				Staging (PO Valida, criado no final do sprint)
+					
+				Producao
+				
+			
+		P: Quanto tempo demora desde que o código é produzido até que entra em producão?
+		O: Perceber eficácia daquilo que está implementado. Tempo reduzido em princípio significa que técnicas utilizadas são eficientes.
+			
+		P: Porque que estados passa o código antes de entrar em produção ?
+		O: Identificar possíveis estados na pipeline até produção.
+
+		P: Como é feita a transição entre estados?
+		O: Tentar perceber se transicões são automáticas ou se há checkpoints / necessidade de intervenccão humana.
+
+		{{foreach states as state}}
+			P: Que testes correm ? Que acontece se os testes falharem ?
+			O: Perceber que testes correm , quando e como influenciam a avaliação do software (ready for deployment ou não)
+
+			P: O que acontece no estado?
+			O: Perceber o que representa para a empresa o estado atual. 
+
+			P: Que equipa(s) está resposável por este estado e qual a função ?
+			O: Perceber como é que as equipas interferem e quem desempenha que papeís em que altura.
+
+			P:Que processos estão automatizados nesta fase? Algum nao automatizado ? Porque ?
+			O:Perceber maturidade da adoção de DevOps.
+
+		{{endforeach}}
+
+Deployment *
+-----------
+
+		(todas as outras perguntas)
+
+		P: Como é feito ?
+		O: Perceber se usam virtualizacão, se usam containers , ...
+
+
+Infrastructure
+--------------
+	Open Stack dentro de portas(querem ter); equipa de IT
+
+	P: What can make infrastructure scale up/down ?
+	O: 
+		Aws (abandonaram por custos) ; 
+		Digital ocean(custos); 
+		Google Com. Engine;
+		Python java
+	P: How is infrastructure increased ?
+	O: 
+		PostGres (Streaming replication) ; Cassandra; 
+		
+	P: Como levantam infrastrutura e em que casos ? Automatico ?
+	O: Perceber que casos levam ao aumento da infrastrutura
+
+	P: Como fazer 
+	O: 
+
+Panic / Erros Handling / Monitoring
+-----------------------------------
+	- 
+		Sensu
+		StatusCake()
+		Sentry() - EMail para cada excepcao()
+		HotFix
+		Param servico e aplicam 
+		Gradual
+		
+
+		Notificacoes(PM inclui correcoes, ou incluir imeadiato, cliente faz reporting)
+		
+					
+		P: Que dados são recolhidos dos servidores em produção?
+		O: Perceber que dados são recolhidos e com que objetivo. Perceber tambem como sao tratados
+
+		P: O que são considerados erros? 
+		O: Perceber o que são erros. Se são servidores que não funcionam, se é o facto de tempo de resposta estar alto, ...
+
+		P: O que acontece quando são detetados erros em produção?
+		O: Perceber se reação passa por fazer rollback, ou se há estratégias do erro adaptadas para cada tipo de erro.
+
+		P: Quem é notificado quando são detetados erros?
+		O: Perceber processo de resolução de erros.
+
+
+
+
+
+* Introduzir na definição da pipeline

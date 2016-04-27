@@ -1,0 +1,29 @@
+
+4/5GB de informacao diarias
+Necessidade de servir anuncions em <100ms
+Microservicos
+
+Equipa: 13 pessoas
+6 devs(frontend & backend)
+~ SCRUM
+Ferramenta de chat ; Comunicacao direta 
+Vendas dao feedback usando slack/skype o que depois e' passado para os Dev's
+
+--------------------------
+Usam Feature Branches
+Deploy questao de minutos
+Usam Elastic Beanstalk da AWS
+Passam string com hash e dizem qual a versao que querem ter a funcionar com Elastic. Beanstalk
+
+Escalamento horizontal 
+BD managed por eles proprios(usam NoSQL graph DB)
+
+Monitorizam aumento e dim. do trafego. (se descer descenm)
+Usam CloudWatch da amazon
+Usam aws forensics
+
+Erros sao resolvidos utilizando hotfixes, caso tal nao seja possivel fazem rollback
+
+? Perceber se rollback e' feito com troca de DNS(deixam versao anterior pronta)
+? Como gerem ip da BD(DNS, ENV, Fixo) (Relembrar que eles tinham arquitetura master slave aki)
+? Usam Git

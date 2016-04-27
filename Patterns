@@ -1,0 +1,81 @@
+Patterns()
+
+	Tudo usa GIt
+
+
+	Pipeline
+		Dev
+
+		Code Review
+			Technical Owner(Codacy + Shiftforward +)
+			ou
+			Lead Dev(Imaginary Cloud)
+
+
+
+
+Patterns
+--------
+	Concepts
+	--------
+		Version Control
+		---------------
+			Tudo usa git
+
+		Testing
+		-------
+			11 tem Unit Tests
+			4 tem integration tests
+
+		CI
+		--
+			CI so existe associado a testes
+		
+		Team Management
+		---------------
+			Agile(generally adapted)
+			Almost always divided by speciality
+			Teams from 1 to 9 max (generally between 4 and 6)
+			Almost always self organized
+
+		Communication
+		-------------
+			Direct contact prefered
+			Chat tool available(for links and files)
+			Chat's sometimes have integration w/ tools like(CI)
+		
+
+		Deployment
+		----------
+			7 have automatic deploys configured(not CD)
+			None has a CD platform(there is always a manual check before deploying)
+			4 Use the provider Database system(Those that don't have a very specific reason to do so)
+
+
+		Infrastructure
+		--------------
+			Scaling is usually managed by the provider(mostly manual triggered)
+			Not many companies use it thtough
+
+		Jobs(Tasks)
+		----
+			Launching new infrastrucure(2)
+			Having a worker() -> 
+
+
+
+	Patterns
+	--------
+		Microservicos(6)-> IaaS or PaaS(5) :
+		
+		CI(7)  			-> Unitary Tests(7) :
+		CI(7)			-> Run tests on push (alguns fazem polling para manter server de CI offline) 
+
+		Int. Tests(3)	-> Unit.Tests(3) :  
+		
+		No separated Departs.
+
+		Code reviews(3) -> Technical Owner(2)
+			(Only if tests pass, on pull request)
+
+		Self-Scaling I.S(4) -> Use Provider managed DB(3)

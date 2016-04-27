@@ -35,3 +35,25 @@ The software pipeline has 5 states. They are :
 Live modules are monitored using New Relic. Additionally some applications were developed by celfinet to monitor specific services and check their responses. Logs are extracted manually and used for BI purposes.
 In case of a failure or error a backup of the last version is always available. Nevertheless, if the error is not serious it is usually resolved in the followng version. Database migrations can sometimes be hard to rollback and changes to it are usually closely analysed by the dev and infrastructure team.
 
+
+
+Employees: 300
+Teams: 5-8  membros
+Project: 70-80 equipas
+Release Rate: Once each 3 months
+Continuous Improvement Rate: every week
+Communication,  TeamFoundation, Email, Skype
+Departments: QA, Development, Infrastructure/Operations
+
+Version Control: Git, Mercurial
+Team Module Ownership: Yes
+
+Dependency/Library specification responsability: Development Team
+Unitary Tests: Development Team
+QA,Dev:  Low coupling
+QA acive period: End of Sprint
+QA Tools: SOAP UI, TSQLT
+Operations <-> Dev : Dev specified servers are lifted by Operations
+
+Perguntar porque criaram modulos proprios de monitorizacao?
+Perguntar como gerem backups ?

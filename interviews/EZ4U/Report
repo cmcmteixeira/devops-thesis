@@ -1,0 +1,23 @@
+Date: 11 April 2016
+
+Produto
+
+EZ4U currently has a solution that enables companies the sending of sms using either an API or an application interface.
+The service is structured in 3 different layers, an UI layer, an API layer  and a layer that then communicates with the mobile operators
+
+Requests and sms are stored to be sent and daemons gradually send them.
+
+The team is currently composed of 2 elements. Both share the development and develop the unitary tests.
+
+Development is done directly in the AWS cloud platform in order to approximate further the development environment of the production environment.
+
+The software pipeline has 3 stages:
+	Under Development
+
+	Testing
+		Both the development team and the sales team use the product.
+	Production
+
+Transition between the steps is done manually by connecting to the servers.
+
+Infrastructure is hosted in AWS and the infrastructure is prepared to handle the worst case scenario. The tools for monitoring are provided by the cloud provider. Nevertheless a proprietary meachanism is monitoring the sms sending speed and if it detects changes in this speed actions are taken by this mechanism.

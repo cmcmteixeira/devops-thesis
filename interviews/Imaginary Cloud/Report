@@ -1,0 +1,20 @@
+Products:
+	Ruby on Rails
+	Mobile 
+	Web dev
+	(Um bocadinho de node,angular, backbone, react.js + redux)
+
+Depende das aplicacoes mas ja usaram microservicos
+
+
+Equipas multidisciplinares de 2/3 pessoas
+Equipas trabalham proximamente com o cliente
+Comunicacao com slack, diretamente 
+
+
+Pipeline
+
+Pipeline(Software)
+		Dev
+		Staging/ Code review 
+		Deploy

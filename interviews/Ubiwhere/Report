@@ -1,0 +1,36 @@
+Product and Company
+-------------------
+
+Ubiwhere is currently giving its first steps into DevOps. This need came from the need to update software without the need to stop the running services.
+
+The company is currently developing a IoT solution that interconnects w/ web and mobile solutions. Because the number of 
+
+Ubiwhere is currently using microservices. 
+
+Team
+-----
+Teams organize according to speciality. There are backend, frontend teams, a Data analytics one and a QA one. The QA team is responsible for several projects(there wasn't the need to have a single team for each project)
+
+Teams communicate using Slack. Scrum and Redmine is used to manage work and flows. Work flows from the Product Owner to the theam
+
+Pipeline
+--------
+The software pipeline at ubiwhere has 3 steps. After each step only the code is passed, there are no containers or virtual machines being transfered from step to step.
+	Development: After each commit this environment runs unitary tests, integration tests, functional tests(these are difficult to maintain).  
+
+	Staging: This environment is updated after each sprint and is where the PO validates and tests all that was done.
+
+	Production: 
+
+
+Infrastructure
+--------------
+Ubiwhere has it's own infrastructure managed by an IT team that has the function of provisioning new machines and maintaining these machines. This infrastructure is for internal use only. 
+Production machines are hosted in Digital Ocean and Google Com. Engine.
+
+
+Monitoring and Error Handling
+-----------------------------
+
+Ubiwhere monitors the infrastructure using Sensu and Status Cake; At the same time application exceptions are also monitored using Sentry and an email is sent with the stack trace of each exception to the PM.
+

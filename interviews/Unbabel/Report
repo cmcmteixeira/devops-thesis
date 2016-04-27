@@ -1,0 +1,46 @@
+Escala: 4000 req/ minuto, 
+10 000 utilizadores
+5000 editores ativos
+10 000 users a submeter jobs
+
+Estrutura inicial era monilitica (Django)
+Novos modulos foram sendo adicionados separadamente(porque app estava a tornar-se complexa, pq novos developers iam ter que se familiarizar com modulos da app e isso consumia tempo )
+
+Equipas estao separadas por modulos(developers 'colam-se' aos profissionais com quem estao a desenvolver (equipas de vendas/etc))
+
+Comunicacao maioritariamente por slack(nao usam SCRUM puro mas fizeram uma adaptacao, nao fazem standups gerais mas nas quarta-feiras juntam-se todos para perceber o estado do projeto e se ha blockers)
+
+Usam Assana para gerir issues/tasks ou trello(equipas podem usar o que quiserem)
+
+
+Usam 'Gitflow' , branch de dev e branch master
+
+Tem servidor de CI a correr testes, nao tem testes de integracao com selinum ou afins
+
+
+Dev0.0
+	maquina pc
+Dev1.0
+	um ambiente de Dev (todos tem acesso, e' 1 maquina com tudo la dentro)
+Dev2.0 - Staging
+	ambiente ~igual ao de dev mas scaledowned(?), so algumas maquinas
+
+Producao
+	ambiente live
+
+
+Migraram de Heroku para AWS
+Deployment e' feito lancando uma infrastrutura igual a anterior e depois fazendo uma switch do dns. Usam AMI para fazer deploy, ami e' montada pelo packer(packer.com) ou usam ansible scripts.
+
+Usam New Relic(tempos de resposta, tracebacks, ...)
+Cloud Watch
+Usavam Bugsnag mas deixaram de usar.
+
+Em caso de erro fazem deploy da versao antiga()
+Usam feature toggles que sao injetadas por variaveis de ambiente(maioritariamente para features que dependam de servicos externos ou complexas )
+Usam NoSQL por isso n se preocupam com schemas de DB's
+
+Em caso de erro, equipa de dev e' notificada, se for problema de infrastrutura vai para o Vasco(?), notificacoes sao feitas por email.
+
+Ha monitorizacao manual de tempos de resposta, jobs por fazer, caso o tempo de resposta aumente ou o nr de jobs seja muito grande levantam infrastrutura para isso.
+

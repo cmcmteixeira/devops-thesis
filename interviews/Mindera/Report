@@ -1,0 +1,19 @@
+Mindera currently develops a set of different solutions in different areas. 
+Mindera teams use Scrum and have between 5 and 6 elements. Teams are usually divided by specialization.
+
+Communication between team members is mostly done using Slack of by talking directly.
+
+Pipelines in Mindera are adjusted to each project needs. Tests are runned each five minutes in the master branch(Jenkins is not public available so instead of using git hooks midera pools the repo). 
+Jenkins usually creates a software build and then tests(Unit tests, moc tests, smoke tests, ...) are run. If any test fails or if the test coverage is decreased builds are rejected.
+
+Throughout the pipeline the same build is always used. When a build passes all of the tests some exploratory tests are made by the QA.
+
+The build is then passed to Go.cd that creates an AMI.
+
+In order to deploy new versions Mindera replicates the infrastructure and then flips the DNS to point to the new group of machines running the newer version.
+
+Mindera projects are hosted in AWS. Machines are not lifted automatically.
+From live instances Mindera extracts all of the metrics that Amazon provides and also response times.
+
+Apart from the system failures, Mindera also interprets low response times as errors. If quickly after a new version is deployed(1/2 hours) an error is detected Mindera rolls back to the previous version otherwise an hot fix is issued.
+
