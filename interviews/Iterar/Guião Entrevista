@@ -1,32 +1,47 @@
 Guião Entrevista
 ----------------
 
+Investem capital
+
+- 5 pessoas
+- 
+
 Produto
 O: Tentar perceber que restrições impõe o produto para que seja possível contextualizar algumas das escolhas feitas pelas empresas/equipa.
 --------
 	- Caracterizacão
 		P: Qual o produto que desenvolvem ?
 		O: Procurar perceber em que consiste o produto
-
+			Knok
+				APPs(Android, IoS)
+				Web
 		P: Qual é a escala do produto ?
 		O: 
+			- Quantos utilizadores ? 
+				> 2 000
+			- Quantos utilizadores em simultâneo ?
+			- Com que volume de dados lidam ?
+			- Alcance do mesmo (geográfico: quantos países, e quais) ?
 
 		P: Definicão de requisitos técnicos (macro) ? 
 		O: Tentar perceber se existem requisitos relacionados com 
-
+			- availability, 
+			- elasticity
+			- response time
 
 		P: Product Architecture (SOA, Mono,etc)
+			Monolitica(Simplicidade);
+			RoR
+
+
 
 Equipa/equipas
 O: Tentar perceber que equipas existem, como se relacionam e quais as suas funções. Ao mesmo tempo identificar o ambiente em que estas se integram.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 	- Caracterização
 		P: Quantas equipas?
-			4 equipas (5-6 elementos) SCRUM
-			Backend, Frontend, QA; (PO,BA)
-			Slack,Diretamente
-			Slack p/ cliente ou skype
-
+			1 equipa(partilham tarefas, alguma segrecacao)
+			Norberto - ruby dev
 
 		{{foreach teams as team}}
 		
@@ -44,45 +59,56 @@ O: Tentar perceber que equipas existem, como se relacionam e quais as suas funç
 			
 			P: Metodologia para gestão de trabalho ?
 			O: Perceber se empresas usam meteodologias ágeis, waterfall, ...
-
+				- Reunioes de status
+					(definir objetivos)
+				- Solucao Agile adaptada
+				Trello
 			P: Interacões com outras equipas  
 			O: Interagem? Como interagem? Para que interagem?
 
 			P: Comunicacão intra equipa.
 			O: Como se gere a comunicação ? Chat? Direto ? 
-
+				Slack
 		{{endforeach}}
 
 Pipeline
 --------
-
-
-
 	- Caracterização (Ajustar de acordo com a pipeline apresentada )
-	(GO,Jenkins)
-		Build 
-			Unit Tests
-			Moc Tests
-		QA
-			Testes. Integracao
-			Smoke Tests
-		Dark (Flip/ switch)
-			Continuous build (Deployment e manual(so dar ok))
+		
+		Equipa de produto(4 + CEO da Knok)
+
+		- Feature Improvements
+		- Estimar desenvolvimento
+
+		- Backlog
+			PO prioriza e define o que fazer
+			Pessoas identificadas no cartao
+		- Ongoing
+
+		- Review(QA) / Heroku cloud com server / Crashlytics
+			- Testes manuais
+			- (Ja comecam a desenvolver testes de integracao e correm localmente)
+		- Done
+			- Heroku + S3 (imagens e midia)
+			- Servicos externos 
+			- Email ~"Sentry"
+
+
 
 		P: Quanto tempo demora desde que o código é produzido até que entra em producão?
 		O: Perceber eficácia daquilo que está implementado. Tempo reduzido em princípio significa que técnicas utilizadas são eficientes.
-			horas , testes correm em Dev
-
+			3/4 dias
+			1/2 dias
 		P: Porque que estados passa o código antes de entrar em produção ?
 		O: Identificar possíveis estados na pipeline até produção.
 
 		P: Como é feita a transição entre estados?
 		O: Tentar perceber se transicões são automáticas ou se há checkpoints / necessidade de intervenccão humana.
-			(Build passa entre estados)
+
 		{{foreach states as state}}
 			P: Que testes correm ? Que acontece se os testes falharem ?
 			O: Perceber que testes correm , quando e como influenciam a avaliação do software (ready for deployment ou não)
-				Testes falham( Tolerancia de coverage > 70%);  
+
 			P: O que acontece no estado?
 			O: Perceber o que representa para a empresa o estado atual. 
 
@@ -91,7 +117,6 @@ Pipeline
 
 			P:Que processos estão automatizados nesta fase? Algum nao automatizado ? Porque ?
 			O:Perceber maturidade da adoção de DevOps.
-
 
 		{{endforeach}}
 
@@ -102,13 +127,14 @@ Deployment *
 
 		P: Como é feito ?
 		O: Perceber se usam virtualizacão, se usam containers , ...
-			Depende do projeto ( AWS_MI, Inteegracao... )
+
 
 Infrastructure
 --------------
 	
 	P: What can make infrastructure scale up/down ?
 	O:
+		Heroku(dynos() e workers)
 
 	P: How is infrastructure increased ?
 	O: 
@@ -127,13 +153,24 @@ Panic / Erros Handling / Monitoring
 
 		P: O que são considerados erros? 
 		O: Perceber o que são erros. Se são servidores que não funcionam, se é o facto de tempo de resposta estar alto, ...
-			TEmpo de resposta dos sites live
+
 		P: O que acontece quando são detetados erros em produção?
 		O: Perceber se reação passa por fazer rollback, ou se há estratégias do erro adaptadas para cada tipo de erro.
-
+			Rollbar(email)
+			Web(responsaveis)
 		P: Quem é notificado quando são detetados erros ?
 		O: Perceber processo de resolução de erros.
 
+
+			- Logs "Roll bar"
+				- Logs apps
+				- New relic
+
+			- Erros de memoria, 
+
+			- Sidecick Workers 
+				- envio de notificacoes e emails
+				- 
 
 * Introduzir na definição da pipeline.
 

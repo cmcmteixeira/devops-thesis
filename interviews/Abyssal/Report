@@ -1,34 +1,46 @@
 Product
 -------
-Abyssal software consists in a platform that allows rover operators to visualize underwater obstacles and infrastructure even though they are not visible(due to underwater conditions).
+Abyssal is a start-up company focused on developing Subsea Navigation Systems for Remotely Operated Vehicles (ROVs).
+Their goal is to facilitate the access to these locations by developing intuitive and precise software solutions to the major problems affecting ROV piloting and supervision: poor navigation, reduced visibility and lack of spatial awareness.
+The current solutions has two major modules. One that renders the underwater obstacles in the live video feed from the ROVs and a web one that handles the transmission of data from the rig/ship to shore.
 
 Teams
 -----
-Teams at abyssal are mainly divided by are of specialization and have between 6-4 people. Nevertheless, some areas like the design team(1 member) for instance directly influences and interacts with several teams at the same time.
-Teams communicate both directly and using slack and use confluence as a collaboration platform.
-In order to manage their work, abyssal teams uses Scrum.
+Teams at abyssal are mainly divided by area of specialization and have between 6-4 people. Nevertheless, some areas like the design team(1 member) for instance directly influences and interact with several teams at the same time.
+Teams communicate both directly and by using Slack and use Confluence as a collaboration platform.
+In order to manage the projetc, abyssal uses SCRUM.
 
 Pipeline
 --------
 
-Pipeline at abyssal is structured in 4 states. 
+The Abyssal software delivery pipeline is structured in 4 states. 
 	Concept
-		An ideTa or feature is approoved by the PO
+		Represents an idea or feature approoved by the P.O.
 	Design
-		The feature implementation is designed
-	Dev
-		Development is underway.
+		A state where the feature implementation is designed.
+	Development
+		When the feature development is underway.
 		After each commit integration and unit tests are run, if a test fails the person who commited the code is notified(the continuous integration manager(team city) handles this) and a message is displayed in the team chat tool.
 	Done
-		When in done a feature is checked by a QA and the PO that check the design and functionality of the feature.
+		When in done a feature is checked by a QA and the PO. Both check the design and functionality of the feature.
 
-Deployment is done manually(in case of the web infrastructure) and automatically(the application can auto update itself.)
+Deployment is done manually(in case of the web infrastructure) and automatically(the application can auto update itself) in case of the virtual reality module
 
 Infrastructure
 --------------
-Infrastructure management at abyssal is mostly done manually due to the fact that the load and user numbers upper bounds are well defined.
-Abyssal infrastructures is hosted in AWS(IaaS for software,SaaS for databases). Databases are managed by the provider.
+Infrastructure management at Abyssal is mostly done manually due to the fact that the load and user numbers upper bounds are well defined.
+Abyssal infrastructures is hosted in AWS(IaaS for software, SaaS for databases). Databases are managed by the provider.
 
 Logs are of two types. Logs from the severs are available trough the cloud provider, logs from running applications are stored in the machine and retrieved manually if needed.
 
-For abyssal errors can be of several types, the main ones are lack of space in disk or processing loads.
+For Abyssal errors can be of several types, the main ones are lack of space in disk or processing loads.
+
+
+Follow up email
+-----------------
+O team city é um serviço cloud ou está instalado localmente ?
+Na Abyssal, existe algum processo de code review implementado ? Se sim quem é o responsável pela aprovação? Ex: Cada commit tem que ser aprovado por um lead developer. 
+Qual a duração de um ciclo de Scrum ?
+Que ferraenta utilizam para extrair os logs das aplicações ?
+Depois de cada deploy mantém máquinas com a última versão que esteve live? Se sim durante quanto tempo ?
+Em caso de erro fazem rollbacks? Ou fazem um hotfix ? Ou fazem deploy da versão anterior ?

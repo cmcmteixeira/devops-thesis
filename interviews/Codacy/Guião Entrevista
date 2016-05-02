@@ -15,7 +15,7 @@ O: Tentar perceber que restrições impõe o produto para que seja possível con
 			- Quantos utilizadores ? 
 			- Quantos utilizadores em simultâneo ?
 			- Com que volume de dados lidam ?
-			- Alcance do mesmo (geográfico: quantos países, e quais) ?
+			- Alcance do mesmo (geográficfo: quantos países, e quais) ?
 
 		P: Definicão de requisitos técnicos (macro) ? 
 		O: Tentar perceber se existem requisitos relacionados com 
@@ -40,7 +40,7 @@ O: Tentar perceber que equipas existem, como se relacionam e quais as suas funç
 			Produto
 			Kanban +- SCRUM
 			Business
-		{{foreach teams as team}}
+		{{foreach teams as team}}2
 		
 			P: Qual o tamanho da equipa?
 			O: Tentar perceber qual é o tamanho. Perguntar se existe alguma razão para equipa ter o tamanho que tem.
@@ -98,7 +98,7 @@ Pipeline
 			O: Perceber como é que as equipas interferem e quem desempenha que papeís em que altura.
 
 			P:Que processos estão automatizados nesta fase? Algum nao automatizado ? Porque ?
-			O:Perceber maturidade da adoção de DevOps.
+			O:Perceber maturidade da aSdoção de DevOps.
 
 		{{endforeach}}
 

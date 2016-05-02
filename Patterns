@@ -37,6 +37,7 @@ Patterns
 			Almost always divided by speciality
 			Teams from 1 to 9 max (generally between 4 and 6)
 			Almost always self organized
+			No separated Departs.
 
 		Communication
 		-------------
@@ -44,6 +45,13 @@ Patterns
 			Chat tool available(for links and files)
 			Chat's sometimes have integration w/ tools like(CI)
 		
+		Pipeline
+		--------
+			Dev Environment
+			Integration (3)
+			QC/QA(4)
+
+
 
 		Deployment
 		----------
@@ -60,8 +68,20 @@ Patterns
 		Jobs(Tasks)
 		----
 			Launching new infrastrucure(2)
-			Having a worker() -> 
+			Having a Daemon() -> 
+		Monitoring
+		----------
+			Mostly done using the provider tools
 
+		Alerts
+		------
+			Dev's and IT teams(if exist) are called
+			- SMS/Phone Call/Email2
+
+		Error Handling
+		--------------
+			- Rollback(Some use DNS switch, others deploy the old version again)
+			- Hotfix(generally if the bug is small)
 
 
 	Patterns
@@ -73,9 +93,10 @@ Patterns
 
 		Int. Tests(3)	-> Unit.Tests(3) :  
 		
-		No separated Departs.
 
 		Code reviews(3) -> Technical Owner(2)
 			(Only if tests pass, on pull request)
 
 		Self-Scaling I.S(4) -> Use Provider managed DB(3)
+
+		Deploys sao norma

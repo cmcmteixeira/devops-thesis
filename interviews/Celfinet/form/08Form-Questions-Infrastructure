@@ -43,7 +43,7 @@
 Long Questions
 
 If need arise, could you describe the lifting of new servers ? ( plz inlude technical details like how are new servers discovered...)
-	Go, TFsRelease manager, Jenkins, Bamboo,
+	Go.cd, TFsRelease manager, Jenkins, Bamboo,
 
 
 Helpier, 

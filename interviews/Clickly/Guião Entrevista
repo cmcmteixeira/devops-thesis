@@ -128,7 +128,7 @@ Panic / Erros Handling / Monitoring
 -----------------------------------
 	- 
 	(Scale relativamente a aumento/dim trafego , scaledown descida)
-	Cloud Watch(alarmes que trigger )
+	Cloud Watch(alarmes que trigger )2
 	AWS,Wally(integracao com o slack:real time)
 	Forensics(AWS,)
 
