@@ -6,7 +6,7 @@ At the time of the interview the company was roughly 1.5 years old and had 4 col
 
 Decisions on what to do or how to do it were made by the team and none of the members had a higher role than the rest of them.
 
-Workload and features were managed using Asana and code versions were managed using Git. Git workflow ( branches for individual features that feed a testing branch that in turn feed a production/master branch) was used .
+Workload and features were managed using Asana and code versions were managed using Git and feature branches was used .
 
 The developers had the ability to at any time access the live environment and deploy new features/code (this access was done using Laravel Forge). The developer team was also responsible for doing the QA and Ops functions.
 

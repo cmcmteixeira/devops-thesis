@@ -11,6 +11,6 @@ The product consisted in a web platform written in PHP(backend) and Javascript(f
 Because of it's tender age and small size, Arealytics didn't feel the need to invest in a well defined pipeline and therefore there was only one environment: development environment. 
 No automation mechanisms were indentified during the interview. 
 
-In order to manage the workload and tasks the Arealytics used Asana(a TODO like tool) and members communicated using Slack. The version control system used was GIT. 
+In order to manage the workload and tasks the Arealytics used Assana and members communicated using Slack. The version control system used was GIT. 
 
 Tests were unexistent but Miguel(one of the team members of Arealytics) demonstrated interest in implementing them.

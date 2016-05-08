@@ -1,33 +1,52 @@
-Product
--------
+Caracterization
+---------------
 Abyssal is a start-up company focused on developing Subsea Navigation Systems for Remotely Operated Vehicles (ROVs).
 Their goal is to facilitate the access to these locations by developing intuitive and precise software solutions to the major problems affecting ROV piloting and supervision: poor navigation, reduced visibility and lack of spatial awareness.
 The current solutions has two major modules. One that renders the underwater obstacles in the live video feed from the ROVs and a web one that handles the transmission of data from the rig/ship to shore.
 
-Teams
------
-Teams at abyssal are mainly divided by area of specialization and have between 6-4 people. Nevertheless, some areas like the design team(1 member) for instance directly influences and interact with several teams at the same time.
+
+Software Practices
+------------------
+Development Languages: C++, Python
+Testing: Manual, Unitary, Integration Testing
+Continuous Integration: Runs tests
+Version Control: Git 
+CI: Team City
+
+
+
+Team Management
+----------------
+Teams at abyssal are mainly divided by area of specialization and have between 6-4 people. 
 Teams communicate both directly and by using Slack and use Confluence as a collaboration platform.
 In order to manage the projetc, abyssal uses SCRUM.
 
 Pipeline
 --------
-
 The Abyssal software delivery pipeline is structured in 4 states. 
+	
 	Concept
 		Represents an idea or feature approoved by the P.O.
 	Design
 		A state where the feature implementation is designed.
 	Development
 		When the feature development is underway.
-		After each commit integration and unit tests are run, if a test fails the person who commited the code is notified(the continuous integration manager(team city) handles this) and a message is displayed in the team chat tool.
+		After each commit integration and unit tests are run, if a test fails the person who commited the code is notified (the continuous integration manager(team city) handles this) and a message is displayed in the team chat tool.
 	Done
 		When in done a feature is checked by a QA and the PO. Both check the design and functionality of the feature.
 
-Deployment is done manually(in case of the web infrastructure) and automatically(the application can auto update itself) in case of the virtual reality module
+
+Deployment
+----------
+
+Deployment is done manually (in the case of the web infrastructure) and automatically in case of the virtual reality module (the application can update itself automatically).
+
+
 
 Infrastructure
 --------------
+Cloud Provider: AWS
+
 Infrastructure management at Abyssal is mostly done manually due to the fact that the load and user numbers upper bounds are well defined.
 Abyssal infrastructures is hosted in AWS(IaaS for software, SaaS for databases). Databases are managed by the provider.
 
@@ -38,6 +57,7 @@ For Abyssal errors can be of several types, the main ones are lack of space in d
 
 Follow up email
 -----------------
+Idade ?
 O team city é um serviço cloud ou está instalado localmente ?
 Na Abyssal, existe algum processo de code review implementado ? Se sim quem é o responsável pela aprovação? Ex: Cada commit tem que ser aprovado por um lead developer. 
 Qual a duração de um ciclo de Scrum ?

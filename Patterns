@@ -84,8 +84,8 @@ Patterns
 			- Hotfix(generally if the bug is small)
 
 
-	Patterns
-	--------
+	Patterns Relations
+	------------------
 		Microservicos(6)-> IaaS or PaaS(5) :
 		
 		CI(7)  			-> Unitary Tests(7) :
@@ -100,3 +100,191 @@ Patterns
 		Self-Scaling I.S(4) -> Use Provider managed DB(3)
 
 		Deploys sao norma
+
+
+P1: Architecture
+	P1.1: Microservices
+		Context
+			A complex application is being developed and maintained by several teams. 
+		Problem
+			Maintaining a big and complex application is difficult.
+		Forces
+			
+		Solution
+			Break the application into several services that communicate with each other.
+		Rationale
+						
+
+P2: Cloud Management
+	P2.1 : Up in the cloud
+		Context
+			A company has the need to acquire computing power in order to conduct its business.
+		Problem
+			Maintaining physical infrastructure is expensive and requires large upfront investment.
+		Forces 
+
+		Solution
+			Acquire computing power from a cloud provider.
+		Rationale: 
+			Most cloud providers allow for the rental of computing power in a pay as you go model.  
+
+		Related Patterns: 2.2, 2.3
+
+	P2.2 : Up in the cloud(PaaS)
+		Context
+
+		Problem
+			
+		Forces
+			
+		Solution
+			
+		Rationale
+			
+
+	P2.3 : Up in the cloud(IaaS)
+	P2.4 : Feature Management Tool
+	P2.5 : Virtualization/Containerization
+	P2.6 : Infrastructure Provisioning
+	P2.7 : Infrastructure Provisioning(Manual)
+	P2.8 : Infrastructure Provisioning(Manager Installer)
+	P2.9 : Infrastructure Provisioning(Copy Image)
+	P2.10 : Infrastructure Provisioning(Image Pull)
+	P2.11 : Infrastructure Scalling
+	P2.12 : Infrastructure Scalling(Vertical)
+	P2.13 : Infrastructure Scalling(Horizontal)
+	P2.14 : Infrastructure Scalling(Manual)
+	P2.15 : Infrastructure Scalling(Automatic)
+	P2.16: aaS(Database, File Storing)
+
+P3: Deployment 
+	P3.1: Automated Deployment
+	P3.2: Automated Deployment: Image Pull
+	P3.3: Automated Deployment: Manager
+
+P4: Testing
+	P4.1: Anti: Manual Testing
+	P4.2: Unit Testing 
+	P4.3: Integration Testing
+	P4.4: Functional Testing
+
+P5: Continuous Integration
+	P5.1: CI(tests on push, what tests are run?, Build, anything more?)
+	P5.2: CI chat integration
+	
+P6: Code Reviews	
+	P6.1: Code Review(Preferencal:Technical Owner)
+	P6.2: Code Review(Lead Developer)
+	P6.3: Code Review(Anyone)
+
+P7: Version Control
+	P7: Version Control Management(None)
+	P7: Version Control Management(Git Flow)
+	P7: Version Control Management(Feature Branches)
+
+P8: Teams
+	P8.1: Anti: Team Division(Specialization)
+	P8.2: Team Division(Multidisciplinary)
+	P8.3: Team Sizes
+	P8.4: Non hierarchical Structure
+	P8.5: Direct Communication
+	P8.6: Chat Tool
+	P8.7: Anti: A la Heroku
+	P8.8: Anti: Deployment Manual Trigger
+	P8.9: Deployment Pos Monitoring
+	P8.10: Version Control
+
+P9: Jobs
+	P9.1: Jobs
+	P9.2: Jobs Daemon
+	P9.3: Jobs Launch Infrastructure
+
+P10: Monitoring
+	P10.1: Monitoring Current Status
+	P10.2: Monitoring History
+
+P11: Alerts
+	P10.1 : Alerts
+	P10.2 : Alerts Tresholds
+	P10.3 : Alerts(Email)
+	P10.4 : Alerts(Sms)
+	P10.5 : Alerts(Notifications)
+	P10.6 : Alerts(Call)
+	P10.7 : Alert Receiver(All)
+	P10.8 : Alert Receiver(Proj. Member)
+	P10.9 : Alert Receiver(IT Team)
+
+P12: Error Handling
+	P12.1: Rolling Back(First Hours)
+	P12.2: Rollback by Deploying Previous Version
+	P12.3: Rollback by Keeping Backup
+
+P13: Pipeline
+	P13.1: Pipeline Automated Step Passing
+	P13.2: Anti Pattern: Pipeline Manual Stepping Process
+	P13.3: Anti Pattern: Pipeline QA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------
+	P1: Continuous Integration
+		Context: 
+			You have several people working in the same project commiting changes to the same repository
+		Problem:
+			You want to know what's the current state of each state and 
+		Forces:
+		2
+
+
+
+------------------------------------------
+	Communication
+
+	P1: Direct Communication
+		Context: 
+			You have several teams working in the same project.
+
+		Problem: 
+			Teams need to comunicate to share ideas and knowledge.
+		Forces:
+
+	P2: Using a chat Tool
+		Context: 
+			You have several teams working in the same project.
+
+		Problem: 
+			Teams need to comunicate to share links and files.
+
+	P3: 
+------------------------------------------
+
+	Jobs
+
+	P1: Launching new infrastructure
+
+	P2: Keeping an active Daemon 
+
+------------------------------------------
+	Error Handling
+
+	P1: Hotfix
+
+	P2: Rolling Back
+
+	P3: Rolling Back Keeping Backup IF
+
+	P4: Rolling Back Deploying the previous version
+
+
