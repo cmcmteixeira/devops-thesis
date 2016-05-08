@@ -1,0 +1,7 @@
+version: '2'
+services:
+  pdfbuild:
+    build: .  
+    volumes:
+      - ".:/app"
+    command: make
