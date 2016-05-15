@@ -101,7 +101,8 @@ Patterns
 
 		Deploys sao norma
 
-
+P2.4 : Feature Management Tool
+	
 P1: Architecture
 	P1.1: Microservices
 		Context
@@ -132,24 +133,40 @@ P2: Cloud Management
 
 	P2.2 : Up in the cloud(PaaS)
 		Context
-
+			A need to setup environments and install tools exists in order to depoloy the project.
 		Problem
-			
+			Keeping tools and dependencies updated across the entire infrastructure takes time and effort.
 		Forces
 			
 		Solution
-			
+			Some cloud providers allow already pre-prepared configurated environtents to be used. This environments and tools are maintained by the provider allowing the user to concentrate on its core business needs.
 		Rationale
 			
-
 	P2.3 : Up in the cloud(IaaS)
-	P2.4 : Feature Management Tool
-	P2.5 : Virtualization/Containerization
+		Context
+			There are some not so common needs for setting up environments.
+		Problem
+			Most cloud providers do not offer a great deal of customisation for its platform services.
+		Forces
+
+		Solution 
+			Cloud providers allow for the allocation of virtual machines that are fully configurable.
+
+	P2.4 : Virtualization/Containerization
+		Context 
+			
+		Problem
+		Forces
+		Solution
+		Racionale
+
+
 	P2.6 : Infrastructure Provisioning
 	P2.7 : Infrastructure Provisioning(Manual)
 	P2.8 : Infrastructure Provisioning(Manager Installer)
 	P2.9 : Infrastructure Provisioning(Copy Image)
 	P2.10 : Infrastructure Provisioning(Image Pull)
+	
 	P2.11 : Infrastructure Scalling
 	P2.12 : Infrastructure Scalling(Vertical)
 	P2.13 : Infrastructure Scalling(Horizontal)
@@ -189,6 +206,7 @@ P8: Teams
 	P8.4: Non hierarchical Structure
 	P8.5: Direct Communication
 	P8.6: Chat Tool
+
 	P8.7: Anti: A la Heroku
 	P8.8: Anti: Deployment Manual Trigger
 	P8.9: Deployment Pos Monitoring

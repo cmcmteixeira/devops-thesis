@@ -1,0 +1,366 @@
+% \begin{pattern}{}
+% 	\context{}
+% 	\problem{}
+% 	\solution{}
+% \end{pattern}
+\chapter{ Patterns } \label{chap:patterns}
+	% \section {Architecture} \label{chap:patterns:sec:architecture}
+
+	% 	\begin{pattern}{Microservices} \label{chap:patterns:sec:architecture:p:microservices}
+			
+	% 		\context{A complex application is developed and maintained by several people.}
+			
+	% 		\problem{Maintaining a big and complex application is difficult.}
+			
+	% 		\solution{Break the application into several services that communicate with each other.}
+	% 	\end{pattern}
+
+
+	\section{Acquiring Computing Resources} \label{chap:patterns:sec:acquiringresources}
+		Entities usually have the need to have a \textbf{web} presence or to acquire computing resources to do some tipe of processing. This means that computing resources must be acquired. 
+		
+		\begin{pattern}{Cloud} \label{chap:patterns:sec:acquiringresources:upinthecloud}
+			\context{You want to have a web presence or you want to do some kind of processing that requires large \textbf{computational resources}.}
+			\problem{How do you \textbf{acquire} computational resources to meet your needs ?}
+			
+			\forces{
+				\begin{itemize}
+					\item Hardware is expensive to buy and you may only need it for a short period.
+					\item Hiring a team/person for managing and maintaining your hardware is expensive. 
+					\item In the future resource needs may vary and you may want to increase or decrease your computational resources.
+				\end{itemize}
+			}
+			\solution{Cloud providers allow individuals and businesses to purchase computing resources with a \textbf{pay-as-you-go} business model. Cloud providers assume the responsabilitie of \textbf{maintaining} and \textbf{managing} the physical infrastructure.}
+			\rationale{Due to its scale cloud providers can usually provide a competitive price compared to the price of maintaing you own infrastructure. The pay-as-you-go model allows you to allocate and deallocate resources meaning that you are only using what you need. Together with the fact that no hardware upfront costs are required this means that using the cloud is usually the best alternative.}
+		\end{pattern}
+
+		\begin{pattern}{Platform as a Service}
+			\context{You have decided to use the \textit{Cloud} and your application does \textbf{not need very specif configurations} to be deployed.}
+			\problem{What aaS model should you use ?}
+			\forces{
+				\begin{itemize}
+					\item Platform as a Service usually allow for some configuration of the underlying layer.
+					\item Platform as a Service environments are usually managed by the provider.
+					\item Platform as a Service is usually expensier than Infrastructure as a Service.
+				\end{itemize}
+
+			}
+			\solution{Deploy your software by using a Platform as a Service.}
+			\rationale{PaaS pushes the environment management to the provider. This means that you do not have to alocate people and time to manage it. This does not mean however that there is no control, some configuration can still be specified by the user.}
+		\end{pattern}
+
+		\begin{pattern}{Infrastructure as a Service}
+			\context{You have decided to use the \textit{Cloud} and your application needs \textbf{very specif configurations} to be deployed.}
+			\problem{What aaS model should you use?}
+			\forces{
+				\begin{itemize}
+					\item Using Infrastructure as a Service means having the responsability of configuring and maintainig all machines.
+					\item Pricewise Infrastructure as a Service is usually the cheapest of the aaS.
+				\end{itemize}
+			}
+			\solution{Deploy your software by using IaaS}
+			\rationale{IaaS gives fine grain control over the aspects of the infrastructure. Cloud providers allow for the allocation of virtual machines that are fully configurable.}
+		\end{pattern}
+
+
+
+
+
+
+
+
+	\section {Reproducible Environments}
+		
+		\begin{pattern}{Containers}
+			\context{You have or want to have several instances of your software installed in several machines.}
+			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
+			\forces{
+				\begin{itemize}
+					\item Performing manual installations can lead to errors.
+					\item Containers are lightweight and several can usually be run in paralel in the same machine.
+					\item Manually installing or updating dependencies and configuring machines is time consuming.
+					\item If changes are costly there will be an incentive not perform them.
+				\end{itemize}
+			}
+			\solution{Containerize your applications by creating a container that includes among other things all of your dependencies and configurations.}
+		\end{pattern}
+
+		\begin{pattern}{Virtual Machine}
+			\context{You have or want to have several instances of your software installed in several machines.}
+			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
+			\forces{
+				\begin{itemize}
+					\item Containers are lightweight and several can usually be run in paralel in the same machine.
+					\item Manually installing or updating dependencies and configuring machines is time consuming.
+					\item If changes are costly there will be an incentive not perform them.
+				\end{itemize}
+			}
+			\solution{Create a \textbf{image} of the machine desired.\newline That machine image can then be copied and used to setup a reproducible environment.}
+		\end{pattern}
+
+		\begin{pattern}{Scripting}
+			\context{You have several teams/people working each in their computers or you need to have several instances of your software installed in several machines.}
+			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
+			\forces{
+				\begin{itemize}
+					\item Containers are lightweight and several can usually be run in paralel in the same machine.
+					\item Manually installing or updating dependencies and configuring machines is time consuming.
+					\item If changes are costly there will be an incentive not perform them.
+				\end{itemize}
+			}
+			\solution{Create a script that describes your infrastructure dependencies and configurations. This script can then be used in several machines to create similar environments.}
+		\end{pattern}
+
+	\section{Creating a new instance}
+		\begin{pattern}{Download the Virtual Machine image}
+			\context{You have choose to define your infrastructure using a \textit{Virtual Machine} and you want to create a new runnning instance of your software. }
+			\problem{How do you do it ?}
+			\forces{
+				\begin{itemize}
+					\item Rebuilding the image takes time and depending on how you setup the image build the final image may be different across builds.
+					\item Some of your dependencies may need to be downloaded from external providers. If they fail usually your build fails.
+				\end{itemize}
+			}
+			\solution{Build the image you want to run once. Then make it available for download and reuse it.}
+		\end{pattern}
+
+		\begin{pattern}{Pull the container}
+			\context{You have choose to define your infrastructure using a \textit{Containers} and you want to create a new runnning instance of your software. }
+			\problem{How do you do it ?}
+			\forces{
+				\begin{itemize}
+					\item Rebuilding a container takes time and depending on how you setup the contaienr build the final container may be different across builds.
+					\item Some of your dependencies may need to be downloaded from external providers. If they fail usually your build fails.
+					\item If the environment setup has some complex or time-consuming steps you may take a long time to build single a container.
+				\end{itemize}
+			}
+			\solution{Build the container once. Then make it available for download and reuse it.}
+		\end{pattern}
+
+		\begin{pattern}{Anti: Run the script}
+			\context{You have choose to define your infrastructure using only \textit{Scripts} and you want to create a new runnning instance of your software. }
+			\problem{How do you do it ?}
+			\forces{
+				\begin{itemize}
+					\item Some of your dependencies may need to be downloaded from external providers. If they fail usually your script fails.
+					\item Re running the script takes time and depending on how you setup the script inconsistencies can arise.
+				\end{itemize}
+			}
+			\solution{Run the script that does the configuration of the application environment in the machine were you want to install the application.}
+		\end{pattern}
+
+	\section{Scalling Infrastructure}
+		\begin{pattern}{Anti: Vertical Scalling}
+			\context{Due to some event or factor you have to increase your computing power.}
+			\problem{How do you scale your computing capacity in order to respond to the change.}
+			\forces{
+				\begin{itemize}
+					\item Due to physical constraints there is a limit for how many resources you can alocate to a single machine.
+					\item Increasing the resources of one machine may not increase the throughput of the overall system.
+					\item There are no special considerations to have when designing a system in order for it to scale vertically. 
+				\end{itemize}
+			}
+			\solution{You can increase your computing resources by adding memory to your machine or by increasing the number of cores your machine has.}
+		\end{pattern}
+		\begin{pattern}{Horizontal Scalling}
+			\context{Due to some event or factor you have to increase your computing power.}
+			\problem{How do you scale your computing capacity in order to respond to the change.}
+			\forces{
+				\begin{itemize}
+					\item If you are using the \textit{Cloud} you have virtually no limit to how many machines you can allocate.
+					\item Horizontally scalable systems are more challenging.
+					\item Having several machines allows you to have some redundancy making your system more robust.
+					\item Having more machines 
+				\end{itemize}
+			}
+			\solution{You alocate new machines to your project.}
+		\end{pattern}
+
+	\section{Testing}
+
+		\begin{pattern}{Anti: Manual Testing}
+			\context{You are building a software product and are constantly improving it.}
+			\problem{Whenever you make a change how will you know that the software still works.}
+			\forces{
+				\begin{itemize}
+				\item Changes to even a small functionality may have impact on a completely unrelated functionality of the system.
+					\item Deploying new features without testing the entire system may result in failure.
+					\item Manually testing all aspects of your application may take a long time.
+				\end{itemize}
+			}
+			\solution{You charge your developer with the responsability of making sure that the software is functional after he made the changes. The developer usually develops the changes to the software and then procedes to manually test the system.}
+		\end{pattern}
+
+		\begin{pattern}{Automatic Testing}
+			\context{You are building a software product and are constantly improving it.}
+			\problem{Whenever you make a change how will you know that the software still works.}
+			\forces{
+				\begin{itemize}
+					\item Changes to even a small functionality may have impact on a completely unrelated functionality of the system.
+					\item Deploying new features without testing the entire system may result in failure.
+					\item Manually testing all aspects of your application may take a long time.
+					\item Developing automatic tests is additional work and may increase the time needed to develop a feature.
+					\item Some functionalities of your software may not be testable. 
+				\end{itemize}
+			}
+			\solution{You charge your team with the responsability of developing automated tests(unitary and/or integration and/or functional) for your software. The code is developed and with it the new tests that test that the new changes are working.}
+		\end{pattern}
+
+	\section{Continuous Integration}
+		\begin{pattern}{Continuous Integration}
+			\context{You have several people/teams contributing to the same codebase.}
+			\problem{Whenever a change is made to your project you want to know that the change did not break anything.}
+			\forces{
+				\begin{itemize}
+					\item Whenever something stops working you want to know when did it stop.
+					\item Having quick feedback may help you figure out a solution faster because you still remember what you have done.
+				\end{itemize}
+			}
+			\solution{You use an automatic system of \textit{Continuous Integration} that \textit{Build}s, \textit{Test}s the new version of the software and provides \textit{Feedback}.}
+		\end{pattern}
+
+		\begin{pattern}{Build}
+			\context{Your You have a change in your software.}
+			\problem{How do you construct new shipable version of your project ?}
+			\solution{If you have a \textit{Container} and are able to \textit{Download the container} you can obtain the container with the new version of the software . The same can be done using \textit{Virtual Machine} and \textit{Download the Virtual Machine}}.
+		\end{pattern}
+
+		\begin{pattern}{Test}
+			\problem{Whitin your \textit{Continuous Integration} you have successfully created a built the software.}
+			\context{You want to know that the build you generated works.}
+			\solution{Use the \textit{Automatic Testing} and run your entire suit of tests within the new build.}
+		\end{pattern}
+
+		\begin{pattern}{Notify}
+			\problem{You have \textit{Build} and run all the \textit{Test}s in your \textit{Continuous Integration} system.}
+			\context{You want to communicate the result of those steps to your team.}
+			\solution{You can communicate the result of the integration by using a \textit{Chat Tool} or by sending an \textit{Email} to the developer/team.}
+		\end{pattern}
+
+
+	\section{Version Control}
+		\begin{pattern}{Git Flow}
+			\context{You are using Git or a similar version control software for your code.}
+			\problem{You want to organize your version control flow in a way that you separate what is being develop from what has been developed and from the current release/production code.}
+			\solution{You can choose to divide your project in 3 branches. The master branch will represent a release or the version that is currently in production. The develop branch will represent all of the current developed features. For each new functionality a new branch will be created. Once terminated the feature if accepted (through pull request) will be merged into the develop branch. When you want to signal a new release you just merge the desired state of the develop branch into the master branch. }
+		\end{pattern}
+		\begin{pattern}{Feature Branches}
+			\context{You are using Git or a similar version control software for your code.}
+			\problem{You want to organize your version control flow so that you separate what has been done from what is still being done.}
+			\solution{You have a master branch. For each new feature you create a new branch. Once the feature is done you merge it into the master branch.}
+		\end{pattern}
+	\section{Teams}
+		
+		\begin{pattern}{Anti: Specialized Teams}
+			\context{You have a set of professionals that you want to allocate to one or several projects.}
+			\problem{You want to organize them in a productive way.}
+			\solution{You divide them by specializations and have them work separately.}
+		\end{pattern}
+
+		\begin{pattern}{Multidisciplinary}
+			\context{You have a set of professionals that you want to allocate to one or several projects.}
+			\problem{You want to organize them in a efficient way that allows them to quicly adapt to new problems.}
+			\solution{You create teams that include individuals from different disciplines.}
+		\end{pattern}
+
+		\begin{pattern}{Keep it Small}
+			\context{}
+			\problem{You do not know how many people to allocate to the project team.}
+			\solution{Depending on your needs you could allocate between 1 and 9 people.}
+		\end{pattern}
+
+		\begin{pattern}{Keep it loose}
+			\context{}
+			\problem{You do not know how to hierarchical organize people to the project.}
+			\solution{You create an horizontal structure inside your team.}
+		\end{pattern}
+
+	\section{Communication}
+		\begin{pattern}{The direct communicator}
+			\context{People with different backgrounds and degrees of knowledge are working together.}
+			\problem{You want knowledge and ideas to be shared between people.}
+			\solution{Allow you team members to communicate directly.}
+		\end{pattern}
+		
+		\begin{pattern}{Chat is for links files and winks}
+			\context{Several people are working in the same project.}
+			\problem{People want to share links and files.}
+			\solution{Most chat tools allow for the sharing of files and links between members.}		
+		\end{pattern}
+
+		
+	\section{Jobs}
+
+		\begin{pattern}{Anti: Daemon}
+			(Confirmar com EZ4U)
+			\context{Your application has some maintenance or some backgrounds tasks that take a significant ammount of time to complete.}
+			\problem{You }
+			\solution{You create a Daemon that sequencially performs each tasks and notifies some service or updates a service when the task is completed.}
+		\end{pattern}
+
+		\begin{pattern}{Launch new infrastructure}
+			\problem{Your application has some maintenance or some backgrounds tasks that take a significant ammount of time to complete.}
+			\solution{You sequencially launch a new piece of infrastructure to perform the task you have to perform.}
+		\end{pattern}
+
+	\section{Monitoring}
+		\begin{pattern}{Monitor the present}
+			\context{You have several servers.}
+			\problem{You want to know wich ones are on and which ones are not.}
+			\solution{You deploy a tool in each infrastrucuture element that tells a master one if that server is online or not.}
+		\end{pattern}
+
+		\begin{pattern}{Save the past}
+			\context{You have several servers.}
+			\problem{You want to know when there is a problem, what has happened.}
+			\solution{You deploy a tool in each infrastrucuture element that reports to the master one the logs from your applications.}
+		\end{pattern}
+
+	\section{Alert}
+		\begin{pattern}{Thresholding}
+			\context{You have a need to watch over your infrastructure and you want to fix problems when they appear.}
+			\problem{You do not want to have to have someone continuously looking to find possible problems.}
+			\solution{Define indicators that try to assess your infrastructure . Define thresholds and alert levels for each indicator. When a treshold is exceeded an alert should be triggered. }
+		\end{pattern}
+
+		\begin{pattern}{Anti: Wake the devs}
+			\context{You have defined tresholds and alert levels for your infrastructure.}
+			\problem{You don't know who to contact.}
+			\solution{You send an alert to everyone involved in the project.}
+		\end{pattern}
+
+		\begin{pattern}{Rotate and Wake}
+			\context{You have defined tresholds and alert levels for your infrastructure.}
+			\problem{You don't know who to contact.}
+			\solution{You have an on call engineer and you rotate the position through the team. The notification is sent to that engineer.}
+		\end{pattern}
+
+	\section{Error Handling}
+
+		\begin{pattern}{Rolling Back}
+			\context{You have detected a problem in your production application.}
+			\problem{You want to solve that problem.}
+			\solution{You change the production version of your application to previously working version.}
+		\end{pattern}
+
+		\begin{pattern}{Rolling Back: DNS Switching}
+			\context{You have detected a problem in your production application.}
+			\problem{You want to solve that problem with minimu.}
+			\solution{You change the DNS for it to point to the old version of the application.}
+		\end{pattern}
+
+		\begin{pattern}{Rolling Back: Deploy again}
+			\context{You have detected a problem in your production application.}
+			\problem{You want to solve that problem with minimu.}
+			\solution{You do a normal deploy but choose the previous version.}
+		\end{pattern}
+
+		\begin{pattern}{Hotfix}
+			\context{You have detected a problem in your production application.}
+			\problem{You want to solve that problem with minimu.}
+			\solution{You make the changes necessary to correct your application and then deploy this new version.}
+		\end{pattern}
+
+
+
+

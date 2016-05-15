@@ -1,17 +1,41 @@
 \documentclass[11pt,a4paper,twoside,openright]{report}
-
-\newcommand{\TODO}[1]{
-	 \textcolor{red}{#1}
-}
 \usepackage[utf8]{inputenc}
 \usepackage[mieic]{feupteses}
 \usepackage{color}
 \usepackage[english]{babel}
 \usepackage{dirtytalk}
-
+\usepackage{xkeyval}
+\usepackage{titlesec}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
 
+\newcommand{\TODO}[1]{
+	 \textcolor{red}{#1}
+}
+
+\newenvironment{pattern}[1]{
+  \subsection{#1}
+  \newcommand{\context}[1]{
+    \subsubsection*{Context}
+    ##1
+    }
+  \newcommand{\problem}[1]{
+    \subsubsection*{Problem}
+    ##1
+  }
+  \newcommand{\forces}[1]{
+    \subsubsection*{Forces}
+    ##1
+  }
+  \newcommand{\solution}[1]{
+    \subsubsection*{Solution}
+    ##1
+  }
+  \newcommand{\rationale}[1]{
+    \subsubsection*{Rationale}
+    ##1
+  }   
+}
 
 
 \begin{document}
@@ -24,16 +48,16 @@
 	\additionalfronttext{Dissertation Planning}
 
 \begin{Prolog}
-  \include{Abstract}
+  % \include{Abstract}
   \pdfbookmark[0]{Table of Contents}{contents}
   \tableofcontents
-  \cleardoublepage
-  \pdfbookmark[0]{List of Figures}{figures}
-  \listoffigures
-  \cleardoublepage
-  \pdfbookmark[0]{List of Tables}{tables}
-  \listoftables
-  \include{Abbreviations}  % the list of abbreviations used
+  % \cleardoublepage
+  % \pdfbookmark[0]{List of Figures}{figures}
+  % \listoffigures
+  % \cleardoublepage
+  % \pdfbookmark[0]{List of Tables}{tables}
+  % \listoftables
+  % \include{Abbreviations}  % the list of abbreviations used
 \end{Prolog}
 
 
@@ -42,14 +66,15 @@
 
 
 
-\include{Introduction} 
-\include{StateOfTheArt} 
-\include{TowardsDevOps} 
-\include{Validation} 
-\include{Conclusion} 
+% \include{Introduction} 
+% \include{StateOfTheArt} 
+% \include{TowardsDevOps} 
+  \include{Patterns}
+% \include{Validation} 
+% \include{Conclusion} 
 
 \bibliographystyle{plainnat-pt} % or try abbrvnat or unsrtnat
-\bibliography{thesis} % refers to example.bib
+% \bibliography{thesis} % refers to example.bib
 
 
 \end{document}
