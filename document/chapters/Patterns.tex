@@ -20,8 +20,14 @@
 		Entities usually have the need to have a \textbf{web} presence or to acquire computing resources to do some tipe of processing. This means that computing resources must be acquired. 
 		
 		\begin{pattern}{Cloud} \label{chap:patterns:sec:acquiringresources:upinthecloud}
-			\context{You want to have a web presence or you want to do some kind of processing that requires large \textbf{computational resources}.}
-			\problem{How do you \textbf{acquire} computational resources to meet your needs ?}
+			\context{You have a piece of software that you want to make available for people to interact with. 
+
+			Because of its size, complexity, distributed nature, etc, you do not want people to have to install that piece of software on their devices. 
+
+			In order to allow people to interact with your software you have therefore to have some underlying infrastructure to support your needs. 
+
+			}
+			\problem{How do setup/acquire infrastructure/resources in order to meet your needs ?}
 			
 			\forces{
 				\begin{itemize}
@@ -35,8 +41,12 @@
 		\end{pattern}
 
 		\begin{pattern}{Platform as a Service}
-			\context{You have decided to use the \textit{Cloud} and your application does \textbf{not need very specif configurations} to be deployed.}
-			\problem{What aaS model should you use ?}
+			\context{You have decided to use the \textit{Cloud}.
+
+			The software you want to deploy follows common flows of installation/setup and you do not need a lot of access to the underlying infrastructure.
+
+			}
+			\problem{Cloud providers offer a set of different types of services and you do not know which to use ?}
 			\forces{
 				\begin{itemize}
 					\item Platform as a Service usually allow for some configuration of the underlying layer.
@@ -50,7 +60,7 @@
 		\end{pattern}
 
 		\begin{pattern}{Infrastructure as a Service}
-			\context{You have decided to use the \textit{Cloud} and your application needs \textbf{very specif configurations} to be deployed.}
+			\context{You have decided to use the \textit{Cloud} and your application needs \textbf{very specif configurations} to be deployed or you need access to the undelying infrastructure.}
 			\problem{What aaS model should you use?}
 			\forces{
 				\begin{itemize}
@@ -72,12 +82,11 @@
 	\section {Reproducible Environments}
 		
 		\begin{pattern}{Containers}
-			\context{You have or want to have several instances of your software installed in several machines.}
-			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
+			\context{You have or want to have several instances of your software installed in several machines. Your instances may need to be updated/altered both in terms of the software they run but also the environment on wich it runs. }
+			\problem{How do you make sure that the environments were your code run are consistent across all machines even when changes are applied ?}
 			\forces{
 				\begin{itemize}
 					\item Performing manual installations can lead to errors.
-					\item Containers are lightweight and several can usually be run in paralel in the same machine.
 					\item Manually installing or updating dependencies and configuring machines is time consuming.
 					\item If changes are costly there will be an incentive not perform them.
 				\end{itemize}
@@ -86,11 +95,11 @@
 		\end{pattern}
 
 		\begin{pattern}{Virtual Machine}
-			\context{You have or want to have several instances of your software installed in several machines.}
+			\context{You have or want to have several instances of your software installed in several machines. Your instances may need to be updated/altered both in terms of the software they run but also the environment on wich it runs.}
 			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
 			\forces{
 				\begin{itemize}
-					\item Containers are lightweight and several can usually be run in paralel in the same machine.
+					\item Performing manual installations can lead to errors.
 					\item Manually installing or updating dependencies and configuring machines is time consuming.
 					\item If changes are costly there will be an incentive not perform them.
 				\end{itemize}
@@ -99,11 +108,11 @@
 		\end{pattern}
 
 		\begin{pattern}{Scripting}
-			\context{You have several teams/people working each in their computers or you need to have several instances of your software installed in several machines.}
+			\context{ou have or want to have several instances of your software installed in several machines. Your instances may need to be updated/altered both in terms of the software they run but also the environment on wich it runs.}
 			\problem{How do you make sure that the environments were your code run are consistent across all machines and that changes to that environment can be easily applied ?}
 			\forces{
 				\begin{itemize}
-					\item Containers are lightweight and several can usually be run in paralel in the same machine.
+					\item Performing manual installations can lead to errors.
 					\item Manually installing or updating dependencies and configuring machines is time consuming.
 					\item If changes are costly there will be an incentive not perform them.
 				\end{itemize}
@@ -129,7 +138,7 @@
 			\problem{How do you do it ?}
 			\forces{
 				\begin{itemize}
-					\item Rebuilding a container takes time and depending on how you setup the contaienr build the final container may be different across builds.
+					\item Rebuilding a container takes time and depending on how you setup the container build the final container may be different across builds.
 					\item Some of your dependencies may need to be downloaded from external providers. If they fail usually your build fails.
 					\item If the environment setup has some complex or time-consuming steps you may take a long time to build single a container.
 				\end{itemize}
@@ -151,7 +160,7 @@
 
 	\section{Scalling Infrastructure}
 		\begin{pattern}{Anti: Vertical Scalling}
-			\context{Due to some event or factor you have to increase your computing power.}
+			\context{You have variable usage of your infrastructural resources. You may need to quicly increase or decrease the size of the infrastructure to meet your needs.}
 			\problem{How do you scale your computing capacity in order to respond to the change.}
 			\forces{
 				\begin{itemize}
@@ -163,7 +172,7 @@
 			\solution{You can increase your computing resources by adding memory to your machine or by increasing the number of cores your machine has.}
 		\end{pattern}
 		\begin{pattern}{Horizontal Scalling}
-			\context{Due to some event or factor you have to increase your computing power.}
+			\context{You have variable usage of your infrastructural resources. You may need to quicly increase or decrease the size of the infrastructure to meet your needs.}
 			\problem{How do you scale your computing capacity in order to respond to the change.}
 			\forces{
 				\begin{itemize}
@@ -179,7 +188,7 @@
 	\section{Testing}
 
 		\begin{pattern}{Anti: Manual Testing}
-			\context{You are building a software product and are constantly improving it.}
+			\context{You are building a software product and are constantly improving it. }
 			\problem{Whenever you make a change how will you know that the software still works.}
 			\forces{
 				\begin{itemize}
@@ -220,13 +229,13 @@
 		\end{pattern}
 
 		\begin{pattern}{Build}
-			\context{Your You have a change in your software.}
+			\context{Your have a change in your software and.}
 			\problem{How do you construct new shipable version of your project ?}
 			\solution{If you have a \textit{Container} and are able to \textit{Download the container} you can obtain the container with the new version of the software . The same can be done using \textit{Virtual Machine} and \textit{Download the Virtual Machine}}.
 		\end{pattern}
 
 		\begin{pattern}{Test}
-			\problem{Whitin your \textit{Continuous Integration} you have successfully created a built the software.}
+			\problem{Whitin your \textit{Continuous Integration} you have successfully created and built the software.}
 			\context{You want to know that the build you generated works.}
 			\solution{Use the \textit{Automatic Testing} and run your entire suit of tests within the new build.}
 		\end{pattern}
@@ -272,7 +281,7 @@
 		\begin{pattern}{Keep it loose}
 			\context{}
 			\problem{You do not know how to hierarchical organize people to the project.}
-			\solution{You create an horizontal structure inside your team.}
+			\solution{You create an horizontal structure inside your team and let them organize themselves.}
 		\end{pattern}
 
 	\section{Communication}
@@ -294,7 +303,7 @@
 		\begin{pattern}{Anti: Daemon}
 			(Confirmar com EZ4U)
 			\context{Your application has some maintenance or some backgrounds tasks that take a significant ammount of time to complete.}
-			\problem{You }
+			\problem{How do you do it?}
 			\solution{You create a Daemon that sequencially performs each tasks and notifies some service or updates a service when the task is completed.}
 		\end{pattern}
 
@@ -345,7 +354,7 @@
 
 		\begin{pattern}{Rolling Back: DNS Switching}
 			\context{You have detected a problem in your production application.}
-			\problem{You want to solve that problem with minimu.}
+			\problem{How do you change the live version to the previous one ?.}
 			\solution{You change the DNS for it to point to the old version of the application.}
 		\end{pattern}
 
@@ -362,5 +371,12 @@
 		\end{pattern}
 
 
+		\begin{figure}[p]
+    		\makebox[\linewidth]{
+        	\includegraphics[width=0.6\linewidth]
+        	{./figures/map.png}
+    	}
+    	\caption{Pattern Map}
+		\end{figure}
 
 
