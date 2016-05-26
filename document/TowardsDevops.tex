@@ -14,25 +14,25 @@
 }
 
 \newenvironment{pattern}[1]{
-  \subsection{#1}
+  \section{#1}
   \newcommand{\context}[1]{
-    \subsubsection*{Context}
+    \subsection*{Context}
     ##1
     }
   \newcommand{\problem}[1]{
-    \subsubsection*{Problem}
+    \subsection*{Problem}
     ##1
   }
   \newcommand{\forces}[1]{
-    \subsubsection*{Forces}
+    \subsection*{Forces}
     ##1
   }
   \newcommand{\solution}[1]{
-    \subsubsection*{Solution}
+    \subsection*{Solution}
     ##1
   }
   \newcommand{\rationale}[1]{
-    \subsubsection*{Rationale}
+    \subsection*{Rationale}
     ##1
   }   
 }
