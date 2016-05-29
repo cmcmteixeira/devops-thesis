@@ -1,69 +1,102 @@
 
 \chapter{ Patterns } \label{chap:patterns}
+		
 		\begin{pattern}{Team Orchestration}
-			\context{When you have a project that you want to execute you will need to assign one or several teams and/or persons to that project. Because of you project complexity you have to allocate people with different expertises.}
-			\problem{How do you ochestrate your team(s) in order to maximize you chances of success ?}
+			\context{
+			Budgets, customer needs, users numbers and other types constraints evolve at a fast pace. In order to be effective in this kind of environment, you want your teams to be able to adapt and respond quickly to those changes.
+			}
+			\problem{How do you ochestrate your team(s) so that they can handle new challenges and deliver results in a sustained manner ?}
 			\forces{
 				\begin{itemize}
-					\item Teams should share objectives and be able to have their objectives aligned with the project objectives.
-					\item Knowledge should spread across project intervinients.
-					\item It may not be possible to have all expertises working in parallel in the same project.
-					\item Teams should be able to colaborate.
+					\item Specialized teams are faster at answering specific problems related with their speciality. 
+					\item Specialized teams will not be able to deliver a final product if it requires skills beyond their speciality.			
+					\item Specialized teams must combine their efforts with other specialized teams.
+					\item Objectives for specialized teams may conflict with other specialized teams (e.g. the team responsible for the performance of an application may not agree with the user experience team when the later wants more content in a specific page).
+					\item Multidisciplinary teams can deliver a final product if they have all specialities represented.
+					\item Members of multidisciplinary teams must be able to work together. 
+					\item It may not be possible to have all expertises constantly working in parallel in the same team.
 				\end{itemize}
 			}
 			\solution{
-				A team should be looked as a unit that can, on their own, produce the results and functionalities necessary for the project. This means that teams should usually be multidisciplinary and capable of communicating efficiently.
-				
-				Teams should also not have an imposed hierarchical structure and should be allowed to organize themselves.
-				
-				In terms of size teams should not exceed the 9 elements, this small size allows teams to communicate better and to be able to self-organize.
+				Having multidisciplinary teams is usually and advantage. Multidisciplinary teams are able to articulate and communicate in order to deliver a product that takes into account several constraints and requirements specified by each of its members specialities. Additionally, teams that have representatives of the expertises needed to deliver the final product are able to deliver it.
 
-				Sometimes, due to lack of work some members of a team can accumulate more than one project at a time.
+				In terms of size, this teams should not go beyond 10 elements. This constraint comes from the need that multidisciplinary teams have to be able to communicate effectively. Team members should be seen as equals and no hierarchical structure should be imposed inside the team.
+
+				Occasionally, due to changes on requirements, some team members can be shared with other teams.
+			}
+		\end{pattern}
+
+
+		\begin{pattern}{Communication}
+			\context{
+				Each member of a multidisciplinary team have different knowledge and backgroud that differ from each other. 
+
+				Professionals working in this kind of environment will sometimes disagree as they guide their work by different contraints and goals. Facilitating the resolution of this discussions and promoting the sharing of knowledge/view points is therefore key and solutions must be found to promote this.
+			}
+			\problem{
+				What kind of approach should you adopt to promote communication and facilitate it?
+			}
+			\forces{
+				\begin{itemize}
+					\item You want to allow people to communicate easily.
+					\item When concentrated on a task some people do not like to be interrupted.
+					\item Some informatiom (e.g. links and code) may not be easy to share verbally.
+					\item Sometimes you want the content of the communication to be made available.
+				\end{itemize}
+			}
+			\solution{
+				\begin{itemize}
+					\item \textbf{Direct Communication} is efective in handling day to day problems (e.g. solving doubts, giving advice, asking for help). Having the teams physically working together is a great way of promoting this type of communication. 
+					\item \textbf{Chat tools} allow you to share links, files and code quickly. 
+
+					Sometimes chat tools are also useful if you need to speak with someone and you do not want to disturb him.
+					\item \textbf{Emails} can be used for sharing information that is not urgent(e.g. scheduling a reunion for next week). Additionally, emails can be used if your communication needs to be stored like when speaking with an outside provider or with a client.
+				\end{itemize} 
 
 			}
 		\end{pattern}
 
+
 		\begin{pattern}{Version Control Organization}
 			\context{
-				You are using Git as a VCS tool and your team, having multiple people working on the same project and pushing code to the same repository, runs into situtations like:
+				As more people are working on the same team and contributing to the same product it becomes increasingly difficult to manage and synchronize those contributions. Tools like Git, SVN and Mercury are helpful on dealing with this kind of problem.
+
+				You have chosen to use Git either because you believed it was the best fit to your project and you have the need to know:
 					\begin{itemize}
-						\item What is the code currently in production ?
+						\item What is the code in each of my environments(e.g. production, development) ?
 						\item What was the code developed for a specific feature ?
 					\end{itemize}
 			}
 			\problem{How do you setup you version control branching strategy so that you can infer valuable information about your current state and past events ?}
 			\forces{
 				\begin{itemize}
-					\item Having to many branches may be complicated to manage.
-					\item Having to few branches may make you loose valuable information.
+					\item Having too many branches may be complicated to manage or cause confusion.
+					\item Having too few branches may make you loose valuable information.
 				\end{itemize}
 
 			}
 			\solution{
-				There are several ways you can manage your VCS branching. The main ones are:
+				There are several ways you can manage branching. The main ones are:
 				\begin{itemize}
 					\item \textbf{GitFlow} specifies that at any given time two branches should be active. This branches are the \textbf{master} and \textbf{develop} ones. The code present in the master only contains shippable code. The \textit{develop} branch contains the most recent working version of your code. This branch should not contain non working code but it may contain, for instance, features that have not been through a QA process. Adding to this two branches there are additional branches called \textit{feature branches}. This branches represent a new feature under development and there should be one \textit{feature branch} per feature. When a feature is implemented it should be merged into the \textit{develop} branch. If that feature and the previous ones are considered production ready then the \textit{develop} branch should be merged into the \textit{master} one.
 
 					Finally, if at some time you need to create an hotfix, you can do it by creating a new \textit{hotfix} branch with the content of the \textit{master} branch, applying the changes and merging it back into the \textit{master} branch.
 
 					\item \textbf{Feature Branches} can be seen as a subset of the \textbf{Gitflow} strategy. Instead of having a \textit{develop} branch, this strategy only uses the \textit{master} and \textit{feature} branches The \textit{master} branch holds tested and functioning code, the \textit{feature} branches (one for each feature) hold the code of the correspondant feature. When a feature is ready and tested it is merged from the \textit{feature} branch into the \textit{master} branch.
-
-					\item \textbf{Gitlab Flow}
-					\item \textbf{Github Flow}
-
 				\end{itemize}
 			}
 
 		\end{pattern}
 	
 		\begin{pattern}{Cloud}
-			\context{In order to have computing power you have to \textbf{acquire} \textbf{computing resources}. This resources can be used to perform a number of functions:
+			\context{
+			Your company and/or your product needs to acquire computing resources in order to perform tasks like:
 				\begin{itemize}
 					\item performing \textbf{large complex operations}.  
 					\item supporting a \textbf{website} or a \textbf{web platform}.
 					\item any other kind of \textbf{computing task}
 				\end{itemize}
-					This resources should be accessible and configurable and there should not be a need to physically connect to it in order to control them.
+					This resources should be accessible and configurable and you believe that you do not need to physically connect to them it in order to control them.
 				}
 
 			\problem{Owning computing resources is essential or at least advantageous to you or your business so the question is how do you acquire and maintain computing resources in a efficient way ?}
@@ -71,8 +104,8 @@
 				\begin{itemize}
 					\item Acquiring hardware may require significant upfront costs.
 					\item Depending on the ammount of hardware you have to manage, a person, team or department may be needed to maintain it. 
-					\item Different services may provide different levels of customization/control over operative system 
-					\item Sometimes due to a variation in your needs you may want to scale both up or down the ammount of resources you allocated.
+					\item Different services may provide different levels of customization/control.
+					\item You may want to scale the amount of allocated resources to match your needs.
 					\item Applications may have very specific needs both in terms of harware and environment where they run.
 				\end{itemize}
 			}
@@ -81,7 +114,7 @@
 				\begin{itemize}
 					\item \textbf{Purchasing} and maintaining your own \textbf{hardware} allows you to have full control over your infrastructure. You can control, for instance, in which machine does a specific applications run, how that machine is configured, etc. This option represents therefore the \textbf{highest level of customization} and \textbf{control}. 
 
-					In the \textbf{downside} this options usually means that you \textbf{have to purchase hardware} and that you either \textbf{acquire more resources than what you need} or you risk \textbf{not having enough resources} to answer increasing computing needs. Additionally you will have to \textbf{create} and \textbf{support} a team or department to \textbf{manage the infrastructure}. 
+					On the \textbf{downside}, this options usually means that you \textbf{have to purchase hardware} and that you either \textbf{acquire more resources than what you need} or you risk \textbf{not having enough resources} to answer increasing computing needs. Additionally you will have to \textbf{create} and \textbf{support} a team or department to \textbf{manage the infrastructure}. 
 
 					\item When using \textbf{IaaS} there is no need to purchase anything upfront. In this \textbf{pay-as-you-go} model you only pay for what you consume and you are able to \textbf{increase/decrease} the size and/or number of \textbf{resources} you are using. With this model the responsability for \textbf{maintaining and setting up infrastructure} is shifted to the cloud provider. 
 
@@ -100,16 +133,20 @@
 
 		\begin{pattern}{Reproducible Environments}
 			\context{
-				Because you have \textbf{several instances} of your software, you want to maintain \textit{consistency} across all of them. 
-				Consistency is important because it will allow to have reproducibility and will give you some guarantees that you can setup new instances of your software.
+				When you have several environments (e.g. production,staging,devevlopment) or multiples instalations/instances of your software it is desirable to be able to guarantee that all instances work the same way. With this goal in mind you have identified that the environments where your instances run is a key factor when trying to antecipate how does the software behaves.
+		
+				This consistency is important because it will allow to have reproducibility and will give you some guarantees when you desire to increase the number of instances of your software.
 			}
 			
+			\problem{How do you guarantee that the environment where you setup your application is consistent across instances?}
+
 			\forces{
 				\begin{itemize}
-					\item Having a complete copy of your environment (OS's, libraries, etc) may create large images.
+					\item Having a complete copy of your environment (OS's, libraries, etc) may create large files that may be hard to move around.
 					\item You may want to have several running instances of different environments in the same machine.
 					\item Some of your dependencies may be fetched from external providers.
 					\item You may want to update or change the environment.
+					\item Depending on your choice for \textit{Cloud} you may have more or less access to your environment settings.
 				\end{itemize}	
 
 			}
@@ -137,21 +174,23 @@
 
 		\begin{pattern}{Deploying new instances}
 			\context{
-				You have decided to increase your computing resources \textbf{horizontally} in order to increase your hability to handle a bigger load of tasks. Depending on what type of \textit{Cloud} you choose to use new resources were allocated. 
+				You have decided to increase your computing resources \textbf{horizontally} in order to increase your hability to handle a bigger load of tasks. Depending on what type of \textit{Cloud} you choose to use new resources were allocated but you still need to have your application running on those resources. 
 			}
 			\problem{
-				How do you deploy your application ?
+				How do you deploy your application in a reproducible and consistent way?
 			}
 
 			\forces{
 				\begin{itemize}
-					\item You want to have guarantees that a deploy will be successfull.
-					\item You want deployments to be reliable. 
-					\item You want to be able to deploy new instances as fast as possible.
+					\item Deployments must be reliable. 
+					\item Deployments should not waist time.
+					\item Deployments should correctly articulate with your environment setup method.
+					\item Deployments should be easy to manage.
 				\end{itemize}
 			}
 			\solution{
-				In order have an efficient deploy both in terms of reliability and speed you should have some sort of \TODO{reproducibility} and depending on your choice for setting up your environment (\textit{Reproducible Environments}) there are different ways you can manage the deploy:
+				In order have an efficient deploy both in terms of reliability and speed you should have some sort of reproducibility.
+				Depending on your choice for setting up environments (\textit{Reproducible Environments}) there are different ways you can manage the deploy:
 				\begin{itemize}
 					\item If you have chosen \textit{Containers} you can simply pull the container from a container registry and run it in your new instance. With this approach you will have a high degree of certainty that your instance will behave as you predict. Because containers are generally lightweight you will be able to download them fairly quickly. You will, nevertheless be dependant on you container registry service.
 					\item If you have chosen \textit{Virtual Machine}
@@ -191,8 +230,10 @@
 
 
 		\begin{pattern}{Continuous Integration}
-			\context{Having several people collaborating into the same project can be challenging. If a developer, unaware that introduced an error, pushes code it into the team repository a long time may go by before an error is even identified. After that the error needs to be identified and, because the code that introduced the error was pushed a long time ago, it may no seem obvious where the error is. }
-			\problem{How do you detect early if some error has been introduced into your code?}
+			\context{There are several people contributing code to your application.}
+			\problem{
+				Having several people collaborating into the same project can be challenging. If a developer, unaware that is introducing an error, pushes code it into the team repository a long time may pass before the error is detected. Once detected, the error cause must identified and, because the code that introduced the error was pushed a long time ago, it may not seem obvious where the error is. 
+			}
 			\forces{
 				\begin{itemize}
 					\item Running your entire test suit before pushing code may take to much time.
@@ -212,10 +253,108 @@
 			}
 		\end{pattern}
 
+		\begin{pattern}{Jobs}
+			\context{
+				Sometimes there are tasks that, due their complexity may take a long time to finish. Cases may also exist when you have tasks that you want to schedule for later(e.g. maintenance tasks may be runned at a time when your application is under). 
 
+				Both this problems can be solved by scheluding jobs to be run when possible or later.
+			}
+			\problem{
+				How do you setup your infrastructure to handle this cases?
+			}
+			\forces{
+				\begin{itemize}
+					\item Having a fixed set of resources for dealing with scheduling tasks may not be cost effective.
+					\item Your load may vary during the day.
+					\item 
+				\end{itemize}
+			}
+			\solution{
+				You may launch new instances of your infrastructure to handle each of you tasks or batches of tasks. Each new instance receives the desired tasks and does the needed computation. When the task as been computed the new piece of infrastructure should be shutdown. 
+				
+				Alternatively you can have a set of daemons running alongside your applications that handle this tasks.
 
-
-
-		\begin{pattern}{Communication}
-
+				Tasks are generally fed through a queing system altough you can also store them in a database.
+			}
 		\end{pattern}
+
+		\begin{pattern}{Auditability}
+			\context{
+				As applications grow identifying potential problems within your infrastructures will become increasingly difficult. If you have several machines and/or different possible points of failure you can not predict or assume that everything will always go without incident and you will therefore have to be prepared. Building a robust system may seem enough but is not. When problems appear (and they will appear) being able to identify them ,where and why they appear is essential for the resolution of those problems.
+			}
+			\problem{
+				What metrics should you extract and what should you do with them?
+			}
+			\forces{
+				\begin{itemize}
+					\item Extracting too many metrics may cluter your hability to effective analyse them.
+					\item You may want to keep an history of how your system behaved.
+					\item You want to have information about the current state of your service. 
+				\end{itemize}
+			}
+			\solution{
+				Monitoring your application health can be done by using your own or external tools. Some cloud providers even provide you with a health view that tells you if your machines are healthy and running. 
+				Identifying some key indicators and some metrics is also important, by defining thresholds for each metric you can setup different levels of alerts for your teams. This way you can tackle problems as soon as they happen. Additionaly some indicators can also trigger automatic responses (e.g. if a platform is taking to long to answer requests you may launch new resources to distribute the traffic).
+			}
+		\end{pattern}
+
+		\begin{pattern}{Alerting}
+			\context{
+				You have defined a set of metrics for checking the health of your application. For some of those metrics when values reach a certain level a solution can not be automated (e.g. server repetitive failures). 
+				You still would want an immediate responese to that alert in order to make sure your services will not go down or in order to put them back on.
+			}
+			\problem{
+				Who are you going to call? 
+			}
+			\forces{
+				\begin{itemize}
+					\item People may not be available to answer alerts or may be unreacheable.
+					\item Alerting everyone may solve your problem quickly but may not be needed.
+				\end{itemize}
+			}
+			\solution{
+				Notifying can follow three main strategy.
+				The first one is to wake everyone up. This approach is wastefull and as you usually do not need your entire team to solve the problem.
+				The second one is always notifying the same person. This person should preferably be someone capable of diagnose the origin of your problem and then solve it or contact someone that can. 
+				The third option is two have a system were the responsability of handling errors rotates among the team members.
+				Alerts can be sent using email, calling people, sending an sms and/or sending a notification to the person you want to notify. 
+			}
+		\end{pattern}
+
+		\begin{pattern}{Deployment Flow}
+			\context{}
+			\problem{}
+			\forces{}
+			\solution{}
+		\end{pattern}
+
+		\begin{pattern}{Error Handling}
+			\context{
+				It is important not only to be able to detect errors(\textit{Auditability}, \textit{Alerting}) but also to be able to respond to them in a proportional way.
+				
+				As someone involved in a team developing a product, being able to find the best way to handle a crysis may prove to be fundamental.
+			}
+			\problem{
+				What alternatives do you have to handle an error ?
+			}
+			\forces{
+				\begin{itemize}
+					\item Errors have different degrees of impact.
+					\item The cause of an error may not be easy to find.
+					\item You may have a working backup of your application.
+					\item Sometimes you can not use a previous backup (e.g. when you have removed a column from your database).
+				\end{itemize}
+			}
+			\solution{
+				Handling and error is a delicate task. There are several things that need to be taken into account. 
+
+				If an error as a direct and significant impact in your applicaion (e.g. there is an error that allows people to login without checking the users passwords) you would want to respond as quickly as possible. In this types of cases you can \textbf{rollback} to an older version of your software. The rolling back effectiveness is nevertheless constrained by the speed with which you can do it and by the fact that you may not be able to do it. Strategies for rolling back you application can be of two types:
+				\begin{itemize}
+					\item \textbf{Deploying the previous version}: You can order your system to deploy a version of your software that you know works.
+					\item \textbf{Keeping a backup} : You can keep a backup of your application/infrastructure and if an error is detected you can switch the DNS servers to point to your old infrastructure.
+				\end{itemize}
+
+				When you can not roll back and/or the error you detected does not have a substancial impact you can try to find and fix the problem. Depending on your choice for \textit{Version Control Organization} you can create a newer \textbf{hotfix} branch and work on that. In the end, when you have found and fixed the problem merging that branch with master and deploying the version will have fixed your problem.
+			}
+		\end{pattern}
+

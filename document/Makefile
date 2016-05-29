@@ -11,7 +11,7 @@ default:
 	cp chapters/* $(OUTPUT_DIR)
 	cp $(FILE).tex $(OUTPUT_DIR)
 	cp thesis.bib $(OUTPUT_DIR)
-	cp sty/* $(OUTPUT_DIR)
+	cp sty/* $(OUTPUT_DIR)2
 	cp figures $(OUTPUT_DIR) -rf
 	cp plainnat-pt.bst $(OUTPUT_DIR)
 	cd $(OUTPUT_DIR) ; $(_COMPILE_FILE) ; $(_COMPILE_BIB) ; $(_COMPILE_FILE); $(_COMPILE_FILE)
