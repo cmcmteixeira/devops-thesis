@@ -1,7 +1,17 @@
 Guião Entrevista
 ----------------
+Parceiro weduc(Amazon producao, backup staging serv. proprios)
+200 000 users ; Data store 50-100GB
 
+	- Code quality
+	- unix 
+	- OpenBSD
+	- Edge proxy
+	- Elastic transcoder
+	- Servicos de notificao da amazon
 
+Deploy manuais
+	- 
 
 Produto
 O: Tentar perceber que restrições impõe o produto para que seja possível contextualizar algumas das escolhas feitas pelas empresas/equipa.
@@ -24,7 +34,7 @@ O: Tentar perceber que restrições impõe o produto para que seja possível con
 			- response time
 
 		P: Product Architecture (SOA, Mono,etc)
-
+			Monolitica/ Facil de partir em servicos ( desenhada para ser distribuida)
 
 
 Equipa/equipas
@@ -32,6 +42,12 @@ O: Tentar perceber que equipas existem, como se relacionam e quais as suas funç
 -------------------------------------------------------------------------------------------------------------------------------------------------
 	- Caracterização
 		P: Quantas equipas?
+			1 equipa - frt end ; testes ;devs;  outsourcing mobile; 
+			Diretamente (skype) 
+			Mail e skype para brasil
+			Jira confluence bitbucket
+			Met. Agile / n Kanban sem sprint (lean design)
+
 
 		{{foreach teams as team}}
 		
@@ -60,8 +76,25 @@ O: Tentar perceber que equipas existem, como se relacionam e quais as suas funç
 
 Pipeline
 --------
-	- Caracterização (Ajustar de acordo com a pipeline apresentada )
+	Backlog
 	
+	Ready For dev
+	
+	Development
+	
+	Ready for review
+		- Review por dev. senior
+
+	Waiting QA deploy
+		Manual deploy 
+		
+	Ready for QA
+	
+	Released
+	Unit TEsting ( API na plat. )
+	Selenium , RObot framework)
+	- Caracterização (Ajustar de acordo com a pipeline apresentada )
+		
 		P: Quanto tempo demora desde que o código é produzido até que entra em producão?
 		O: Perceber eficácia daquilo que está implementado. Tempo reduzido em princípio significa que técnicas utilizadas são eficientes.
 
@@ -93,13 +126,19 @@ Deployment *
 
 		P: Como é feito ?
 		O: Perceber se usam virtualizacão, se usam containers , ...
-
+scripts para deploy
 
 Infrastructure
 --------------
 	
 	P: What can make infrastructure scale up/down ?
-	O:
+	O: 
+	Code base antiga nao() ; nova codebase
+	4 dias para 
+	n usa autoscaling ; 
+	load balancers da amazon
+	(pre warn)
+	fazem probing interno da plataforma
 
 	P: How is infrastructure increased ?
 	O: 
@@ -113,6 +152,17 @@ Infrastructure
 Panic / Erros Handling / Monitoring
 -----------------------------------
 	- 
+		Munin(espaco de dados
+		Zabix(maquinas
+		Pingdom
+		
+		Registos estatisticos p/ clientes
+
+		Rollback e xunga; Patching de DB foi desenvolvido por eles
+		Schema e forward only
+		
+		
+		
 		P: Que dados são recolhidos dos servidores em produção?
 		O: Perceber que dados são recolhidos e com que objetivo. Perceber tambem como sao tratados
 
@@ -130,5 +180,3 @@ Panic / Erros Handling / Monitoring
 
 
 * Introduzir na definição da pipeline.
-
-

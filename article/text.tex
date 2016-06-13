@@ -1,0 +1,190 @@
+-------------------------------------------------------------------------------------------------------------
+		ABSTRACT 
+-------------------------------------------------------------------------------------------------------------
+Software projects have been increasing both in complexity and in size across the years. As more businesses and opportunities arise, so did the challenges and the need for better and more robust practices and methodologies. 
+
+Initial methodologies like Waterfall would prove to be inefective in dealing with the management or Software Products and would create a clear cut between developers and operations in the workplace. This cut would persist across the 2001 Manifesto for Agile Software Development and the subsequent movement and methodologies that emerged.
+
+As years passed and more companies moved online complexity grew and an extra pressure would be put both on the operations professionals and developers. As this pressures build, so did the tension between developers and operations. Conflicting objectives, lack of communication and unfamiliarity with each others world would create a tense atmosphere between developers and opeartions. 
+
+Different attempts were made to heal this relation. This attempts would eventually culminate in the appearance of DevOps.
+
+Formed by combining the word Development with the word Operations, the "DevOps" movement has been around for sometime. Interpretations of the movement and what it means are still topics of discussion and written literature on the subject is still scarce.
+
+In this article we demystify DevOps, first by using the existing literature as the basis to create a DevOps state-of-the-art and then by analyzing the current practices associated with DevOps in the real world. 
+
+The analysis, done by interviewing and observing 25 Portuguese startups is then the basis from which we then extract a set of patterns related with DevOps and its values. Some of the 13 identified patterns are then validated by watching the effects of the DevOps culture in real people in real world situations.
+
+
+------------------------------------------------------------------------------------------------------------
+		Introduction
+------------------------------------------------------------------------------------------------------------
+
+DevOps has been around for some time now. 
+The term is relatively new and we were not able to find the its exact first appearance. Nevertheless, a talk by Patrick Debois named "Agile Operations" is usually refered as the "starting point" of DevOps.
+Before delving into what is DevOps it is important to understand the problem it tries to solve and what parties does it concern.
+
+=========================
+The intervinients parties
+=========================
+
+DevOps focus its attention in the relation between Operations and Developers.
+
+Operations are seen as the maintainers of working software. Being a Operations professional would include tasks such as swaping damaged hardware, managing software environments, applying updates, monitoring the running application, ... As maintainers, the Operations goal was to keep the software running correctly and efficiently.
+
+Developers on the other hand were the ones creating the software. Developers would develop software with concerns like test coverage, code quality, code performance and so on. As developers responsabilities/incentives go, developers would have to deliver new functionalities for the product in the shortest time possible.
+
+
+========================
+The Relation
+========================
+
+In [ref] Mike Loukides recalls a time when the Developer and Operations role was seen as a single responsability. As time went on and complexity of software and infrastructure increased, a path for specialization opened and both Operations and Developers paths would move in different ways. Waterfall like models would also reinforce this trend by creating a separation between maintenance and inplementation. The siloed departments would as a result be born. 
+
+Between the departments, information would usually flow from the Developers to Operations. The information, usually in the form of very contractualised documents, would try to provide operations with the knowledge to run the new functionalities developed. 
+
+
+=========================
+Marital Problems
+=========================
+
+Beeing incentivized to keep the application healthy, it would not take long until Operations started to view Developers and the changes they pushed as harmful. Developers, on the other hand, would soon see the barriers imposed by Operations as an attack to their productivity. This mismatch of objectives would feed an ongoing war between Developers and Operations professionals.
+
+As if this was not enough, the siliozation of the Development and Operations departments meant that communication would seldom occur.
+
+This mismatch of objectives conjugated with the lack of communication fueled an ongoing war between Developers and Operations professionals that did not seem to have an easy solution.
+
+====================
+The birth of DevOps |
+====================
+
+As time passed the problem grew bigger and ideas and movements started to evolve that tried to reconcile this two departments, eventually culminating in the appearance of DevOps.
+
+DevOps is therefore at its core an attempt to pacify the ongoing war between developers and operations professionals. 
+
+In order to do so, some believed that taking advantage of newer technologies and tools like the Cloud and the automation possibilities that it brough would be enough. 
+
+Others believed there was a need for more than just the introduction of newer tools and that a cultural change was needed. This cultural change would call for the end of the segregation between the two departments and for the inclusion of the Operations professionals into the development teams.
+
+
+
+====================
+What DevOps brought |
+====================
+
+When looking at DevOps there are some key values and principles that should be taken into account. 
+
+The first set of such values are the "Agile Manifesto Movement" ones (some authors go as far as to describe DevOps as an extension of the Agile Manifesto and Agile Methods to opearations and development). This values, sumed up in the manifesto as follows:
+	
+	Individuals and interactions over processes and tools
+	Working software over comprehensive documentation
+	Customer collaboration over contract negotiation
+	Responding to change over following a plan
+
+The second set of values is the John Willies CAMS acronym. CAMS stands for:
+
+	Culture: 
+	Automation
+	Measurement
+	Sharing 
+
+Together both this sets of values aim to improve the relation between developers and operations.
+
+
+
+
+
+------------------------------------------------------------------------------------------
+			Towards DevOps
+------------------------------------------------------------------------------------------
+
+=================
+	Problem |
+=================
+
+When searching for DevOps and related information, one could easily get lost in the vast ammount and variety of information that exists. From job offers, to adverts for "DevOps ready" tools or blog posts talking about cultural changes it is easy to get lost. Adding to this , the existent information is higly contraditory and both opinions/definitions often point in different directions. 
+
+Contrastingly, information about DevOps in the academic world seems to be quite scarce. Again, this information focus mostly in the automation aspect of DevOps and leave the measurment, sharing and and cultural aspects aside. 
+
+All together, both the lack of concrete and verified information and the large ammount of different views means that DevOps is still misunderstood and that teams/companies that want to adopt it still do not know what are the common challenges and solutions available.
+
+We have therefore identified three main questions that we will try to answer:
+	What is DevOps?
+	What are the common problems facing DevOps teams?
+	What are the common solutions found ?
+
+================================
+	Approaching the problem |
+================================
+
+Given the low volume of information present in the current literature and the ammount of confusion in the community we had to base the study of DevOps on something more concret. With that in mind we decided that the way to go would be to look at were DevOps was being applied. This approach led us to choose the Portuguese Startups as a sample from which to extract information.
+
+The choice of portuguese startups came from the following reasons:
+	
+	- Geographical proximity
+	- Easy identification: Most startups are concentrated in innovation centers and it is quite easy to identify and find startups.
+	- Resource scarcity: Usually startups have at most a couple tens of employees. This allows for a easier study of the overall companie and at the same time means that there is not a lot of room for specialized professionals or even departments. Additionally this also means 
+	- Role overload: Having few members usually translates in the need for members to adopt several roles.
+	- Culture: Due to "Resource scarcity" and "Role overload" startups usually have to adopt a more comprehensive approach and usually have a more holistic and collaborative approach for software development.
+
+Having identified the target there was a need to now define the methodology to extract information from these startups. 
+
+The first option was to send a survey to every startup. This approach was nevertheless abandoned due to the following reasons:
+	
+	- People are not very receptive to fill long forms even if they are only multiple choice.
+	- DevOps is an extremely vast subject and trying to create a survey that identified every single detail and aspect of it would be non trivial.
+	- Surveys would not be very good at capturing the environment of companies.
+
+The second and chosen option was a little different. 
+
+First we started by trying do identify what where the main areas that DevOps covers. 
+
+We began by looking at "Culture". At the cultural side, devops defends communication, knowledge sharing and a multidisciplinar and holistic approach to software development. In order to identify how to achieve this goal/value we started by looking at how teams were setup. From team sizes, to team composition to cross team comunication and work management tools we aimed to caracterize this aspects. 
+
+Secondly we dived into the Automation part of DevOps. In this area we looked at how environments were setup, how were pipelines structured, what software practices were put in place, how were infrastructure and deployments setup and what kind of tools were used.
+
+Lastly we looked at measurement and attempt to understand what metrics companies were extracting and what responses would they give in different scenarios.
+
+After identifying the areas we wanted to study we built a small script to guide the interview. Altough some of the areas overlaped (automation and measurement would usually be tighlty coupled for instance) we organized the information into six big areas :
+	Product 
+	Teams
+	Pipeline
+	Deployment
+	Infrastructure
+	Monitoring and error handling
+
+We attempted with this organization to be able to extract the information needed.
+
+The next phase consisted of selecting, contacting and interviewing companies.For the selection phase we started by creating a list of portuguese startups (around 300 companies). We then removed those that did not develop software and those that seemed not to exist anymore (those that did not have online websites). By doing so we were able to cut the sample in half and 155 companies remained.
+
+We then proceed to rank the remaining 155 companies. In order to rank them we created five metrics:
+	
+	- Cloud Usage: This metric tried to estalish if a company used the cloud for its services.
+	- Offers SaaS or PaaS: We believed that if a company offered some kind of PaaS or PaaS then special considerations should exist in terms of scalling and monitoring.
+	- Number of employees: By looking at the companies website or linkedin profiles we were able to aproximately determine the number of employees of a company. Here we created three groups (Less than 5 members, Between 5 and 15 and more than 15)
+	- Reach: Companies that worked in a global scale would feel a bigger pressure to automate their infrastructure and services.
+	- Subjective appreaciation: While searching for the information specified above we identified some metrics that we felt mattered but would be difficult to parametrize. Such metrics would be for instance the fact that a question had only one or two employees with non technological backgrounds. In order to take that into account we added a subjective factor was added with values from 1 to 5.
+
+
+With this evaluation of companies we proceed to contact some of the companies in the list. In the end we contacted a total of 60 companies from those we were able to get a total of 25 interviews.
+
+================
+The interviews|
+================
+
+As 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

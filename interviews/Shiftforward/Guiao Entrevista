@@ -116,7 +116,7 @@ Deployment *
 		P: Como é feito ?
 		O: Perceber se usam virtualizacão, se usam containers , ...
 			Docker
-			AddForcaster(agnostico,AWS,Mezzos...Marathon Cluster,)
+			AddForcaster(agnostico,AWS,Mesos...Marathon Cluster,)
 
 Infrastructure
 --------------
