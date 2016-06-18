@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twoside,openright]{report}
+\documentclass[11pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[mieic]{feupteses}
 \usepackage{color}
@@ -6,6 +6,8 @@
 \usepackage{dirtytalk}
 \usepackage{xkeyval}
 \usepackage{titlesec}
+\usepackage{epigraph}
+\usepackage[autostyle]{csquotes}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
 
@@ -34,7 +36,7 @@
   \newcommand{\rationale}[1]{
     \subsection*{Rationale}
     ##1
-  }   
+  }
 }
 
 
@@ -51,31 +53,27 @@
   \include{Abstract}
   \pdfbookmark[0]{Table of Contents}{contents}
   \tableofcontents
-  % \cleardoublepage
-  % \pdfbookmark[0]{List of Figures}{figures}
-  % \listoffigures
-  % \cleardoublepage
-  % \pdfbookmark[0]{List of Tables}{tables}
-  % \listoftables
-  % \include{Abbreviations}  % the list of abbreviations used
+  \cleardoublepage
+  \pdfbookmark[0]{List of Figures}{figures}
+   \listoffigures
+   \cleardoublepage
+   \pdfbookmark[0]{List of Tables}{tables}
+   \listoftables
+   \include{Abbreviations}  % the list of abbreviations used
 \end{Prolog}
 
 
 \StartBody
 
+\include{Introduction}
+\include{StateOfTheArt}
+\include{TowardsDevOps}
+\include{Patterns}
+% \include{Validation}
+% \include{Conclusion}
 
-
-
-% \include{Introduction} 
-% \include{StateOfTheArt} 
-% \include{TowardsDevOps} 
-  \include{Patterns}
-% \include{Validation} 
-% \include{Conclusion} 
-
-\bibliographystyle{plainnat-pt} % or try abbrvnat or unsrtnat
-% \bibliography{thesis} % refers to example.bib
+\bibliographystyle{abbrv} % or try abbrvnat or unsrtnat
+\bibliography{references} % refers to example.bib
 
 
 \end{document}
-

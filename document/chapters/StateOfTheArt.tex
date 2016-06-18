@@ -1,130 +1,131 @@
 \chapter{State of The Art} \label{chap:stateoftheart}
-    \section{The Internet} \label{chap:stateoftheart:sec:internet}
-
-    The Internet has existed since the 1970s yet, the vast majority of the current users only became familiar with it after 2005 \cite{Guangming2011}. Since then, the number of users of the Internet has been increasing and there are currently 3.2 billion people with Internet access representing 43\% of the total world population \cite{SANOU2015}.
-
-    Economically, the size of the Internet is not less impressive.In 2010, in Europe, e-commerce represented around 3.5\% of all retail. Additionally, in the same study, around 40\% of individuals admitted to have made an online purchase the year before \cite{EuropeanCommission2012}.
-
-    In addition to this numbers, new developments in areas like IoT \footnote{Internet of Things} where devices will be able to interact with other devices through the Internet \cite{Suresh2014} indicate that the already huge size and span of the Internet will only increase in the next years.
-
+  In this chapter we will first look at what is the Cloud and Cloud computing. This initial section will provide the needed context for what follows where we will describe DevOps based on some of the work already done.
 
     \section{Cloud Computing} \label{chap:stateoftheart:sec:cloud}
-    	If we had to pinpoint the start of the rise of popularity of the term \say{Cloud} we would probably refer to 2006 when Eric Schmidt, Google's CEO, used it to refer to the business model of providing services across the Internet\cite{Zhang2010}.  Since then the term was used in different contexts and with different meanings which lead to the lack of a agreed upon definition \cite{Zhang2010}.
-    
-    
-    	\subsection{Definition} \label{chap:stateoftheheart:sec:cloud:sec:definition}
-        Several definitions exist that try to capture the concept of cloud computing, in \say{A break in the cloud} \cite{Vaquero2008}, for instance, 22 different definitions of cloud are analyzed in an attempt to create a standard definition of \say{cloud}. 
-        
-        Nevertheless throughout this thesis we will use only one definition, namely, the one provided by NIST \footnote{National Institute of Standards and Technology of the U.S Department of Commerce}. NIST defines cloud computing as: 
-        
-        \say{Cloud computing is a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources... that can be rapidly provisioned and released with minimal management effort or service provider interaction.}. 
-        
-        NIST, in the same article, also defines the essential characteristics of cloud computing to be:
+
+        Paraphrasing \cite{Debois2008}, imagine wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network. Charges are calculated based on the usage ammount and no special knowledge of how the network setup is needed.
+
+        Clouds follows the exact same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid are calculated based on the usage and clients do not need to know how the resources are managed or setup.
+
+        \subsection{Definition}
+        In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \say{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
+
+        NIST also defines the following essencial characteristics of cloud computing:
+
         \begin{itemize}
-			\item{On-Demmand self-service} - Cloud providers must allow their users to, without requiring human interaction, provision computing resources.
-            \item{Broad network access} - Users must be allowed to access resources through standard mechanism. 
-            \item{Resource pooling} - A multi-tenant model should be used in order to serve multiple users. Resources are allocated dynamically meaning that users do not know were, physically, the allocated resources are \cite{Garrison2012}.
-            
-            \item{Rapid elasticity} - Resources can be elastically allocated or deallocate. This should be possible to be done automatically \cite{Garrison2012,Mell2011}.
-            
-            \item{Measured service} - The usage of resources should be measured providing transparency in the provider-client relation.
+            \item \textbf{On-demand self-service} : A consumer can unilaterally provision computing capabilities, such as server time and network storage, as needed automatically without requiring human interaction with each service provider.
+            \item \textbf{Broad network access} :  Users must be allowed to access resources through standard mechanism.
+            \item \textbf{Resource pooling} : A multi-tenant model should be used in order to serve multiple users. Resources are allocated dynamically meaning that users do not know were, physically, the allocated resources are \cite{Garrison2012}
+            \item \textbf{Rapid elasticity} : Resources can be elastically allocated or deallocate. This should be possible to be done automatically \cite{Mell2011}
+            \item \textbf{Measured service} : The usage of resources should be measured providing transparency in the provider-client relation.
+  	    \end{itemize}
 
-		\end{itemize}
-        
         \subsection{Delivery methods} \label{chap:stateoftheheart:sec:cloud:sec:deliverymethods}
-        
-        In regards to their accessibility,it's common to identify three or four main categories of clouds \cite{Zhang2010,Garrison2012,Garrison2012,Khajeh-Hosseini2012} :
-        	\begin{itemize}
-            	\item{Public Clouds} - Public clouds are a pool of resources hosted by cloud providers who rent them to the general public. This resources can be accessed over the Internet and are shared among users. 
-                
-				\item{Private Clouds} - Private clouds are usually administered and used by the same organization. Alternatively a third party can also be hired to manage the resources. The main difference between public and private clouds is the usage of the resources. Private clouds resources are only used by one company as opposed to public clouds were resources are shared.
+        In regards to their accessibility, it is common to identify three main categories of clouds \cite{Zhang2010} :
+      	\begin{itemize}
+          	\item \textbf{Public Clouds} : Public clouds are a pool of resources hosted by cloud providers who rent them to the general public. This resources can be accessed over the Internet and are shared among users.
 
-                \item{Hybrid Clouds} - Hybrid clouds combine both the private and public concepts. When using an hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
-                
-                \item{Virtual Private Cloud} - Virtual private clouds are an alternative to private clouds. This type of cloud are essentially a public cloud that \textit{leverages virtual private network (VPN) technology..}\cite{Zhang2010} allowing users to combine characteristics of both public clouds and private clouds. 
-                
-                Some authors choose not to mention VPCs \cite{Garrison2012,Garrison2012,Khajeh-Hosseini2012} while others do \cite{Zhang2010}. The reason why some do not mention it is mainly due to the fact that VPCs can be seen as a platform over a public cloud. 
-                
-			\end{itemize}
-        
-        \subsection{Service Levels} \label{chap:stateoftheheart:sec:cloud:sec:servicelevels}
-			In terms of service levels cloud computing can be classified in regards to the provided abstraction. The main categories are the following \cite{Garrison2012,Zhang2010,Mell2011,Sampaio2011,Vaquero2008} :
-			\begin{itemize}
-				\item{SaaS} - Software as a Service (SaaS) gives users access to a platform usually through a web client. Without the need to  download or install software the user is able to use the provided software instantly and virtually everywhere. 
-	    
-    			Applications of this model include messaging software, email services, collaborative platforms, etc.  
-	    
-   				\item{PaaS} - Platform as a Service (PaaS) allows it's users to quickly deploy applications with little to no configuration. In this type of platform environments are usually pre-setup or configurable. PaaS users should nevertheless expect only to be able to deploy applications or software supported by the provider.
-	    
-	    
-    			\item{IaaS} - Infrastructure as a Service (IaaS) represents the lowest abstraction made available by cloud providers. In this model the user is able to configure and access a machine directly without constraints. This machine, usually a virtual server managed by the provider, can be configured and maintained by the user.
-	    
-    		This model is used when applications are complex and therefore need complex configurations.
+  		      \item \textbf{Private Clouds} : Private clouds are usually administered and used by the same organization. Alternatively a third party can also be hired to manage the resources. The main difference between public and private clouds is the usage of the resources. Private clouds resources are only used by one company as opposed to public clouds were resources are shared.
 
-			\end{itemize}
+            \item \textbf{Hybrid Clouds} : Hybrid clouds combine both the private and public concepts. When using an hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
 
-		\subsection{Benefits} \label{chap:stateoftheheart:sec:cloud:sec:benefits}
-			The main advantages of cloud computing for it's users can be summarized as following:
-			\begin{itemize}
+            \item \textbf{Virtual Private Cloud} : Virtual private clouds are an alternative to private clouds. This type of cloud are essentially a public cloud that \textit{leverages virtual private network (VPN) technology..}\cite{Zhang2010} allowing users to combine characteristics of both public clouds and private clouds.
+  		\end{itemize}
 
-				\item{Monetary Efficiency} - Cloud providers allow users to keep their resources to the needed minimum. By allowing users to quickly and easily increase/decrease the allocated resources amount and billing clients only for the resources used, cloud providers are good way to save money and spend only the needed amount \cite{Garrison2012,Mell2011}.
-		    
-				\item{Scalability} - usually through a public API of some kind most cloud providers allow for the quick increase or reduction of resources \cite{Mell2011}. This enables businesses to quickly go from zero to millions of users with minimum overhead. Additionally because processes related with the management and configuration of cloud servers can be automated it is usually possible to manage large systems with small teams \cite{Loukides2012}. 
-		    
-		    	\item{Maintainability} - Cloud Providers are responsible for the maintenance of all the hardware and infrastructure aspects. Cloud computing users therefore do not need to worry about updating the hardware or maintaining the physical infrastructure. This enables users to focus their resources in improving their product rather than improving the structure that supports it \cite{Garrison2012}.
-			\end{itemize}
-            
-		\subsection{Challenges} \label{chap:stateoftheheart:sec:cloud:sec:challenges}
+      \subsection{Service Levels} \label{chap:stateoftheheart:sec:cloud:sec:servicelevels}
+  		In terms of service levels cloud computing can be classified in regards to the provided abstraction. The main categories are the following \cite{Vaquero2008} :
+  		\begin{itemize}
+  			\item \textbf{SaaS} - Software as a Service (SaaS) gives users access to a platform usually through a web client. Without the need to  download or install software the user is able to use the provided software instantly and virtually everywhere.\linebreak Applications of this model include messaging software, email services, collaborative platforms, etc.
+ 				\item \textbf{PaaS} - Platform as a Service (PaaS) allows it's users to quickly deploy applications with little to no configuration. In this type of platform environments are usually pre-setup or configurable. PaaS users should nevertheless expect only to be able to deploy applications or software supported by the provider.
+  			\item \textbf{IaaS} - Infrastructure as a Service (IaaS) represents the lowest abstraction made available by cloud providers. In this model the user is able to configure and access a machine directly without constraints. This machine, usually a virtual server managed by the provider, can be configured and maintained by the user.\linebreak This model is used when applications are complex and therefore need complex configurations.
+  		\end{itemize}
 
-		The main challenges related with cloud computing are related with security aspects \cite{Zhang2010}. Given the remote accessibility nature of cloud computing resources, there is always fear that unwanted entities/parties may gain access to both the resources and the information that they hold. Some solutions to this problem include virtual private clouds or private clouds. 
-
-
+  		\subsection{Benefits} \label{chap:stateoftheheart:sec:cloud:sec:benefits}
+  			The main advantages of cloud computing for it's users can be summarized as following:
+  			\begin{itemize}
+  				\item \textbf{Monetary Efficiency} - Cloud providers allow users to keep their resources to the needed minimum. By allowing users to quickly and easily increase/decrease the allocated resources amount and billing clients only for the resources used, cloud providers are good way to save money and spend only the needed amount \cite{Garrison2012,Mell2011}.
+  				\item \textbf{Scalability} - usually through a public API of some kind most cloud providers allow for the quick increase or reduction of resources \cite{Mell2011}. This enables businesses to quickly go from zero to millions of users with minimum overhead. Additionally because processes related with the management and configuration of cloud servers can be automated it is usually possible to manage large systems with small teams \cite{Loukides2012}.
+  	    	\item \textbf{Maintainability} - Cloud Providers are responsible for the maintenance of all the hardware and infrastructure aspects. Cloud computing users therefore do not need to worry about updating the hardware or maintaining the physical infrastructure. This enables users to focus their resources in improving their product rather than improving the structure that supports it \cite{Garrison2012}.
+  			\end{itemize}
 
 	\section{DevOps} \label{chap:stateoftheart:sec:devops}
-		
-        In \say{What is DevOps} \cite{Loukides2012}, Mike Loukides recalls a time when operations and development weren't separated and the same person that developed would also operate the equipment.  
-        
-        In the time between then and the present a great deal of things changed. Personal computers appeared, the internet grew to become a global network and two separate roles emerged in the software development life cycle: Developers and Operations. Developers, would rise as the creators of the software and operations, as the maintainers and managers of both the software and the infrastructure that supported it after it was developed.
-        
-        As maintainers of the software and infrastructure, operations would have ,as their goal, keeping both hardware and software working. This meant deploying new instances of software every time usage increased, adding or fixing servers and, when needed, upgrading the software and infrastructure. Manually done, in the beginning, and eventually automated with the help of scripts, this tasks would prove to be too hard and complex to be done efficiently and reliably. 
-        
-        New solutions to handle this problem had to be found and taking advantage of cloud computing and virtualized servers a shift from hardware owned resources to hosted resources begun.
-        
-        In the cloud, resources are virtualized and operations are no longer responsible for maintaining the hardware. Tools that allowed the configuration of virtualized resources in the form of code would soon appeared.
-        
-        	It became clear, as a result of the advances of cloud, that, the traditional role of operations no longer applied. As there was no hardware to manage and infrastructure could now be managed by code, the operational role had lost most of it's significance. The responsibilities that remain were, therefore, integrated in the development team. This team would now work closely with ex-operations to ensure the reliability of the produced software.   
-	
-      \subsection{Benefits} \label{chap:stateoftheheart:sec:devops:benefits}
-      
-      In \cite{Elliot2015}, a number of claims is made in regards to the possible benefits of adopting DevOps.
-      These benefits are:
-		\begin{itemize}
-			\item{DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client }
-            
-            \item{Adopting DevOps allows business to practice Continuous Delivery}
-		\end{itemize}
-      
-      
-      \subsection{Challenges} \label{chap:stateoftheheart:sec:devops:challenges}
-    
-    	DevOps is powerful in the sense that it allows companies to better react to different kind of scenarios and environments. Nevertheless the adoption of DevOps is not easy and a lot of companies struggle to achieve it. 
-    
-        Making the matters worst study or information relative to DevOps is scarce \cite{SaugatuckTechnology2014} and, the existent information, is usually spread throughout several sources. 
 
-        Recently, in a survey made by \cite{SaugatuckTechnology2014} where around 300 development and IT companies were surveyed, it was asked what were the main issues identified when adopting DevOps. Some of the highlighted aspects emphasized  were: 
+      \subsection{Developers \& Operations} \label{chap:stateoftheheart:sec:devops:sec:devsandoperations}
+      First it is important to understand who were the interested parties and how they were related.
+
+      In software development there are two responsabilities that fall on two distinct departments: Operations and Developers.
+
+      Operations and their members are charged with the responsibilitie of operating the companies computing infrastructure. From changing faulty hardware to configuring new machines or monitoring incoming traffic, Operations have, as their goal, to keep the applications they were operating running and doing so correctly \cite{Bass}.
+
+      Developers, develop and build the application. The result of their work is then handed over to Operators who would then be resposible for running the application \cite{Huttermann2012}.
+
+      \subsection{Problem} \label{chap:stateoftheheart:sec:devops:sec:problem}
+
+      In \textit{Agile infrastructure and operations: How infra-gile are you?} \cite{Debois2008}, Patrick Debois discusses and describes three different attempts to apply Agile methodologies to infrastructure and operations teams. In the three cases, companies had identified that the lack of articulation between the two departments was causing problems like failure to meet deadlines, outages or a lack of consistency across environments which lead, directly or indirectly to the loss of value for the respective companies.
+
+      As the article progresses, the cultural and technological changes that happened are described and, in the end a list of patterns is identified. Some of those patterns are as follow:
+
+      \begin{itemize}
+        \item \say{ Operations know very well that changes introduce incidents. Therefore they think their job is to minimize change to the production environment. Still they serve the same customer the project does. Therefore the project should have a view on the demands the customer puts on the operations.}
+        \item \say{ Development and infrastructure need to be seen as whole and not two separate projects. This is especially difficult in large enterprises where both belong to different entities.}
+        \item \say{ Technical skills need to be complemented with an agile mindset. Similar to the technical, to speed things up have experienced agile project managers guide the process.}
+        \item \say{ Non-agile infrastructure tends grow old changes are hard to execute in these environments. This can be seen as technical debt.}
+        \item \say{ Every change will eventually require a management buy-in to allow it to persist.}
+      \end{itemize}
+
+      \subsection{Solution}  \label{chap:stateoftheheart:sec:devops:sec:solution}
+
+      In 2009, John Allspaw and Paul Hammond gave a talk at the \textit{Velocity Conference} named \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} in San Jose where they discussed a new culture emerging at Flickr \footnote{www.flickr.com}. In this culture, John and Paul describe the way operations and developers objectives are changed from respectively keeping the site stable and fast and creating new functinalities to being enablers for the business. As the business evolve, changes are needed and both developers and operations should create the environment where those changes are possible without representing a risk for the business.
+
+      The talk then continues to describe the changes that happen at Flickr that enabled this change:
+
         \begin{itemize}
-       	    \item{Overcoming cultural habits inside the organization.}
-            \item{Lack of experience or understanding of DevOps practices.}
-            \item{Lack of buy-in from leadership.}
-    	\end{itemize}
-        
-        In another study, \cite{Debois2008} where three attempts to implement ideas similar to the ones defended by DevOps the same aspects related to cultural aspects as well as the lack of information are mentioned.
-        	
-        Both studies emphasize that adopting DevOps is far from being easy and that more work must be made in order to allow future DevOps adopters to fully understand the consequences,problems and solutions associated with DevOps.
-      
+          \item \textbf{Automation} - By automating deployment processes (for staging or production environments), consistency across the environments improved decreasing the chance of errors in production.
+          \item \textbf{Deploying Frequently} - By enabling deploys to be made often(due to the automation of some of the deployment processes), this meant that less functionalities would be deployed each time. This made deployments more manageable and in turn safer.
+          \item \textbf{Using Feature Flags} - Feature flags are special flags that toggle features on and off. Using this, improved error handling because if a feature was faulty, one could just turn it off rather than having to fix it right away. Feature flags would also enable more complex schemes of operation where certain functionalities would be launched but would not be displayed in the final site, once it was observer that the new functionality would not hurt performance or cause some kind of error, the flag could be turned on and the new funtionality would be available.
+          \item \textbf{Version Control} - All code was centralized in a single repository. This meant that there was more transparency across instances.
+          \item \textbf{Shared metrics} - Developers and operations would have access to metrics related with the site. Having this, developers could know how certain features would affect the infrastructure and this would in turn influence their decisions.
+          \item \textbf{Communication increase \& Cultural changes} - Developers and operations would communicate and a culture of respect and understanding between the two departments would be promoted. This change would allow trust to exist between the two departments meaning that developers and operations would take each other points of views, problems and objectives into consideration. Additional rules like \textit{No finger pointing} would also promote a culture of collaboration and mutual aid between the two .
+        \end{itemize}
+
+      In the end, John and Paul both highlight the importance of the cultural aspects of the change. In their opinion if the cultural aspects are not met, the tooling or new practices will not be enough.
+
+      \subsection{The DevOps Movement}
+      In the problem section \ref{chap:stateoftheheart:sec:devops:sec:problem} we saw how the separation of departments was causing problems to both the businesses and professionals. This problem, often seen ans unsovable, would soon after be view as solvable after all. In \ref{chap:stateoftheheart:sec:devops:sec:solution} a new way of doing things started to emmerge. This new ideas would eventually fuel a community that would discuss them and enventually DevOps emmerged.
+
+      In the several studies that we read, we found several definitions for DevOps. Some or quite large and broad. In this thesis, we will use the one from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} which is:
+
+      \say{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.}
+
+      We find this definition to be empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. On the other hand, it does allow us to easily classify something as being DevOps or not i.e. we only have to ask ourselves if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in normal production, if it does, then it is DevOps.
+
+      As we saw in \ref{chap:stateoftheheart:sec:devops:sec:solution}, there are several ways in which DevOps can influence professionals and the work they do, but we have not seen what are the benefits for businesses. In \textit{DevOps and the Cost of Downtime: Fortune 1000 Best Practice Metrics Quantified} \cite{Elliot2015}, DevOps is viewed from a more business centric perspective and the following benefits are identified:
+
+		  \begin{itemize}
+			    \item{DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client }
+          \item{Adopting DevOps allows business to practice Continuous Delivery.}
+          \item{The average cost of a critical application failure per hour is \$500,000 to \$1 million (DevOps can help reduce application failures).}
+          \item{The average cost percentage (per year) of a single application's development, testing, deployment, and operations life cycle considered wasteful and unnecessary is 25\% (DevOps can help automate some repetitive tasks)}
+		  \end{itemize}
+
+      \subsection{Patterns}
+      Some previous progress has already been made regarding the identification of DevOps related patterns. We will summarize this progress by listing the identified patterns and briefly describing them:
+      \begin{itemize}
+        \item \textbf{Store Big Files in Cloud Storages}\cite{Cukier2013} - Instead of creating and managing a system to store large files, or storing them in database columns, store them in a Cloud Storage\footnote{A storage system provided by a cloud provider.}
+        \item \textbf{Queue based solution to process asynchronous jobs}\cite{Cukier2013} - When there are tasks that take a long time to complete but users still expect a quick response, create a new Job instance in a queueing service and then have a service performing those tasks. When finished, post the result of that Job somewhere acessible to the user and notify the user that the task is done.
+        \item \textbf{Prefer PaaS over IaaS}\cite{Cukier2013} - For non technology companies, PaaS is usually preferable because it will give them lot of functionalities without the need for configuration. This will allow them to simply focus on their core business.
+        \item \textbf{Load Balancing Application Server with memcached user sessions}\cite{Cukier2013} - Use a load balancer in front of your application servers. This severs will handle sessions using memcached which means that if a application server goes down or if a new application server is needed, it will be able to use the user session.
+        \item \textbf{Email delivery}\cite{Cukier2013} - Rather than implementing your own SMTP solution, use cloud mail delivery services which provicde REST API's to send emails.
+        \item \textbf{Logging}\cite{Cukier2013} - Having multiple servers you need a way to consolidate your application logs. In order to do so, you should use a cloud based log service.
+        \item \textbf{Realtime User Monitoring (RUM)}\cite{Cukier2013} - Monitor user behaviour in order to find possible bugs or errors.
+        \item \textbf{The isolation by containerization pattern} \cite{Sousa2015} - \say{Use a container to package the applications and its dependencies and deploy the service within it}.
+        \item \textbf{The discovery by local reverse proxy pattern} \cite{Sousa2015} - \say{Configure a service port for each service, which is routed locally from each server to the proper destination using a reverse proxy.}
+        \item \textbf{The orchestration by resource offering pattern} \cite{Sousa2015} - \say{Orchestrate services in a cluster based on each host’s resource-offering announcements.}
+
+      \end{itemize}
 
 
 	\section{The Portuguese startup scene} \label{sec:stateoftheart:sec:portuguesestartupscene}
-    	Motivated by a recent investment in innovation and entrepreneurship, Portugal startups have been growing their position in the global startup scene \cite{Coleman2015}.  
-        
-       A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country. UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa, both business incubators, have currently more than 300 companies \cite{Uptec,StartupLisboa} under their wing. 
+  Motivated by a recent investment in innovation and entrepreneurship, Portugal startups have been growing their position in the global startup scene \cite{Coleman2015}.
+
+  A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country. UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa, both business incubators. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.

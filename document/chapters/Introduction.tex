@@ -1,46 +1,62 @@
 \chapter{Introduction} \label{chap:introduction}
+	Altough DevOps ideas are not recent (DevOps ideals can be traced back as far as 2008) academic and peer reviewed literature about the subject is scarce.
+
+	Having notice that, we aim, in this thesis, to study DevOps and the way it is being applied near the industry. With this study, we aim to enable those that want to adopt DevOps and those who want to study DevOps with a starting point on which to build.
+
+
+
+
+
 
 	\section{Context} \label{chap:introduction:sec:context}
+	Developing and maintaining/operating software are often disjoint tasks and responsabilities. This pattern has been observed in several organizations and project management techniques. Nevertheless, this was not always the case, and, in the beginning, the same person that developed the software was also the person that operated it \cite{Loukides2012}.
 
-		As the Internet grew and more people joined, an ever increasing number of
-	businesses and opportunities started to emerge.
-		
-	    Initially, businesses that wanted to provide services over the Internet would need to buy servers, hire operations crews and buy real estate to accommodate the previous two. Additionally, businesses were also subjected to large usage fluctuations. This meant that a lot of the time, servers and teams were not being used in an optimal way. 
-	    
-	    Large upfront costs combined with large maintenance costs and unused resources were obviously not desirable and eventually solutions to this problems started to appear. Eventually named ”cloud computing”, the solution consisted in a new type of business that allowed other businesses to rent computing resources with little to no upfront costs. Cloud computing providers would charge businesses based on the usage as well as allow them to quickly increase or decrease computing resources. This elasticity combined with the elimination of the previously mentioned upfront costs meant that more businesses could be born and that the existing ones could lower their operational costs.
+	As a result of this separation, two separated departments were born. This two departments, Development and Operations, would not be able to efficiently articulate preventing businesses from beeing as efficient as they could be.
 
-		In the midst of this change a new set of opportunities and problems started to arise. This ideas and problems eventually started the denominated DevOps movement. This movement called for the end of organizational boundaries between operations and development departments, integration of the previous two and the automation of repetitive tasks. This way DevOps aimed to reduce software time to market, teams sizes and also increase businesses agility and efficiency.	
+	Devops appeared within this context with the objective of solving this lack of articulation between those that developed and those that maintained/operated.
+
+
+
+
 
 	\section{Problem} \label{chap:introduction:sec:problem}
 
-		The DevOps movement spans throughout a vast set of areas. This means that successfully understanding DevOps is not easy and can often seem like a never ending task requiring an informed and multidisciplinary approach.
+	The DevOps movement spans throughout a vast set of areas and tries to change both techniques and culture. This variety means, nonetheless that Devops can offer an integrated approach that takes into consideration several aspects of the software pipeline but, at the same time, makes it hard to fully study and understand.
 
-		Regarding the current state of the literature on DevOps there is not a lot of investigation done on the subject \ref{chap:stateoftheheart:sec:devops:challenges}. 
+	Looking at the current state of DevOps, we can see that the movement popularity was and is rising. We can find, with a simple search, numerous blog posts made both by individuals and companies about their experiences and opinions regarding Devops an its adoption. Not only that, but there are also a growing number of "Devops ready" tools that promise to simplify and empower companies with the benefits of Devops.
 
-		Companies that want do adopt DevOps are, as a result, required to learn the challenges and solutions of adopting DevOps while adopting it. Obviously this is far from being ideal and consequently companies may fail to adopt DevOps or practice it in an efficient way.
+	Contrastingly, a simmilar search on a search engines like "Engineering Village" or "Scopus" will yield a much smaller list of results.
 
-		   
-	\section{Motivation \& Objectives} \label{chap:introduction:sec:motivation}
+	This lack of academic literature and study means that Devops understandment is still mostly based on opinions and personal experiences. Consequently, adopting Devops is not trivial.
 
-	    This work aims to provide companies and teams that want to adopt DevOps with knowledge relative to DevOps and the adoption process. This information should be easy to access and understand and, it should allow companies to have a feeling of the effort needed to adopt DevOps as well as allow them to define a preliminary road map for the adoption. 
-	    
-	    Lastly with the information provided, companies must be able to solve most of the problems that will appear when adopting DevOps.
 
-    \section{Expected Contributions} \label{chap:introduction:sec:contributions}
 
-    	Contributions of this work will be:
+
+	\section{Motivation} \label{chap:introduction:sec:motivation}
+
+	Devops represents a new way to look at the entire software pipeline. From development to delivery and maintenance, Devops represents an advantage for both teams and businesses by creating a more efficient, agile and collaborative way of working. From a more business centric perspective, DevOps also reduces the software time to market which provides a competitive advantage for those that are able to practice it.
+
+	With that in mind, we believed that studying Devops, its values and common practices, will allow for a broader adoption and further strengthening of the movement.
+
+
+
+
+	\section{Goals}
+	The main goal of this thesis is to increase the existent knowledge regarding DevOps. With this increment, teams and companies that want to adopt DevOps will be able to better understand common pitfalls and solutions related with DevOps. At the same time, further studies of the DevOps movement will be able to build upon this study by extending the current concepts or by having a base from which to search new ones.
+
+
+  \section{Contributions} \label{chap:introduction:sec:contributions}
+	Taking into account the goals defined for this thesis, we defined the contributions of this thesis to be:
     	\begin{itemize}
     		\item{A comprehensive description of the current state of the art regarding the DevOps movement.}
-    		\item{Identification of good practices concerning the DevOps adoption.}
-    		\item{Elicitation of common obstacles faced when adopting DevOps.}
-    		\item{Validation of the former two items in a real world scenario.}
+    		\item{Set of patterns and good practices concerning DevOps.}
     	\end{itemize}
 
-    \section{Outline} \label{chap:introduction:sec:outline}
-    	This report was made as preparation for the dissertation.
+  \section{Outline} \label{chap:introduction:sec:outline}
+    	\TODO{This report was made as preparation for the dissertation.}
 
-    	In it there is a Introduction \ref{chap:introduction}, followed by the state of the art \ref{chap:stateoftheart} regarding the reach and size of the Internet \ref{chap:stateoftheart:sec:internet}, cloud computing \ref{chap:stateoftheart:sec:cloud} and DevOps \ref{chap:stateoftheart:sec:devops}.
-    	Section \ref{chap:towardsdevops} defines both the problem \ref{chap:towardsdevops:sec:problem}, the solution \ref{chap:towardsdevops:sec:solutionperspective}, and the methodology \ref{chap:towardsdevops:sec:methodology}.
-    	Then, the method for validating the obtained results is described in \ref{chap:validation}.
-
-    	Lastly, the Conclusion is presented and the planning for the future work is presented \ref{chap:conclusion}.  
+    	% In it there is a Introduction \ref{chap:introduction}, followed by the state of the art \ref{chap:stateoftheart} regarding the reach and size of the Internet \ref{chap:stateoftheart:sec:internet}, cloud computing \ref{chap:stateoftheart:sec:cloud} and DevOps \ref{chap:stateoftheart:sec:devops}.
+    	% Section \ref{chap:towardsdevops} defines both the problem \ref{chap:towardsdevops:sec:problem}, the solution \ref{chap:towardsdevops:sec:solutionperspective}, and the methodology \ref{chap:towardsdevops:sec:methodology}.
+    	% Then, the method for validating the obtained results is described in \ref{chap:validation}.
+			%
+    	% Lastly, the Conclusion is presented and the planning for the future work is presented \ref{chap:conclusion}.
