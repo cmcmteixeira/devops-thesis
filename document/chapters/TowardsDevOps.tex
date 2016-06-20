@@ -1,45 +1,41 @@
-\chapter{Studying the Portuguese Startup Scene} \label{chap:towardsdevops}
-
+\chapter{Towards DevOps} \label{chap:towardsdevops}
+    In this chapter we will look at the approach used in order to solve the problem described in \ref{chap:introduction:sec:problem}. We will start by looking at how we defined the sample from which we extracted information and then how we handle that data in order to produce the final results.
 
     \section{Methodology} \label{chap:towardsdevops:sec:methodology}
+      In \ref{chap:stateoftheheart:sec:devops:sec:movement} we saw that the DevOps movement emerged in the software development\footnote{software development should be seen in this context as both the development, maintenance and any other tasks related with the creation of software} community. Having this factor into consideration and knowing that there is still a significant lack of scientific information regarding the subject, we choose to look for a solution within the development community. We believed, before conducting this study, that not only would they be able to provide us that information, but because they were using this techniques/tools in their daily activities, it would serve also an extra layer of assurance.
 
-    Both the companies and the individuals that have been involved in the  adoption of DevOps are the best sources regarding the subject. Even though most of the knowledge they hold is not formalized, it represents a tested  set of solutions to identified problems.
+      \subsection{Collecting the information}
+      Taking into consideration the vastness of topics that DevOps \ref{chap:stateoftheheart:sec:devops:sec:movement} touches, we knew that it would not be hard to create a form that covered that extensively. Instead, the chosen approach was to do go for a more exploratory approach. This idea lead to the creation of a script rather than a form that would guide the interviews. This script had 5 major sections:
+      \begin{itemize}
+          \item \textbf{Product} - The product section would try to understand, first what did the company do and secondly if there were any kind of special requirements that would influence what followed.
+          \item \textbf{Team Management} - Team sizes, interactions, project management techniques would be analyzed here.
+          \item \textbf{Software delivery pipeline} - In this section, we identified if teams did Continuous Integration, how did they handled the creation of environments for each of the pipeline states and what teams did what in each state.
+          \item \textbf{Infrastructure Management} - We tried to capture how the companies handled their infrastructer. Did they use the cloud? Which processes did they automate?
+          \item \textbf{Monitoring \& Error Handling} - With this section we aimed to understand if the companies were monitoring their infrastructure, how did they do it and, when errors were detected, how were they responding.
+      \end{itemize}
 
-    In order to collect this knowledge individuals and companies must be given a way to share their experiences and knowledge.
+      \subsection{Defining a sample} \label{chap:towardsdevops:sec:methodology:sec:sample}
+      As it was seen in \ref{sec:stateoftheart:sec:portuguesestartupscene}, Portugal as a rich startup community. Startups have strict contraints regarding the ammount of resources they have at their disposal and have, as a result, aditional incentive to automate as many tasks as they can. Being small companies(in terms of staff) communication and cultural aspects are usually guided towards cooperation as this is a key factor in allowing small teams to handle large projects. Finally, the fact that startups have as their objective to scale further highligh the need for automation and cooperation. This conjugation of factors meant the mindset of startups was aligned with the DevOps one and startups are therefore a good place to look for information that can be directly linked to DevOps.
 
-    This collection of data will initially be made through online surveys. These will serve the purpose of selecting companies in which to focus.
+      Having more than 300 startup companies \ref{sec:stateoftheart:sec:portuguesestartupscene} from which to choose, there needed to be a way to reduce the size of the sample. With that objective we listed and attempted to identify if a startup was doing software development or not. To do so we looked to, when available,at the company web page and tried to determine if the company had staff members working on software development task. When we could not find a team page, we also looked at the Linkedin\footnote{www.linkedin.com} companie profile and did the same thing. Companies that had software developers or software related productswould go to the next round. We were able to reduce the sample to 155 companies.
 
-    When chosen, provided that they authorize it, companies will be asked to in a detailed way :
-    \begin{itemize}
-      \item{ Why did they felt that adopting DevOps was necessary. }
-      \item{ What initial concerns did they have when adopting DevOps. }
-      \item{ What were the obstacles that they have to overcome and how they they overcome them. }
-      \item{ What technologies do they use. }
-    \end{itemize}
+      Because the ammount of time we had was limited, it would not be possible to interview those 155 companies. We choose, in this phase, to prioritize which companies were better or worst for our study. To do so we created a compound evaluation metric that would allow us to rank companies. We created 5 metrics to do so:
+      \begin{itemize}
+        \item \textbf{Cloud Usage} - We created three possible values for this metric. If a company used cloud services, we would give the company 2 points. If we were not sure if a company was using cloud services, we would give it 1 point. If we know the company was not using cloud services, we would give it 0 points. With this metric we attempted to distinguish between, for instance, companies that were developing hardware solutions from those that were developing more software oriented solutions.
 
-    The gathered data from all companies will then be analyzed, compiled and formalized in the form of patterns
+        \item \textbf{SaaS/PaaS offering} - Having the same point attribution schema as the \textit{Cloud Usage} metric we believed that if a company had a SaaS/PaaS product, it would need to have some sort of automation put into practice as it would need to be able to scale if there was a sudden increase in clients.
 
-    \section{Solution Perspective} \label{chap:towardsdevops:sec:solutionperspective}
+        \item \textbf{Company Size} - We create four possible values for each metric. Companies could have 0,1,2,3 points if they had respectively less than 5 members, between 5 and 15 memebrs, more than fifteen members or more than fifteen members and several teams.
 
-    Collecting data from different companies will provide us with useful information on how to successfully adopt DevOps and what are the common pitfalls and traps, however, if not treated, this information can feel clumsy and disconnected. That is why, in addition to the collected data, common problems and solutions will be represented as patterns.
-        \subsubsection{Granularity}
-        In it's lowest level, granularity for the solutions presented could go as far as to specify what tools to use and how to configure and set them up. This would nonetheless be counterproductive as different companies have different requirements and different requirements require different tools. Consequently, the final solution will try to be tool agnostic and only present the situation and the types of solutions available with the hope to help the broader audience it can reach.
-        \subsection{Why patterns?}
-        In the software development world there are several examples of different domains that were studied and where patterns were identified. Architecture, software development and Scrum are just some examples of that.
+        \item \textbf{Subjective Appreciation} - This metric would reflect the overall opinion of the company that we developed when searching for information for the other metrics. Some common factors that influenced this metric were for instance the fact that some companies had no software developers, or the company website was down.
+      \end{itemize}
 
-        Patterns are by definition recurring and, in that sense, identifying them means identifying situations that will frequently happen. This allows us to prevent common pitfalls and be prepared with solutions in case we can not prevent them.
+      This ranking is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe more relevant than the second one, but rather as a way to prioritize them i.e.the first company surely is more intersting to study then the last one.
 
-        When identified, patterns allow us to have a common language while referring to domains of knowledge. Instead of having to constantly describe a situation or solution one can simply refer the pattern and, provided that there is a common knowledge of the pattern, communication can be greatly simplified.
+      In the end of the study, we contacted 60 comapanies (of the remaining 155) from which we were able to interview 25.
 
-        Additionally patterns are also useful when reasoning about a subject. They allow us to abstract away the complexity of a situation and better visualize the overall solution as a set of pattern instead of an agglomerate of situations.
+      \subsection{Processing the data}
 
-        Lastly, although they are tied to a context, patterns are within that context generic, meaning that they are not tied to a specific moment in time or space. This makes them even more useful as they can be reused.
-        \subsection{Domains}
+      After conducting the interviews the next task was to analyze and process the collected information.
 
-        As DevOps spreads throughout different areas of knowledge both the cultural and technological aspects need to be considered.
-
-        In the cultural side, information about aspects like how to redistribute operations teams or how to improve communication between peers will ,as well as other problems, be gathered and discussed. This will hopefully allow companies and their members to better accept the adoption of DevOps.
-
-        In the technological side, ways to improve the infrastructure elasticity among others will also be addressed.
-    \section{Company selection and sorting}
-    \section{The script}
+      We started by creating a set of concepts/techniques that were observed. This concepts/techniques were then analyzed and we extracted their frequency in the data set. It became clear at this point, that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified one or two times. This lead us to the next option that would be to identify the practices that were relevant to our study and that embodied the DevOps mindeset. Using this criteria we were able to identify a total of 13 practices.

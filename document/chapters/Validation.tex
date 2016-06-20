@@ -1,99 +1,66 @@
 \chapter{ Validation } \label{chap:validation}
-	Validating the collected data and the subsequently identified patterns cannot be made in a formal way.
-
-	The only course of action available is therefore to measure the effects that applying the gathered information has in a real world situation. In order to do so, measurements must be made before and after the application.
+	In this chapter we describe the validation of some of the collected patterns at Ventureoak \footnote{www.ventureoak.com}. In the beggining, we describe the Ventureoak core business and the methodology used to validate the identified patterns.\\
+	We then show, for each pattern, what were the measured changes.
 
 	\section{Ventureoak}
+	VentureOak is a startup currently operating at UPTEC, Porto that started its activity in 2014. \\
+	Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases. \\
+	At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market. \\
+	Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually made up of only developers. \\
+	Operations at Ventureoak are mostly managed by one of the employees altough access is provided and used by the other members of the company. Usually, infrastruture is handled manually.\\
 
-	VentureOak is a startup currently operating at UPTEC, Porto that started its activity in 2014. 
+	\section{Methodology} \label{chap:validation:sec:methodology}
+	In order to validate the collected patterns, there were two approaches used. \\
+	The first was to take advantage of some of the changes that were already ocurring at Ventureoak. This changes, like the \textit{Code Review} pattern were already being implemented when we arrived and in order to take advantage of that we tried to find, near the team what did they feel changed when this techniques were applied.\\
+	The second approach used consisted in applying the patterns and then measuring what changed.
 
-	Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases.  
-
-	At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market.
-
-	Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually made up of only developers. 
-
-	Operations at Ventureoak are done by one of the employees. This member of the company accumulates most of the operations responsibilities and these are usually done manually. 
-
-\section{Methodology} \label{chap:validation:sec:methodology}
-	
-	During the month of May, in order to validate the gathered information, one of the projects that will being developed at that time will be chosen. In this project an attempt to partial or fully automate the work flow will me made. 
-
-	During this attempt a set of indicators will be extracted periodically - once each week. This indicators will be of two types:
-
-	\begin{itemize}
-		\item{Objective Indicators} - Indicators in this category are for instance the deployment frequency or time and will be gathered by direct observation.
-
-		\item{Subjective Indicators} - Subjective indicators will be gathered by asking - in the form of 
-questionnaires - teams members and management what is their impression about the current changes. They will also be asked to quantify how much better/worse they think they are in a different set of indicators.
-
-	\end{itemize}
-
-	At the end of each week, questionnaires will be made and based on them a plan of action will be written that will aim to solve possible dissatisfactions felt by both team and management and improve direct measurement indicators. 
-
-	Additionally teams will be allowed to give suggestions about what they think should change or in what direction to go. These opinions will also be considered when creating the action plan. 
-
-\section{Indicators \& Acceptance Criteria}
-
-	Having a wide area of application and focusing its attention in several areas and domains, measuring the success of adopting DevOps can be difficult. In this work the evaluation of the success factor will be divided into two main categories having each a set of criteria for acceptance:
+	\section{Application}
 
 
-	\begin{itemize}
-        \item{ Objective indicators }
-        	\begin{itemize}
-				\item{Deployment Frequency} - Deploying an application is the process by which software can be made available to the customer. By increasing the deployment frequency teams can more frequently transmit value to the customer. 
-                
-				\item{Deployment Time} - Deployment time is of great importance as it enables companies to quickly respond to change. 
-                
-				\item{Set Up Time} - Being able to quickly set up new environments is crucial in order for teams to bring new developers in quickly and effectively.
-
-				\item{Infrastructure Elasticity} - Being able to quickly and in an automated way increase or decrease the infrastructure size can mean the difference between success and failure. 
-
+	\section{Pattern Validation}
+		\subsection{Cloud}
+			\subsubsection*{Before}
+			The cloud pattern was already being used at Ventureoak. Ventureoak prefered to use the IaaS alternative which allowed them to fully control their infrastructure. This, however forced Ventureoak to handle their own infrastructure monitoring setup. At the time this study was made that meant that a New Relic instance was installed in the used servers. Elasticity was not a priority and so there was no automatic way of scalling.
+			\subsubsection*{Implementation}
+			Due to the choices made for \textit{Reproducible Environments} and \textit{Deploying new instances} as well as the objectives for \textit{Continuous Integration} , manually handling the deployment process was not desirable. As a result, we choose to use a PaaS alternative instead and used AWS Elastic Beanstalk.
+			\subsubsection*{After}
+			Because of the usage of AWS Elastic Beanstalk, we were able to have, without having to spend time implementing it:
+			\begin{itemize}
+					\item Automatic restart in case of error was already implemented.
+					\item Load balancing was enabled from the start.
+					\item Automatic scalling could also be configured from the start.
+					\item Automatic deployment management.
+					\item Automatic rollbacks.
 			\end{itemize}
-            
-            
-        \item{ Subjective indicators }
-        	\begin{itemize}
-
-        		\item{Team cohesion \& communication} - Teams should be able to communicate and feel as if they are one. This enables them to better react to change.
-
-				\item{Team satisfaction} - Team satisfaction is essential as it promotes more motivated professionals and better results. 
-                
-				\item{ Managerial satisfaction } - The satisfaction of the managerial team is of great importance as it usually reflects the current state of the business. 
-                
-			\end{itemize}
-
-	\end{itemize}
-	\pagebreak
-	For the previous indicators the following acceptance and rejection criteria will be used: 
-    
-		\begin{table}[h!]
-			\centering
-            \caption{Objective Indicators}
-			\label{tab1}
-			\begin{tabular}{|l|c|c|}
-               	\hline
- 				Indicator & Acceptance & Rejection  \\ \hline
- 				Deployment Frequency & Increase  & Decrease   \\ \hline
- 				Set Up Time & Decrease &  Increase  \\ \hline
- 				Deployment Time & Decrease &  Increase  \\ \hline
- 				Infrastructure Elasticity & Increase & Decrease \\ \hline 
-			\end{tabular}
-		\end{table}
-
-
-
-		\begin{table}[h!]
-			\centering
-            \caption{Subjective Indicators}
-			\label{tab2}
-				\begin{tabular}{|l|c|c|}
-                	\hline
- 					Indicator & Acceptance & Rejection  \\ \hline
- 					Team satisfaction & Increase  & Decrease   \\ \hline
- 					Team cohesion \& communication & Increase  & Decrease   \\ \hline
- 					Managerial Satisfaction & Increase &  Decrease  \\ \hline
-				\end{tabular}
-			\end{table}
-
-		
+			\subsection{Code Review}
+			A code review process was already underway at Ventureoak. This process was conducted as a way for members to share opinions and help each other grow faster. \\
+			When we talked with Jorge Meireles, the Ventureoak Head of Development, he confessed that the process was not being adopted by the entire team and that the efectiveness of the process was therefore not being fully potentiated. Nonetheless, Jorge told us that by reviewing the code produced by the team he was able to reduce code duplication and have a broader view of the project.
+			\subsection{Team Orchestration}
+			Teams at Ventureoak are usually small (between two and six members). This meant that communication was facilitated and because this teams were usually multidisciplinar, members were able to be always active and always contributing to the final product. \\
+			When new projects were started, this also meant that no special members could be easily allocated.
+			\subsection{Reproducible Environments}
+					Environments were setup manually and in the developers machine. This meant that often, problems would arise everytime a developer changed the version of a dependency like the gulp version or nodejs version. This problem would usually be quickly solved once identified. In production environments, however, it had happen that a service was deployed and the required dependenies were not installed meaning that the application did not work correctly. \\
+					Also, newcomers, usually took, depending on their previous experience, one or two days to fully install all of the needed dependencies. \\
+					With the release of PHP7, a new problem was also starting to appear. Developers would want to use this new, more performant version but not all projects could be upgraded. For some developers, this meant that they would have to have in their machines two distinct installations which sometimes generated some errors.
+				\subsubsection*{Implementation}
+					In order to provide the team with a way to easily reproduce their environments we used containerization. This approach was used because we would need to run several services at the same time and because we would need different configurations for each service.\\
+					This was done by using Docker which provided a way to describe the environment through a Dockerfile.
+				\subsubsection*{Results}
+					With this approach we were able to give the team a way to share their environment. Everytime a change was made, they would just have to push the new file that descibed the environment and, when other team members would pull that file, the environment would be easily updated. \\
+					For newcomers, setting up a project was now a matter of minutes. They would just have to install Docker and then running a command in the shell, the entire environment would be created.
+					Additionally, developers could now have different services running different PHP versions without needing to manage the extra complexity of having two distinct versions running on the same machine
+			\subsection{Continuous Integration}
+					Ventureoak had no stagin environment setup. This environment would house different projects and would create
+					\subsubsection*{Implementation}
+					In order to implement a Continuous Integration pipeline we begun by choosing a CI tool. The choice fell upon GoCD. The creation of the pipeline took around 2 weeks. The time it took was mostly due to the fact that the pipeline included and automated deploy to a test environment in AWS which took around a week to fully automate. \\
+					The setup phase also took advantage from the \textit{Reproducible Environments} choice and by using containers we were able to setup the system and easily install it in a different machine. \\
+					The CI pipeline would run on every push to the project repository and would have three phases. The first would create/update the needed configurations in the AWS Elastic Beanstalk service .The second would consist in building an container image and pushing that container to a registry. The third and last would be to trigger a deployment in the AWS Elastic Beanstalk Service. \\
+					\subsubsection{Results}
+					Before the creation of the CI solution a normal deployment could take between 5 and 20 minutes depending on the need to install newer dependencies or run some assets minimization tasks. This deploy would be managed by a developer and done by manually accessing the server and updating the code. This task would be done every time an external clients or internal project manager wanted to check if a feature was correctly implemented. Sometimes, developers forgot to clean the server cache and/or compile some assets and would leave the application in a inconsistent state. \\
+					By implementing the CI pattern we were able to remove the need for developers to manually handle the deployment and to enabled project managers to choose what to deploy and when to deploy. This automated deployment would usually take 5 minutes if the build and push step was already previously done and around 15 to 20 minutes if the build and push process  had to be done.
+			\subsection{Deploying new instances}
+					The deployment process followed the \textit{Reproducible Environments} approach. We would not be able to measure any indicator of success for the application of this pattern.
+			\subsection{Scalling}
+					Taking advantage of the automatic scalling options provided by the choice for \textit{Cloud} we were able to setup a scalable application without the need for extra work.
+			\subsection{Auditability, Alerting, Error Handling}
+					Having only deployed to a stagin environment, we were not able to identify metrics or situations related with this patterns.

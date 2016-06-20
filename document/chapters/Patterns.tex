@@ -1,65 +1,56 @@
+\chapter{ Patterns from the Portuguese Startup Scene} \label{chap:patterns}
+		The following patterns represent the result of the carried out interviews.
 
-\chapter{ Patterns } \label{chap:patterns}
-		
 		\begin{pattern}{Team Orchestration}
-			\context{
-			Budgets, customer needs, users numbers and other types constraints evolve at a fast pace. In order to be effective in this kind of environment, you want your teams to be able to adapt and respond quickly to those changes.
-			}
-			\problem{How do you ochestrate your team(s) so that they can handle new challenges and deliver results in a sustained manner ?}
-			\forces{
-				\begin{itemize}
-					\item Specialized teams are faster at answering specific problems related with their speciality. 
-					\item Specialized teams will not be able to deliver a final product if it requires skills beyond their speciality.			
-					\item Specialized teams must combine their efforts with other specialized teams.
-					\item Objectives for specialized teams may conflict with other specialized teams (e.g. the team responsible for the performance of an application may not agree with the user experience team when the later wants more content in a specific page).
-					\item Multidisciplinary teams can deliver a final product if they have all specialities represented.
-					\item Members of multidisciplinary teams must be able to work together. 
-					\item It may not be possible to have all expertises constantly working in parallel in the same team.
-				\end{itemize}
-			}
-			\solution{
-				Having multidisciplinary teams is usually and advantage. Multidisciplinary teams are able to articulate and communicate in order to deliver a product that takes into account several constraints and requirements specified by each of its members specialities. Additionally, teams that have representatives of the expertises needed to deliver the final product are able to deliver it.
+				\context{Budgets, customer needs, users numbers and other types constraints evolve at a fast pace. In order to be effective in this kind of environment, you want your teams to be able to adapt and respond quickly to those changes.}
+				\problem{How do you ochestrate your team(s) so that they can handle new challenges and deliver results in a sustained manner ?}
+				\forces{
+					\begin{itemize}
+						\item Specialized teams are faster at answering specific problems related with their speciality.
+						\item Specialized teams will not be able to deliver a final product if it requires skills beyond their speciality.
+						\item Specialized teams must combine their efforts with other specialized teams.
+						\item Objectives for specialized teams may conflict with other specialized teams (e.g. the team responsible for the performance of an application may not agree with the user experience team when the later wants more content in a specific page).
+						\item Multidisciplinary teams can deliver a final product if they have all specialities represented.
+						\item Members of multidisciplinary teams must be able to work together.
+						\item It may not be possible to have all expertises constantly working in parallel in the same team.
+					\end{itemize}
+				}
+				\solution{\textbf{Multidisciplinary} teams are able to articulate and communicate in order to deliver a product that takes into account several constraints and requirements specified by each of its members specialities. Additionally, teams that have representatives of the expertises needed to deliver the final product are able to deliver it.
 
-				In terms of size, this teams should not go beyond 10 elements. This constraint comes from the need that multidisciplinary teams have to be able to communicate effectively. Team members should be seen as equals and no hierarchical structure should be imposed inside the team.
+				In terms of \textbf{size}, this teams should not go beyond 10 elements. This constraint comes from the need that multidisciplinary teams have to be able to communicate effectively. Team members should be seen as equals and no hierarchical structure should be imposed inside the team.
 
 				Occasionally, due to changes on requirements, some team members can be shared with other teams.
-			}
+				}
 		\end{pattern}
 
 
 		\begin{pattern}{Communication}
-			\context{
-				Each member of a multidisciplinary team have different knowledge and backgroud that differ from each other. 
+				\context{Each member of a multidisciplinary team have different knowledge and backgroud that differ from each other.
 
-				Professionals working in this kind of environment will sometimes disagree as they guide their work by different contraints and goals. Facilitating the resolution of this discussions and promoting the sharing of knowledge/view points is therefore key and solutions must be found to promote this.
-			}
-			\problem{
-				What kind of approach should you adopt to promote communication and facilitate it?
-			}
-			\forces{
-				\begin{itemize}
-					\item You want to allow people to communicate easily.
-					\item When concentrated on a task some people do not like to be interrupted.
-					\item Some informatiom (e.g. links and code) may not be easy to share verbally.
-					\item Sometimes you want the content of the communication to be made available.
-				\end{itemize}
-			}
-			\solution{
-				\begin{itemize}
-					\item \textbf{Direct Communication} is efective in handling day to day problems (e.g. solving doubts, giving advice, asking for help). Having the teams physically working together is a great way of promoting this type of communication. 
-					\item \textbf{Chat tools} allow you to share links, files and code quickly. 
-
-					Sometimes chat tools are also useful if you need to speak with someone and you do not want to disturb him.
-					\item \textbf{Emails} can be used for sharing information that is not urgent(e.g. scheduling a reunion for next week). Additionally, emails can be used if your communication needs to be stored like when speaking with an outside provider or with a client.
-				\end{itemize} 
-
-			}
+					Professionals working in this kind of environment will sometimes disagree as they guide their work by different contraints and goals. Facilitating the resolution of this discussions and promoting the sharing of knowledge/view points is therefore key and solutions must be found to promote this.
+				}
+				\problem{What kind of approach should you adopt to promote communication and facilitate it?}
+				\forces{
+					\begin{itemize}
+						\item You want to allow people to communicate easily.
+						\item When concentrated on a task some people do not like to be interrupted.
+						\item Some informatiom (e.g. links and code) may not be easy to share verbally.
+						\item Sometimes you want the content of the communication to be made available.
+					\end{itemize}
+				}
+				\solution{
+					\begin{itemize}
+						\item \textbf{Direct Communication} is efective in handling day to day problems (e.g. solving doubts, giving advice, asking for help). Having the teams physically working together is a great way of promoting this type of communication.
+						\item \textbf{Chat tools} allow you to share links, files and code quickly.
+						Sometimes chat tools are also useful if you need to speak with someone and you do not want to disturb him.
+						\item \textbf{Emails} can be used for sharing information that is not urgent(e.g. scheduling a reunion for next week). Additionally, emails can be used if your communication needs to be stored like when speaking with an outside provider or with a client.
+					\end{itemize}
+				}
 		\end{pattern}
 
 
 		\begin{pattern}{Version Control Organization}
-			\context{
-				As more people are working on the same team and contributing to the same product it becomes increasingly difficult to manage and synchronize those contributions. Tools like Git, SVN and Mercury are helpful on dealing with this kind of problem.
+			\context{As more people are working on the same team and contributing to the same product it becomes increasingly difficult to manage and synchronize those contributions. Tools like Git, SVN and Mercury are helpful on dealing with this kind of problem.
 
 				You have chosen to use Git either because you believed it was the best fit to your project and you have the need to know:
 					\begin{itemize}
@@ -87,12 +78,12 @@
 			}
 
 		\end{pattern}
-	
+
 		\begin{pattern}{Cloud}
 			\context{
 			Your company and/or your product needs to acquire computing resources in order to perform tasks like:
 				\begin{itemize}
-					\item performing \textbf{large complex operations}.  
+					\item performing \textbf{large complex operations}.
 					\item supporting a \textbf{website} or a \textbf{web platform}.
 					\item any other kind of \textbf{computing task}
 				\end{itemize}
@@ -103,7 +94,7 @@
 			\forces{
 				\begin{itemize}
 					\item Acquiring hardware may require significant upfront costs.
-					\item Depending on the ammount of hardware you have to manage, a person, team or department may be needed to maintain it. 
+					\item Depending on the ammount of hardware you have to manage, a person, team or department may be needed to maintain it.
 					\item Different services may provide different levels of customization/control.
 					\item You may want to scale the amount of allocated resources to match your needs.
 					\item Applications may have very specific needs both in terms of harware and environment where they run.
@@ -112,34 +103,22 @@
 			\solution{
 				Solutions for this problem can be seen as belonging to three categories:
 				\begin{itemize}
-					\item \textbf{Purchasing} and maintaining your own \textbf{hardware} allows you to have full control over your infrastructure. You can control, for instance, in which machine does a specific applications run, how that machine is configured, etc. This option represents therefore the \textbf{highest level of customization} and \textbf{control}. 
-
-					On the \textbf{downside}, this options usually means that you \textbf{have to purchase hardware} and that you either \textbf{acquire more resources than what you need} or you risk \textbf{not having enough resources} to answer increasing computing needs. Additionally you will have to \textbf{create} and \textbf{support} a team or department to \textbf{manage the infrastructure}. 
-
-					\item When using \textbf{IaaS} there is no need to purchase anything upfront. In this \textbf{pay-as-you-go} model you only pay for what you consume and you are able to \textbf{increase/decrease} the size and/or number of \textbf{resources} you are using. With this model the responsability for \textbf{maintaining and setting up infrastructure} is shifted to the cloud provider. 
-
+					\item \textbf{Purchasing} and maintaining your own \textbf{hardware} allows you to have full control over your infrastructure. You can control, for instance, in which machine does a specific applications run, how that machine is configured, etc. This option represents therefore the \textbf{highest level of customization} and \textbf{control}. \\
+					On the \textbf{downside}, this options usually means that you \textbf{have to purchase hardware} and that you either \textbf{acquire more resources than what you need} or you risk \textbf{not having enough resources} to answer increasing computing needs. Additionally you will have to \textbf{create} and \textbf{support} a team or department to \textbf{manage the infrastructure}. \\
+					\item When using \textbf{IaaS} there is no need to purchase anything upfront. In this \textbf{pay-as-you-go} model you only pay for what you consume and you are able to \textbf{increase/decrease} the size and/or number of \textbf{resources} you are using. With this model the responsability for \textbf{maintaining and setting up infrastructure} is shifted to the cloud provider. \\
 					IaaS providers usually allow you to have some degree of customization  like choosing the operating system and resources available(CPU cores, memory, etc) but lower level configurations will not be available. As a matter of fact, most cloud providers use virtual machines to run their clients applications meaning that you will not be able to tweak network configurations or choose exactly wich machine runs what. IaaS \textbf{reduces} therefore the \textbf{level of control} in comparisson to hosting your own infrastructure.
-					
-					\item \textbf{PaaS} follows the same \textbf{pay-as-you-go} model as as IaaS meaning that you can also \textbf{increase/decrease} the size and/or number of \textbf{resources} you use. 
-
+					\item \textbf{PaaS} follows the same \textbf{pay-as-you-go} model as as IaaS meaning that you can also \textbf{increase/decrease} the size and/or number of \textbf{resources} you use. \\
 					PaaS represents the \textbf{smallest} level of \textbf{customization} but at the same time allows you to use already \textbf{pre-configured environments } in which you can run your applications.
-
-
 				\end{itemize}
 			}
 		\end{pattern}
 
-
-
 		\begin{pattern}{Reproducible Environments}
 			\context{
-				When you have several environments (e.g. production,staging,devevlopment) or multiples instalations/instances of your software it is desirable to be able to guarantee that all instances work the same way. With this goal in mind you have identified that the environments where your instances run is a key factor when trying to antecipate how does the software behaves.
-		
+				When you have several environments (e.g. production,staging,devevlopment) or multiples instalations/instances of your software it is desirable to be able to guarantee that all instances work the same way. With this goal in mind you have identified that the environments where your instances run is a key factor when trying to antecipate how does the software behaves. \\
 				This consistency is important because it will allow to have reproducibility and will give you some guarantees when you desire to increase the number of instances of your software.
 			}
-			
 			\problem{How do you guarantee that the environment where you setup your application is consistent across instances?}
-
 			\forces{
 				\begin{itemize}
 					\item Having a complete copy of your environment (OS's, libraries, etc) may create large files that may be hard to move around.
@@ -147,57 +126,42 @@
 					\item Some of your dependencies may be fetched from external providers.
 					\item You may want to update or change the environment.
 					\item Depending on your choice for \textit{Cloud} you may have more or less access to your environment settings.
-				\end{itemize}	
-
-			}
-			
-			\solution{
-				\begin{itemize}
-					\item Using \textbf{scripts} usually means \textbf{describing you environment} in the form of a text \textbf{file}. This \textbf{file} is then \textbf{executed/interpreted} inside an \textbf{environment} in order to create the desired state. 
-
-					Because scripts do not contain the dependencies you need, you usually have to \textbf{rely} on \textbf{external providers}. If for instance one provider shuts down your script will not be able to complete.
-					
-
-					In case you need to \textbf{update} your setup, depending on the change and the tool you use you may need to \textbf{run} the script \textbf{again}, run only the part you modified or reset the machine and run everything again.
-
-					Because scripts are just text files they often represent the most efficient alternative in terms of memory.
-
-					\item \textbf{Containers} \TODO(containers) 
-
-					
-					\item Using \textbf{virtual machines} an environment can be created by creating an image of the operative system with all dependencies installed. This image can then be replicated across different projects. If the need to change dependencies arise a new image can be created. 
-					
-				\end{itemize}	
-			}
-		\end{pattern}
-
-
-		\begin{pattern}{Deploying new instances}
-			\context{
-				You have decided to increase your computing resources \textbf{horizontally} in order to increase your hability to handle a bigger load of tasks. Depending on what type of \textit{Cloud} you choose to use new resources were allocated but you still need to have your application running on those resources. 
-			}
-			\problem{
-				How do you deploy your application in a reproducible and consistent way?
-			}
-
-			\forces{
-				\begin{itemize}
-					\item Deployments must be reliable. 
-					\item Deployments should not waist time.
-					\item Deployments should correctly articulate with your environment setup method.
-					\item Deployments should be easy to manage.
 				\end{itemize}
 			}
+
 			\solution{
+				\begin{itemize}
+					\item Using \textbf{scripts} usually means \textbf{describing you environment} in the form of a text \textbf{file}. This \textbf{file} is then \textbf{executed/interpreted} inside an \textbf{environment} in order to create the desired state. \\
+					Because scripts do not contain the dependencies you need, you usually have to \textbf{rely} on \textbf{external providers}. If for instance one provider shuts down your script will not be able to complete. \\
+					In case you need to \textbf{update} your setup, depending on the change and the tool you use you may need to \textbf{run} the script \textbf{again}, run only the part you modified or reset the machine and run everything again. \\
+					Because scripts are just text files they often represent the most efficient alternative in terms of memory. \\
+					\item Using \textbf{virtual machines} an environment can be created by creating an image of the operative system with all dependencies installed. This image can then be replicated across different projects. If the need to change dependencies arise a new image can be created.
+					\item \textbf{Containers} Containers are a lightweight alternative to Virtual Machines. The setup process is pretty similar to VM’s but the generated representation/image is much smaller. This decrease in size comes from the fact that containers share resources with the host machine and even among containers. By doing so, it is usually possible to have multiple containers running in the same host. Some cloud providers already have options were they support containers natively.
+				\end{itemize}
+			}
+		\end{pattern}
+		\begin{pattern}{Deploying new instances}
+		\context{You have decided to increase your computing resources \textbf{horizontally} in order to increase your hability to handle a bigger load of tasks. Depending on what type of \textit{Cloud} you choose to use new resources were allocated but you still need to have your application running on those resources.
+		}
+		\problem{How do you deploy your application in a reproducible and consistent way ?}
+				\forces{
+				\begin{itemize}
+						\item Deployments must be reliable.
+						\item Deployments should not waist time.
+						\item Deployments should correctly articulate with your environment setup method.
+						\item Deployments should be easy to manage.
+				\end{itemize}
+				}
+				\solution{
 				In order have an efficient deploy both in terms of reliability and speed you should have some sort of reproducibility.
 				Depending on your choice for setting up environments (\textit{Reproducible Environments}) there are different ways you can manage the deploy:
 				\begin{itemize}
-					\item If you have chosen \textit{Containers} you can simply pull the container from a container registry and run it in your new instance. With this approach you will have a high degree of certainty that your instance will behave as you predict. Because containers are generally lightweight you will be able to download them fairly quickly. You will, nevertheless be dependant on you container registry service.
-					\item If you have chosen \textit{Virtual Machine}
-					\item If you have chosen \textit{Scripts}
-					\item If you have chosen \textit{Manual}
+						\item If you have chosen \textit{Containers} you can simply pull the container from a container registry and run it in your new instance. With this approach you will have a high degree of certainty that your instance will behave as you predict. Because containers are generally lightweight you will be able to download them fairly quickly. You will, nevertheless be dependant on you container registry service.
+						\item If you have chosen \textit{Virtual Machine}
+						\item If you have chosen \textit{Scripts}
+						\item If you have chosen \textit{Manual}
 				\end{itemize}
-			}
+		}
 		\end{pattern}
 
 		\begin{pattern}{Scalling}
@@ -205,24 +169,24 @@
 				Having a 1:1 ratio between your needs and your resources may be easy to achieve if your needs are fixed in time. If, however, your needs fluctuate as a result of, for instance, new users accessing your application you would want to be able to \textbf{increase} or \textbf{decrease} (in case users numbers drop) the \textbf{resource} allocated.
 			}
 			\problem{
-				What strategy do you choose to increase your computing power ? 
+				What strategy do you choose to increase your computing power ?
 			}
 			\forces{
 				\begin{itemize}
 					\item Costs are a factor.
 					\item You want to change the allocated resources quantity without having to stop the existing application(s).
 					\item Your application may have need to keep state.
-					\item You may not have an upper limit for the amount of resources you will be using. 
-				\end{itemize}	
+					\item You may not have an upper limit for the amount of resources you will be using.
+				\end{itemize}
 
 			}
 			\solution{
 				Usually if your are using the \textit{Cloud} you can easily allocate new machines or increase the CPU cores, RAM, Disk Space, etc of your current machine(s). This two options represent the two existing approaches to scale your computing resources.
 				The first one (increasing the number of machines) is usually refered to as \textbf{Horizontal Scalling} and second approach (increasing the resources of each machine) is usually refered to as \textbf{Vertical Scalling}.
 
-				\textbf{Horizontal Scalling} usually is the \textbf{cheaper} option and allows for \textbf{no downtime} when upgrading (the existing machine can be put into production while the old one is running). This approach will also allow you to \textbf{scale} virtually \textbf{without} a \textbf{limit}. On the downside, this approach will force to have some considerations in mind concerning state keeping. If you have a need to keep sessions, for instance, and you are storing them in the machine, the new machines will not have access to that.  
+				\textbf{Horizontal Scalling} usually is the \textbf{cheaper} option and allows for \textbf{no downtime} when upgrading (the existing machine can be put into production while the old one is running). This approach will also allow you to \textbf{scale} virtually \textbf{without} a \textbf{limit}. On the downside, this approach will force to have some considerations in mind concerning state keeping. If you have a need to keep sessions, for instance, and you are storing them in the machine, the new machines will not have access to that.
 
-				\textbf{Vertical Scalling} is usually more expensive and depending on your \textit{Cloud} provider may have associated downtime. \textbf{Verical Scalling} also has a maximum amount of resources you can allocate to a single machine. On the upside if you scale vertically(and have only one instance) you can keep the state of your application inside your machine. 
+				\textbf{Vertical Scalling} is usually more expensive and depending on your \textit{Cloud} provider may have associated downtime. \textbf{Verical Scalling} also has a maximum amount of resources you can allocate to a single machine. On the upside if you scale vertically(and have only one instance) you can keep the state of your application inside your machine.
 
 				Both approaches can be combined in order to accomodate your needs.
 			}
@@ -232,7 +196,7 @@
 		\begin{pattern}{Continuous Integration}
 			\context{There are several people contributing code to your application.}
 			\problem{
-				Having several people collaborating into the same project can be challenging. If a developer, unaware that is introducing an error, pushes code it into the team repository a long time may pass before the error is detected. Once detected, the error cause must identified and, because the code that introduced the error was pushed a long time ago, it may not seem obvious where the error is. 
+				Having several people collaborating into the same project can be challenging. If a developer, unaware that is introducing an error, pushes code it into the team repository a long time may pass before the error is detected. Once detected, the error cause must identified and, because the code that introduced the error was pushed a long time ago, it may not seem obvious where the error is.
 			}
 			\forces{
 				\begin{itemize}
@@ -247,15 +211,15 @@
 				Use (or develop) an automatic continuous integration(CI) system. This system should detect when code is pushed to your repository and then run the following steps:
 				\begin{itemize}
 					\item \textbf{Build} . Building your software consists in, depending on your choice for  \textit{Reproducible Environments}, building your environment, then fetching all required dependencies and finally compiling the code(if needed).
-					\item \textbf{Test} your build. When your build is successfull you should run your test suite against that build in order to check if everything is running according to plan. 
-					\item \textbf{Notify} If any of the previous steps fails you should notify the developer that checked the code and any other people to whom the build integration status is relevant.  
+					\item \textbf{Test} your build. When your build is successfull you should run your test suite against that build in order to check if everything is running according to plan.
+					\item \textbf{Notify} If any of the previous steps fails you should notify the developer that checked the code and any other people to whom the build integration status is relevant.
 				\end{itemize}
 			}
 		\end{pattern}
 
 		\begin{pattern}{Jobs}
 			\context{
-				Sometimes there are tasks that, due their complexity may take a long time to finish. Cases may also exist when you have tasks that you want to schedule for later(e.g. maintenance tasks may be runned at a time when your application is under). 
+				Sometimes there are tasks that, due their complexity may take a long time to finish. Cases may also exist when you have tasks that you want to schedule for later(e.g. maintenance tasks may be runned at a time when your application is under).
 
 				Both this problems can be solved by scheluding jobs to be run when possible or later.
 			}
@@ -266,12 +230,12 @@
 				\begin{itemize}
 					\item Having a fixed set of resources for dealing with scheduling tasks may not be cost effective.
 					\item Your load may vary during the day.
-					\item 
+					\item
 				\end{itemize}
 			}
 			\solution{
-				You may launch new instances of your infrastructure to handle each of you tasks or batches of tasks. Each new instance receives the desired tasks and does the needed computation. When the task as been computed the new piece of infrastructure should be shutdown. 
-				
+				You may launch new instances of your infrastructure to handle each of you tasks or batches of tasks. Each new instance receives the desired tasks and does the needed computation. When the task as been computed the new piece of infrastructure should be shutdown.
+
 				Alternatively you can have a set of daemons running alongside your applications that handle this tasks.
 
 				Tasks are generally fed through a queing system altough you can also store them in a database.
@@ -289,22 +253,22 @@
 				\begin{itemize}
 					\item Extracting too many metrics may cluter your hability to effective analyse them.
 					\item You may want to keep an history of how your system behaved.
-					\item You want to have information about the current state of your service. 
+					\item You want to have information about the current state of your service.
 				\end{itemize}
 			}
 			\solution{
-				Monitoring your application health can be done by using your own or external tools. Some cloud providers even provide you with a health view that tells you if your machines are healthy and running. 
+				Monitoring your application health can be done by using your own or external tools. Some cloud providers even provide you with a health view that tells you if your machines are healthy and running.
 				Identifying some key indicators and some metrics is also important, by defining thresholds for each metric you can setup different levels of alerts for your teams. This way you can tackle problems as soon as they happen. Additionaly some indicators can also trigger automatic responses (e.g. if a platform is taking to long to answer requests you may launch new resources to distribute the traffic).
 			}
 		\end{pattern}
 
 		\begin{pattern}{Alerting}
 			\context{
-				You have defined a set of metrics for checking the health of your application. For some of those metrics when values reach a certain level a solution can not be automated (e.g. server repetitive failures). 
+				You have defined a set of metrics for checking the health of your application. For some of those metrics when values reach a certain level a solution can not be automated (e.g. server repetitive failures).
 				You still would want an immediate responese to that alert in order to make sure your services will not go down or in order to put them back on.
 			}
 			\problem{
-				Who are you going to call? 
+				Who are you going to call?
 			}
 			\forces{
 				\begin{itemize}
@@ -315,9 +279,9 @@
 			\solution{
 				Notifying can follow three main strategy.
 				The first one is to wake everyone up. This approach is wastefull and as you usually do not need your entire team to solve the problem.
-				The second one is always notifying the same person. This person should preferably be someone capable of diagnose the origin of your problem and then solve it or contact someone that can. 
+				The second one is always notifying the same person. This person should preferably be someone capable of diagnose the origin of your problem and then solve it or contact someone that can.
 				The third option is two have a system were the responsability of handling errors rotates among the team members.
-				Alerts can be sent using email, calling people, sending an sms and/or sending a notification to the person you want to notify. 
+				Alerts can be sent using email, calling people, sending an sms and/or sending a notification to the person you want to notify.
 			}
 		\end{pattern}
 
@@ -331,7 +295,7 @@
 		\begin{pattern}{Error Handling}
 			\context{
 				It is important not only to be able to detect errors(\textit{Auditability}, \textit{Alerting}) but also to be able to respond to them in a proportional way.
-				
+
 				As someone involved in a team developing a product, being able to find the best way to handle a crysis may prove to be fundamental.
 			}
 			\problem{
@@ -346,7 +310,7 @@
 				\end{itemize}
 			}
 			\solution{
-				Handling and error is a delicate task. There are several things that need to be taken into account. 
+				Handling and error is a delicate task. There are several things that need to be taken into account.
 
 				If an error as a direct and significant impact in your applicaion (e.g. there is an error that allows people to login without checking the users passwords) you would want to respond as quickly as possible. In this types of cases you can \textbf{rollback} to an older version of your software. The rolling back effectiveness is nevertheless constrained by the speed with which you can do it and by the fact that you may not be able to do it. Strategies for rolling back you application can be of two types:
 				\begin{itemize}

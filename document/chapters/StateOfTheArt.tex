@@ -1,14 +1,14 @@
 \chapter{State of The Art} \label{chap:stateoftheart}
-  In this chapter we will first look at what is the Cloud and Cloud computing. This initial section will provide the needed context for what follows where we will describe DevOps based on some of the work already done.
+  In this chapter an introduction to cloud computing will be presented providing the needed context for the following section where a brief set of events that lead to the DevOps movement will be presented. After this, a small characterization of the portuguese startup scene will be presented in order to justify some of the choices presented in the section \ref{chap:towardsdevops:sec:methodology:sec:sample}.
 
     \section{Cloud Computing} \label{chap:stateoftheart:sec:cloud}
 
-        Paraphrasing \cite{Debois2008}, imagine wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network. Charges are calculated based on the usage ammount and no special knowledge of how the network setup is needed.
+        Paraphrasing \cite{Debois2008}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network.In the common scenario, charges are calculated based on the usage ammount and no special knowledge of how the network setup is needed.
 
-        Clouds follows the exact same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid are calculated based on the usage and clients do not need to know how the resources are managed or setup.
+        Clouds follows the exact same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
 
         \subsection{Definition}
-        In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \say{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
+        In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \textit{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
 
         NIST also defines the following essencial characteristics of cloud computing:
 
@@ -20,7 +20,7 @@
             \item \textbf{Measured service} : The usage of resources should be measured providing transparency in the provider-client relation.
   	    \end{itemize}
 
-        \subsection{Delivery methods} \label{chap:stateoftheheart:sec:cloud:sec:deliverymethods}
+      \subsection{Delivery methods} \label{chap:stateoftheheart:sec:cloud:sec:deliverymethods}
         In regards to their accessibility, it is common to identify three main categories of clouds \cite{Zhang2010} :
       	\begin{itemize}
           	\item \textbf{Public Clouds} : Public clouds are a pool of resources hosted by cloud providers who rent them to the general public. This resources can be accessed over the Internet and are shared among users.
@@ -87,17 +87,26 @@
           \item \textbf{Shared metrics} - Developers and operations would have access to metrics related with the site. Having this, developers could know how certain features would affect the infrastructure and this would in turn influence their decisions.
           \item \textbf{Communication increase \& Cultural changes} - Developers and operations would communicate and a culture of respect and understanding between the two departments would be promoted. This change would allow trust to exist between the two departments meaning that developers and operations would take each other points of views, problems and objectives into consideration. Additional rules like \textit{No finger pointing} would also promote a culture of collaboration and mutual aid between the two .
         \end{itemize}
-
       In the end, John and Paul both highlight the importance of the cultural aspects of the change. In their opinion if the cultural aspects are not met, the tooling or new practices will not be enough.
 
-      \subsection{The DevOps Movement}
-      In the problem section \ref{chap:stateoftheheart:sec:devops:sec:problem} we saw how the separation of departments was causing problems to both the businesses and professionals. This problem, often seen ans unsovable, would soon after be view as solvable after all. In \ref{chap:stateoftheheart:sec:devops:sec:solution} a new way of doing things started to emmerge. This new ideas would eventually fuel a community that would discuss them and enventually DevOps emmerged.
 
-      In the several studies that we read, we found several definitions for DevOps. Some or quite large and broad. In this thesis, we will use the one from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} which is:
+      \subsection{The DevOps Movement} \label{chap:stateoftheheart:sec:devops:sec:movement}
+      In the problem section \ref{chap:stateoftheheart:sec:devops:sec:problem} we saw how the separation of departments was causing problems to both the businesses and professionals. This problem, often seen ans unsovable, would soon after be view as solvable after all. In \ref{chap:stateoftheheart:sec:devops:sec:solution} a new way of doing things started to emmerge. This new ideas would eventually fuel a community that would discuss them and enventually DevOps emmerged.\\
+      There were two approaches identified when trying two define DevOps. In this thesis we will use two, the first that captures the essence of DevOps, and the second defines what is and what is not DevOps.
 
-      \say{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.}
+      The CAMS \footnote{acronym for culture, automation, measurrment and sharing} system, coined by Damon Edwards and John Willis, defines DevOps devops as a set of values. This values are:
+      \begin{itemize}
+          \item \textbf{Culture} - DevOps puts people and processes first. The movement believes that without the right culture, automation is bound to fail.
+          \item \textbf{Automation} - Tools should be used to automate releases, provisioning, monitoring, etc.
+          \item \textbf{Measurement} - Measurements of people, infrastructure metrics, application metrics should be gathered in an attempt to help the process evolve.
+          \item \textbf{Sharing} - Sharing allows for new ideas to appear which could lead to improvements.
+      \end{itemize}
 
-      We find this definition to be empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. On the other hand, it does allow us to easily classify something as being DevOps or not i.e. we only have to ask ourselves if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in normal production, if it does, then it is DevOps.
+      The second definition is from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} and is state as:
+
+      \textit{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.}
+
+      We find this second definition to be empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. On the other hand, it does allow us to easily classify something as being DevOps or not i.e. we only have to ask ourselves if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in normal production, if it does, then it is DevOps.
 
       As we saw in \ref{chap:stateoftheheart:sec:devops:sec:solution}, there are several ways in which DevOps can influence professionals and the work they do, but we have not seen what are the benefits for businesses. In \textit{DevOps and the Cost of Downtime: Fortune 1000 Best Practice Metrics Quantified} \cite{Elliot2015}, DevOps is viewed from a more business centric perspective and the following benefits are identified:
 
