@@ -1,16 +1,17 @@
 \chapter{State of The Art} \label{chap:stateoftheart}
-  In this chapter an introduction to cloud computing will be presented providing the needed context for the following section where a brief set of events that lead to the DevOps movement will be presented. After this, a small characterization of the portuguese startup scene will be presented in order to justify some of the choices presented in the section \ref{chap:towardsdevops:sec:methodology:sec:sample}.
+DevOps is usually associated with different types of technologies and practices. Effectively applying DevOps means not only to understand the cultural aspects but also the technological aspects that enabled some of its practices.
+In this chapter an introduction to cloud computing will be presented providing the needed context for the following section where a brief set of events involved in the rise of DevOps movement will be presented. After this, a small characterization of the Portuguese start-up scene will be presented in order to justify some of the choices presented in the next chapter \ref{chap:towardsdevops:sec:methodology:sec:sample}.
 
     \section{Cloud Computing} \label{chap:stateoftheart:sec:cloud}
 
-        Paraphrasing \cite{Debois2008}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network.In the common scenario, charges are calculated based on the usage ammount and no special knowledge of how the network setup is needed.
+        Paraphrasing \cite{Bass}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network.In the common scenario, charges are calculated based on the usage amount and no special knowledge of how the network setup is needed.
 
-        Clouds follows the exact same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
+        Clouds follows exactly the same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
 
         \subsection{Definition}
         In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \textit{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
 
-        NIST also defines the following essencial characteristics of cloud computing:
+        NIST also defines the following essential characteristics of cloud computing:
 
         \begin{itemize}
             \item \textbf{On-demand self-service} : A consumer can unilaterally provision computing capabilities, such as server time and network storage, as needed automatically without requiring human interaction with each service provider.
@@ -20,28 +21,28 @@
             \item \textbf{Measured service} : The usage of resources should be measured providing transparency in the provider-client relation.
   	    \end{itemize}
 
-      \subsection{Delivery methods} \label{chap:stateoftheheart:sec:cloud:sec:deliverymethods}
-        In regards to their accessibility, it is common to identify three main categories of clouds \cite{Zhang2010} :
-      	\begin{itemize}
-          	\item \textbf{Public Clouds} : Public clouds are a pool of resources hosted by cloud providers who rent them to the general public. This resources can be accessed over the Internet and are shared among users.
+        \subsection{Delivery methods} \label{chap:stateoftheheart:sec:cloud:sec:deliverymethods}
+          In regards to their accessibility, it is common to identify three main categories of clouds \cite{Zhang2010} :
+        	\begin{itemize}
+            	\item \textbf{Public Clouds} : Public clouds are a pool of resources hosted by cloud providers who rent them to the general public. This resources can be accessed over the Internet and are shared among users.
 
-  		      \item \textbf{Private Clouds} : Private clouds are usually administered and used by the same organization. Alternatively a third party can also be hired to manage the resources. The main difference between public and private clouds is the usage of the resources. Private clouds resources are only used by one company as opposed to public clouds were resources are shared.
+    		      \item \textbf{Private Clouds} : Private clouds are usually administered and used by the same organization. Alternatively a third party can also be hired to manage the resources. The main difference between public and private clouds is the usage of the resources. Private clouds resources are only used by one company as opposed to public clouds were resources are shared.
 
-            \item \textbf{Hybrid Clouds} : Hybrid clouds combine both the private and public concepts. When using an hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
+              \item \textbf{Hybrid Clouds} : Hybrid clouds combine both the private and public concepts. When using an hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
 
-            \item \textbf{Virtual Private Cloud} : Virtual private clouds are an alternative to private clouds. This type of cloud are essentially a public cloud that \textit{leverages virtual private network (VPN) technology..}\cite{Zhang2010} allowing users to combine characteristics of both public clouds and private clouds.
-  		\end{itemize}
+              \item \textbf{Virtual Private Cloud} : Virtual private clouds are an alternative to private clouds. This type of cloud are essentially a public cloud that \textit{leverages virtual private network (VPN) technology..}\cite{Zhang2010} allowing users to combine characteristics of both public clouds and private clouds.
+    		\end{itemize}
 
       \subsection{Service Levels} \label{chap:stateoftheheart:sec:cloud:sec:servicelevels}
-  		In terms of service levels cloud computing can be classified in regards to the provided abstraction. The main categories are the following \cite{Vaquero2008} :
+  		In terms of service levels cloud computing can be classified in regard to the provided abstraction. The main categories are the following \cite{Vaquero2008} :
   		\begin{itemize}
   			\item \textbf{SaaS} - Software as a Service (SaaS) gives users access to a platform usually through a web client. Without the need to  download or install software the user is able to use the provided software instantly and virtually everywhere.\linebreak Applications of this model include messaging software, email services, collaborative platforms, etc.
- 				\item \textbf{PaaS} - Platform as a Service (PaaS) allows it's users to quickly deploy applications with little to no configuration. In this type of platform environments are usually pre-setup or configurable. PaaS users should nevertheless expect only to be able to deploy applications or software supported by the provider.
+ 				\item \textbf{PaaS} - Platform as a Service (PaaS) allows it's users to quickly deploy applications with little to no configuration. In this type of platform environments are usually setup previously or configurable. PaaS users should nevertheless expect only to be able to deploy applications or software supported by the provider.
   			\item \textbf{IaaS} - Infrastructure as a Service (IaaS) represents the lowest abstraction made available by cloud providers. In this model the user is able to configure and access a machine directly without constraints. This machine, usually a virtual server managed by the provider, can be configured and maintained by the user.\linebreak This model is used when applications are complex and therefore need complex configurations.
   		\end{itemize}
 
   		\subsection{Benefits} \label{chap:stateoftheheart:sec:cloud:sec:benefits}
-  			The main advantages of cloud computing for it's users can be summarized as following:
+  			The main advantages of cloud computing for its users can be summarized as following:
   			\begin{itemize}
   				\item \textbf{Monetary Efficiency} - Cloud providers allow users to keep their resources to the needed minimum. By allowing users to quickly and easily increase/decrease the allocated resources amount and billing clients only for the resources used, cloud providers are good way to save money and spend only the needed amount \cite{Garrison2012,Mell2011}.
   				\item \textbf{Scalability} - usually through a public API of some kind most cloud providers allow for the quick increase or reduction of resources \cite{Mell2011}. This enables businesses to quickly go from zero to millions of users with minimum overhead. Additionally because processes related with the management and configuration of cloud servers can be automated it is usually possible to manage large systems with small teams \cite{Loukides2012}.
@@ -49,73 +50,85 @@
   			\end{itemize}
 
 	\section{DevOps} \label{chap:stateoftheart:sec:devops}
+      In \textit{Why DevOps Is Like An Onion} \cite{DaveSayers2013}, Dave Sayers chooses to use the analogy of peeling an onion, with each layer representing a different concept, in order to describe DevOps. Further developing upon his initial idea, in this section, we will try to introduce DevOps using that same analogy.
 
-      \subsection{Developers \& Operations} \label{chap:stateoftheheart:sec:devops:sec:devsandoperations}
-      First it is important to understand who were the interested parties and how they were related.
-
-      In software development there are two responsabilities that fall on two distinct departments: Operations and Developers.
-
-      Operations and their members are charged with the responsibilitie of operating the companies computing infrastructure. From changing faulty hardware to configuring new machines or monitoring incoming traffic, Operations have, as their goal, to keep the applications they were operating running and doing so correctly \cite{Bass}.
-
-      Developers, develop and build the application. The result of their work is then handed over to Operators who would then be resposible for running the application \cite{Huttermann2012}.
-
-      \subsection{Problem} \label{chap:stateoftheheart:sec:devops:sec:problem}
-
-      In \textit{Agile infrastructure and operations: How infra-gile are you?} \cite{Debois2008}, Patrick Debois discusses and describes three different attempts to apply Agile methodologies to infrastructure and operations teams. In the three cases, companies had identified that the lack of articulation between the two departments was causing problems like failure to meet deadlines, outages or a lack of consistency across environments which lead, directly or indirectly to the loss of value for the respective companies.
-
-      As the article progresses, the cultural and technological changes that happened are described and, in the end a list of patterns is identified. Some of those patterns are as follow:
-
+      \subsection{The cultural layer} \label{chap:stateoftheart:sec:devops:sec:culture}
+      Looking at some of the first DevOps efforts we see that a lot of them aimed to create a better articulation between Developers and Operations \cite{Debois2008} \cite{Allspaw}.\\
+      Being two distinct departments with different work methodologies and objectives, this meant that some cultural changes had to happen in order for the two departments to be able to create a common understanding of each other worlds \cite{Allspaw}.\\
+      The main cultural values associated with DevOps are, as a result, values that promote cooperation and communication. These are some of the ones that we identified:
       \begin{itemize}
-        \item \say{ Operations know very well that changes introduce incidents. Therefore they think their job is to minimize change to the production environment. Still they serve the same customer the project does. Therefore the project should have a view on the demands the customer puts on the operations.}
-        \item \say{ Development and infrastructure need to be seen as whole and not two separate projects. This is especially difficult in large enterprises where both belong to different entities.}
-        \item \say{ Technical skills need to be complemented with an agile mindset. Similar to the technical, to speed things up have experienced agile project managers guide the process.}
-        \item \say{ Non-agile infrastructure tends grow old changes are hard to execute in these environments. This can be seen as technical debt.}
-        \item \say{ Every change will eventually require a management buy-in to allow it to persist.}
+          \item Respect \cite{Davis2015} \cite{Allspaw}
+          \item Trust \cite{Huttermann2012}
+          \item Collaboration \cite{Davis2015}
+          \item Sharing \cite{Willis2010}
       \end{itemize}
 
-      \subsection{Solution}  \label{chap:stateoftheheart:sec:devops:sec:solution}
+      \subsection{The methodology layer} \label{chap:stateoftheart:sec:devops:sec:methodology}
+      The DevOps movement does not define a specific methodology mostly since it belives that this choice should be made by the company/organization in order to better accomodate their needs. Nevertheless, when we look for instance at CAMS\ref{chap:stateoftheart:sec:devops:sec:definition} or at some of the practices like \textit{Continuous Deployment} it becomes clear that, altough a methodology is not defined, the one chosed should enable an iterative and continuous improvement focused approach.
 
-      In 2009, John Allspaw and Paul Hammond gave a talk at the \textit{Velocity Conference} named \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} in San Jose where they discussed a new culture emerging at Flickr \footnote{www.flickr.com}. In this culture, John and Paul describe the way operations and developers objectives are changed from respectively keeping the site stable and fast and creating new functinalities to being enablers for the business. As the business evolve, changes are needed and both developers and operations should create the environment where those changes are possible without representing a risk for the business.
+      \subsection{The practices layer} \label{chap:stateoftheart:sec:devops:sec:practices}
+      Broadly speaking, DevOps practices gravitate around the automation of processes. From the setup of environments on the developers machine, up to the deployment phase, the capacity to automate repetitive tasks is a key feature of DevOps.
+      Common practices associated with the DevOps movement include:
+      \begin{itemize}
+        \item \textbf{Continuous Integration} - Regular integration of software helps discover risks associated with the integration with the integration of the software. \cite{And2015}
+        \item \textbf{Continuous Deployment} - Deploying often means that less functionalities are deployed each time. This makes deployments more manageable and in turn safer \cite{Allspaw}.
+        \item \textbf{Continuous Monitoring} - Continuously monitoring infrastructure and applications allows for the early detection of bugs \cite{Cukier2013}. It can also be a way to identify areas that can be improved \cite{Willis2010}
+        \item \textbf{Defining infrastructure as code} - By defining infrastructure as code it is possible to increase reliability and consistency \cite{Loukides2012}.
+        \item \textbf{Using feature Flags} - Feature flags are special flags that toggle features on and off. Using this, can improve error handling (if a feature is faulty, it can be turned off. Feature flags also enable more complex schemes of operation where certain functionalities are launched but are not displayed or are displayed just to certain users. Once it is observeved that the new functionality works, the flag can be turned on and the new funtionality is available \cite{Bass}.
+        \item \textbf{Others} - As we will see in \ref{chap:stateoftheart:sec:devops:sec:definition} there can be a great number of practices that can be considered DevOps practices. This means that we would not be able to include them all here.
+      \end{itemize}
 
-      The talk then continues to describe the changes that happen at Flickr that enabled this change:
-
+      \subsection{The tool layer} \label{chap:stateoftheart:sec:devops:sec:tools}
+      Tools allow for some practices to be more effective. In this section we will present some of the existent categories of tools. This categories are presented in \cite{Labs} and are currently being maintained and increased by the DevOps community:
+      \begin{multicols}{3}
         \begin{itemize}
-          \item \textbf{Automation} - By automating deployment processes (for staging or production environments), consistency across the environments improved decreasing the chance of errors in production.
-          \item \textbf{Deploying Frequently} - By enabling deploys to be made often(due to the automation of some of the deployment processes), this meant that less functionalities would be deployed each time. This made deployments more manageable and in turn safer.
-          \item \textbf{Using Feature Flags} - Feature flags are special flags that toggle features on and off. Using this, improved error handling because if a feature was faulty, one could just turn it off rather than having to fix it right away. Feature flags would also enable more complex schemes of operation where certain functionalities would be launched but would not be displayed in the final site, once it was observer that the new functionality would not hurt performance or cause some kind of error, the flag could be turned on and the new funtionality would be available.
-          \item \textbf{Version Control} - All code was centralized in a single repository. This meant that there was more transparency across instances.
-          \item \textbf{Shared metrics} - Developers and operations would have access to metrics related with the site. Having this, developers could know how certain features would affect the infrastructure and this would in turn influence their decisions.
-          \item \textbf{Communication increase \& Cultural changes} - Developers and operations would communicate and a culture of respect and understanding between the two departments would be promoted. This change would allow trust to exist between the two departments meaning that developers and operations would take each other points of views, problems and objectives into consideration. Additional rules like \textit{No finger pointing} would also promote a culture of collaboration and mutual aid between the two .
+            \item Source Control Management (SCM)
+            \item Continuous Integration (CI)
+            \item Deployment management
+            \item Cloud platform and infrastructure
+            \item Monitoring
         \end{itemize}
-      In the end, John and Paul both highlight the importance of the cultural aspects of the change. In their opinion if the cultural aspects are not met, the tooling or new practices will not be enough.
+        \begin{itemize}
+            \item Repository Management
+            \item Infrastructure Provisioning
+            \item Release management
+            \item Logging
+            \item Security
+        \end{itemize}
+        \begin{itemize}
+            \item Build
+            \item Testing
+            \item Containerization
+            \item Collaboration
+            \item Database Management
+        \end{itemize}
+      \end{multicols}
 
+      \subsection{The full onion} \label{chap:stateoftheart:sec:devops:sec:onion}
+        \begin{wrapfigure}{R}{0.4\textwidth}
+            \includegraphics[width=0.5\linewidth]{onion}
+            \caption{The full onion \cite{DaveSayers2013}}
+            \label{fig:onion}
+        \end{wrapfigure}
+        As it was stated by Paul Hammon and John Allspawn at their \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} presentation, tools and processes alone are not enough and the cultural change should be the first step to take towards DevOps. \\
+        Because of this, the outermost represents the most important layer and without \textit{peeling} it you will not be able to access the inner layers.
 
-      \subsection{The DevOps Movement} \label{chap:stateoftheheart:sec:devops:sec:movement}
-      In the problem section \ref{chap:stateoftheheart:sec:devops:sec:problem} we saw how the separation of departments was causing problems to both the businesses and professionals. This problem, often seen ans unsovable, would soon after be view as solvable after all. In \ref{chap:stateoftheheart:sec:devops:sec:solution} a new way of doing things started to emmerge. This new ideas would eventually fuel a community that would discuss them and enventually DevOps emmerged.\\
-      There were two approaches identified when trying two define DevOps. In this thesis we will use two, the first that captures the essence of DevOps, and the second defines what is and what is not DevOps.
+        \subsection{A DevOps definition} \label{chap:stateoftheart:sec:devops:sec:definition}
+        DevOps vastness can be seen in the enormous ammounts of tools categories identified in \ref{chap:stateoftheart:sec:devops:sec:tools} related with DevOps.\\
+        As one might expect from this vastness of areas that DevOps touches, there are still difficulties to properly define DevOps. In order to reduce this indefinition, we will use throughout this thesis a conjugation of two definitions for DevOps.\\
+        The first definition is from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} and it states that: \\
+        \textit{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.} \\
+        We chose this definition because it allows to easily classify something as being DevOps or not i.e. one would only have to ask himself if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in production, if it does, then it is DevOps. Nevertheless, we find this definition to be a bit empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. As a workaround for this problem we use a second definition based on the CAMS acronym.\\
+        The CAMS acronym \cite{Willis2010} defines DevOps as being a \textbf{C}ultural movement where \textbf{A}utomation and continuous \textbf{M}easurement of processes and people are promoted and where the later can serve as a input for the \textbf{S}haring of problems and new ideas. As new ideas appear to solve the indentified problems, new measurements can be made to further identify problems furthering improving the overall process.
 
-      The CAMS \footnote{acronym for culture, automation, measurrment and sharing} system, coined by Damon Edwards and John Willis, defines DevOps devops as a set of values. This values are:
-      \begin{itemize}
-          \item \textbf{Culture} - DevOps puts people and processes first. The movement believes that without the right culture, automation is bound to fail.
-          \item \textbf{Automation} - Tools should be used to automate releases, provisioning, monitoring, etc.
-          \item \textbf{Measurement} - Measurements of people, infrastructure metrics, application metrics should be gathered in an attempt to help the process evolve.
-          \item \textbf{Sharing} - Sharing allows for new ideas to appear which could lead to improvements.
-      \end{itemize}
-
-      The second definition is from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} and is state as:
-
-      \textit{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.}
-
-      We find this second definition to be empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. On the other hand, it does allow us to easily classify something as being DevOps or not i.e. we only have to ask ourselves if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in normal production, if it does, then it is DevOps.
-
-      As we saw in \ref{chap:stateoftheheart:sec:devops:sec:solution}, there are several ways in which DevOps can influence professionals and the work they do, but we have not seen what are the benefits for businesses. In \textit{DevOps and the Cost of Downtime: Fortune 1000 Best Practice Metrics Quantified} \cite{Elliot2015}, DevOps is viewed from a more business centric perspective and the following benefits are identified:
-
-		  \begin{itemize}
-			    \item{DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client }
-          \item{Adopting DevOps allows business to practice Continuous Delivery.}
-          \item{The average cost of a critical application failure per hour is \$500,000 to \$1 million (DevOps can help reduce application failures).}
-          \item{The average cost percentage (per year) of a single application's development, testing, deployment, and operations life cycle considered wasteful and unnecessary is 25\% (DevOps can help automate some repetitive tasks)}
-		  \end{itemize}
+        \subsection{DevOps Benefits}
+        In a recent study \cite{Elliot2015} some of the DevOps benefits were identified:
+  		  \begin{itemize}
+  			    \item DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client
+            \item Adopting DevOps allows business to practice Continuous Delivery.
+            \item The average cost of a critical application failure per hour is \$500,000 to \$1 million (DevOps can help reduce application failures).
+            \item The average cost percentage (per year) of a single application's development, testing, deployment, and operations life cycle considered wasteful and unnecessary is 25\% (DevOps can help automate some repetitive tasks)
+  		  \end{itemize}
 
       \subsection{Patterns}
       Some previous progress has already been made regarding the identification of DevOps related patterns. We will summarize this progress by listing the identified patterns and briefly describing them:
@@ -134,7 +147,12 @@
       \end{itemize}
 
 
-	\section{The Portuguese startup scene} \label{sec:stateoftheart:sec:portuguesestartupscene}
-  Motivated by a recent investment in innovation and entrepreneurship, Portugal startups have been growing their position in the global startup scene \cite{Coleman2015}.
+  	\section{The Portuguese startup scene} \label{sec:stateoftheart:sec:portuguesestartupscene}
+    Motivated by a recent investment in innovation and entrepreneurship, Portugal startups have been growing their position in the global startup scene \cite{Coleman2015}.
 
-  A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country. UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa, both business incubators. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.
+    A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country. UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa, both business incubators. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.
+
+
+    \section{A pattern language}
+    Pattern languages have been used in the software development area in the past for describing common architectural solutions \cite{kircher2013pattern}, recurring software design choices \cite{johnson1995design} and even describing pattern languages themselves \cite{Meszaros1998}.\\
+    Patterns represent a way to share recurring solutions to a problem \cite{Meszaros1998}. As a result, pattern languages help reduce re-discovery and re-invention of concepts and functionalities as well as \textit{avoiding common pitfalls that are learned from experience} \cite{Schmidt1995}.

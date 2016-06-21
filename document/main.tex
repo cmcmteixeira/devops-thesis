@@ -6,6 +6,8 @@
 \usepackage{dirtytalk}
 \usepackage{titlesec}
 \usepackage{epigraph}
+\usepackage{multicol}
+\usepackage{wrapfig}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
 
@@ -35,6 +37,10 @@
     \subsubsection*{Rationale}
     ##1
   }
+	\newcommand{\related}[1]{
+		\subsubsection*{Related Patterns}
+		##1
+	}
 }
 
 
@@ -45,7 +51,7 @@
 	\supervisor{Supervisor}{Prof. Hugo Sereno Ferreira}
 	\supervisor{Co-Supervisor}{Tiago Boldt Sousa}
 	\logo{uporto-feup.pdf}
-	\additionalfronttext{Dissertation Planning}
+	\additionalfronttext{Dissertation}
 
 \begin{Prolog}
   \include{Abstract}
