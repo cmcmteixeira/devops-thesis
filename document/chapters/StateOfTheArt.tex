@@ -1,13 +1,10 @@
 \chapter{State of The Art} \label{chap:stateoftheart}
 DevOps is usually associated with different types of technologies and practices. Effectively applying DevOps means not only to understand the cultural aspects but also the technological aspects that enabled some of its practices.
-In this chapter an introduction to cloud computing will be presented providing the needed context for the following section where a brief set of events involved in the rise of DevOps movement will be presented. After this, a small characterization of the Portuguese start-up scene will be presented in order to justify some of the choices presented in the next chapter \ref{chap:towardsdevops:sec:methodology:sec:sample}.
+In this chapter an introduction to cloud computing will be presented providing the needed context for the following section where a brief set of events involved in the rise of DevOps movement will be presented. After this, both a small characterization of the Portuguese start-up scene and of pattern languages will be presented in order to justify some of the choices presented in the next chapters. \ref{chap:towardsdevops:sec:methodology:sec:sample}.
 
     \section{Cloud Computing} \label{chap:stateoftheart:sec:cloud}
-
-        Paraphrasing \cite{Bass}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network.In the common scenario, charges are calculated based on the usage amount and no special knowledge of how the network setup is needed.
-
-        Clouds follows exactly the same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
-
+    Paraphrasing \cite{Bass}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network.In the common scenario, charges are calculated based on the usage amount and no special knowledge of how the network setup is needed.\\
+    Clouds follow exactly the same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
         \subsection{Definition}
         In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \textit{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
 
@@ -28,7 +25,7 @@ In this chapter an introduction to cloud computing will be presented providing t
 
     		      \item \textbf{Private Clouds} : Private clouds are usually administered and used by the same organization. Alternatively a third party can also be hired to manage the resources. The main difference between public and private clouds is the usage of the resources. Private clouds resources are only used by one company as opposed to public clouds were resources are shared.
 
-              \item \textbf{Hybrid Clouds} : Hybrid clouds combine both the private and public concepts. When using an hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
+              \item \textbf{Hybrid Clouds} : Hybrid clouds combine both the private and public concepts. When using a hybrid clouds approach, infrastructure is divided by the two types of clouds meaning that some modules may be hosted in the private space and others on the public one.
 
               \item \textbf{Virtual Private Cloud} : Virtual private clouds are an alternative to private clouds. This type of cloud are essentially a public cloud that \textit{leverages virtual private network (VPN) technology..}\cite{Zhang2010} allowing users to combine characteristics of both public clouds and private clouds.
     		\end{itemize}
@@ -64,17 +61,17 @@ In this chapter an introduction to cloud computing will be presented providing t
       \end{itemize}
 
       \subsection{The methodology layer} \label{chap:stateoftheart:sec:devops:sec:methodology}
-      The DevOps movement does not define a specific methodology mostly since it belives that this choice should be made by the company/organization in order to better accomodate their needs. Nevertheless, when we look for instance at CAMS\ref{chap:stateoftheart:sec:devops:sec:definition} or at some of the practices like \textit{Continuous Deployment} it becomes clear that, altough a methodology is not defined, the one chosed should enable an iterative and continuous improvement focused approach.
+      The DevOps movement does not define a specific methodology mostly since it believes that this choice should be made by the company/organization in order to better accomodate their needs. Nevertheless, when we look for instance at CAMS\ref{chap:stateoftheart:sec:devops:sec:definition} or at some of the practices like \textit{Continuous Deployment} it becomes clear that, although a methodology is not defined, the one chose should enable an iterative and continuous improvement focused approach.
 
       \subsection{The practices layer} \label{chap:stateoftheart:sec:devops:sec:practices}
       Broadly speaking, DevOps practices gravitate around the automation of processes. From the setup of environments on the developers machine, up to the deployment phase, the capacity to automate repetitive tasks is a key feature of DevOps.
       Common practices associated with the DevOps movement include:
       \begin{itemize}
         \item \textbf{Continuous Integration} - Regular integration of software helps discover risks associated with the integration with the integration of the software. \cite{And2015}
-        \item \textbf{Continuous Deployment} - Deploying often means that less functionalities are deployed each time. This makes deployments more manageable and in turn safer \cite{Allspaw}.
+        \item \textbf{Continuous Deployment} - Deploying often means that less functionality are deployed each time. This makes deployments more manageable and in turn safer \cite{Allspaw}.
         \item \textbf{Continuous Monitoring} - Continuously monitoring infrastructure and applications allows for the early detection of bugs \cite{Cukier2013}. It can also be a way to identify areas that can be improved \cite{Willis2010}
         \item \textbf{Defining infrastructure as code} - By defining infrastructure as code it is possible to increase reliability and consistency \cite{Loukides2012}.
-        \item \textbf{Using feature Flags} - Feature flags are special flags that toggle features on and off. Using this, can improve error handling (if a feature is faulty, it can be turned off. Feature flags also enable more complex schemes of operation where certain functionalities are launched but are not displayed or are displayed just to certain users. Once it is observeved that the new functionality works, the flag can be turned on and the new funtionality is available \cite{Bass}.
+        \item \textbf{Using feature Flags} - Feature flags are special flags that toggle features on and off. Using this, can improve error handling (if a feature is faulty, it can be turned off. Feature flags also enable more complex schemes of operation where certain functionality are launched, but are not displayed or are displayed just to certain users. Once it is observed that the new functionality works, the flag can be turned on and the new functionality is available \cite{Bass}.
         \item \textbf{Others} - As we will see in \ref{chap:stateoftheart:sec:devops:sec:definition} there can be a great number of practices that can be considered DevOps practices. This means that we would not be able to include them all here.
       \end{itemize}
 
@@ -103,23 +100,24 @@ In this chapter an introduction to cloud computing will be presented providing t
             \item Database Management
         \end{itemize}
       \end{multicols}
-
+\pagebreak
       \subsection{The full onion} \label{chap:stateoftheart:sec:devops:sec:onion}
         \begin{wrapfigure}{R}{0.4\textwidth}
-            \includegraphics[width=0.5\linewidth]{onion}
-            \caption{The full onion \cite{DaveSayers2013}}
+            \center
+            \includegraphics[width=0.8\linewidth]{onion}
+            \caption{The DevOps onion \cite{DaveSayers2013}}
             \label{fig:onion}
         \end{wrapfigure}
         As it was stated by Paul Hammon and John Allspawn at their \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} presentation, tools and processes alone are not enough and the cultural change should be the first step to take towards DevOps. \\
         Because of this, the outermost represents the most important layer and without \textit{peeling} it you will not be able to access the inner layers.
 
         \subsection{A DevOps definition} \label{chap:stateoftheart:sec:devops:sec:definition}
-        DevOps vastness can be seen in the enormous ammounts of tools categories identified in \ref{chap:stateoftheart:sec:devops:sec:tools} related with DevOps.\\
-        As one might expect from this vastness of areas that DevOps touches, there are still difficulties to properly define DevOps. In order to reduce this indefinition, we will use throughout this thesis a conjugation of two definitions for DevOps.\\
+        DevOps vastness can be seen in the enormous amounts of tools categories identified in \ref{chap:stateoftheart:sec:devops:sec:tools} related with DevOps.\\
+        As one might expect from this vastness of areas that DevOps touches, there are still difficulties to properly define DevOps. In order to reduce this lack of definition, we will use throughout this thesis a conjugation of two definitions for DevOps.\\
         The first definition is from \textit{DevOps: A Software Architect's Perspective} \cite{Bass} and it states that: \\
         \textit{DevOps is a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality.} \\
-        We chose this definition because it allows to easily classify something as being DevOps or not i.e. one would only have to ask himself if a practice or cultural aspect will allow for the reduction of time since commiting a change until that change is in production, if it does, then it is DevOps. Nevertheless, we find this definition to be a bit empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. As a workaround for this problem we use a second definition based on the CAMS acronym.\\
-        The CAMS acronym \cite{Willis2010} defines DevOps as being a \textbf{C}ultural movement where \textbf{A}utomation and continuous \textbf{M}easurement of processes and people are promoted and where the later can serve as a input for the \textbf{S}haring of problems and new ideas. As new ideas appear to solve the indentified problems, new measurements can be made to further identify problems furthering improving the overall process.
+        We chose this definition because it allows to easily classify something as being DevOps or not, i.e. one would only have to ask himself if a practice or cultural aspect will allow for the reduction of time since committing a change until that change is in production, if it does, then it is DevOps. Nevertheless, we find this definition to be a bit empty in the sense that by only reading it one would not be aware of the aspects that are associated with Devops. As a workaround for this problem we use a second definition based on the CAMS acronym.\\
+        The CAMS acronym \cite{Willis2010} defines DevOps as being a \textbf{C}ultural movement where \textbf{A}utomation and continuous \textbf{M}easurement of processes and people are promoted and where the later can serve as an input for the \textbf{S}haring of problems and new ideas. As new ideas appear to solve the identified problems, new measurements can be made to further identify problems furthering improving the overall process.
 
         \subsection{DevOps Benefits}
         In a recent study \cite{Elliot2015} some of the DevOps benefits were identified:
@@ -135,7 +133,7 @@ In this chapter an introduction to cloud computing will be presented providing t
       \begin{itemize}
         \item \textbf{Store Big Files in Cloud Storages}\cite{Cukier2013} - Instead of creating and managing a system to store large files, or storing them in database columns, store them in a Cloud Storage\footnote{A storage system provided by a cloud provider.}
         \item \textbf{Queue based solution to process asynchronous jobs}\cite{Cukier2013} - When there are tasks that take a long time to complete but users still expect a quick response, create a new Job instance in a queueing service and then have a service performing those tasks. When finished, post the result of that Job somewhere acessible to the user and notify the user that the task is done.
-        \item \textbf{Prefer PaaS over IaaS}\cite{Cukier2013} - For non technology companies, PaaS is usually preferable because it will give them lot of functionalities without the need for configuration. This will allow them to simply focus on their core business.
+        \item \textbf{Prefer PaaS over IaaS}\cite{Cukier2013} - For non technology companies, PaaS is usually preferable because it will give them lot of functionality without the need for configuration. This will allow them to simply focus on their core business.
         \item \textbf{Load Balancing Application Server with memcached user sessions}\cite{Cukier2013} - Use a load balancer in front of your application servers. This severs will handle sessions using memcached which means that if a application server goes down or if a new application server is needed, it will be able to use the user session.
         \item \textbf{Email delivery}\cite{Cukier2013} - Rather than implementing your own SMTP solution, use cloud mail delivery services which provicde REST API's to send emails.
         \item \textbf{Logging}\cite{Cukier2013} - Having multiple servers you need a way to consolidate your application logs. In order to do so, you should use a cloud based log service.
@@ -153,6 +151,12 @@ In this chapter an introduction to cloud computing will be presented providing t
     A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country. UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa, both business incubators. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.
 
 
-    \section{A pattern language}
+    \section{A pattern language} \label{sec:stateoftheart:sec:patterns}
     Pattern languages have been used in the software development area in the past for describing common architectural solutions \cite{kircher2013pattern}, recurring software design choices \cite{johnson1995design} and even describing pattern languages themselves \cite{Meszaros1998}.\\
-    Patterns represent a way to share recurring solutions to a problem \cite{Meszaros1998}. As a result, pattern languages help reduce re-discovery and re-invention of concepts and functionalities as well as \textit{avoiding common pitfalls that are learned from experience} \cite{Schmidt1995}.
+    A pattern is a recurring solution to a problem that lives inside a specific context \cite{Meszaros1998}. Pattern languages are \textit{collections of patterns that are related to each other by virtue of solving the same problems or parts of a solution to a larger, partitioned problem)} \cite{Meszaros1998}.\\
+    There are some key characteristics that should be taken in consideration when writing patterns. In \textit{A pattern language for pattern writing} \cite{Meszaros1998}, some of this characteristics are presented in a form of patterns themselves, they can be summed up as follows:
+    \begin{itemize}
+      \item patterns should identify a pattern \textbf{user} operating in a \textbf{context}. This pattern user should have and identified \textbf{problem} that he solves using a \textbf{solution} that takes into consideration some of the constraints defined by the context.
+      \item patterns should be easy to read and understand and should not force the reader to read the entire pattern multiple times in order understand it.
+    \end{itemize}
+    Because patterns represent a way to share recurring solutions to a problem \cite{Meszaros1998}, pattern languages help reduce re-discovery and re-invention of concepts and functionality as well as \textit{avoiding common pitfalls that are learned from experience} \cite{Schmidt1995}.

@@ -8,6 +8,10 @@
 \usepackage{epigraph}
 \usepackage{multicol}
 \usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{framed}
+
+\definecolor{shadecolor}{RGB}{180,180,180}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
 
@@ -18,27 +22,27 @@
 \newenvironment{pattern}[1]{
   \section{#1}
   \newcommand{\context}[1]{
-    \subsubsection*{Context}
+  \begin{snugshade*}\noindent\textsc{Context} \end{snugshade*}
     ##1
     }
   \newcommand{\problem}[1]{
-    \subsubsection*{Problem}
+    \begin{snugshade*}\noindent\textsc{Problem} \end{snugshade*}
     ##1
   }
   \newcommand{\forces}[1]{
-    \subsubsection*{Forces}
+    \begin{snugshade*}\noindent\textsc{Forces} \end{snugshade*}
     ##1
   }
   \newcommand{\solution}[1]{
-    \subsubsection*{Solution}
+    \begin{snugshade*}\noindent\textsc{Solution} \end{snugshade*}
     ##1
   }
   \newcommand{\rationale}[1]{
-    \subsubsection*{Rationale}
+    \begin{snugshade*}\noindent\textsc{Rationale} \end{snugshade*}
     ##1
   }
 	\newcommand{\related}[1]{
-		\subsubsection*{Related Patterns}
+		\begin{snugshade*}\noindent\textsc{Related Patterns} \end{snugshade*}
 		##1
 	}
 }

@@ -2,24 +2,30 @@
     In this chapter we will look at the approach used in order to solve the problem described in \ref{chap:introduction:sec:problem}. We will start by looking at how we defined the sample from which we extracted information and then how we handle that data in order to produce the final results.
 
     \section{Methodology} \label{chap:towardsdevops:sec:methodology}
-      In \ref{chap:stateoftheheart:sec:devops:sec:movement} we saw that the DevOps movement emerged in the software development\footnote{software development should be seen in this context as both the development, maintenance and any other tasks related with the creation of software} community. Having this factor into consideration and knowing that there is still a significant lack of scientific information regarding the subject, we choose to look for a solution within the development community. We believed, before conducting this study, that not only would they be able to provide us that information, but because they were using this techniques/tools in their daily activities, it would serve also an extra layer of assurance.
+      In \ref{chap:stateoftheart:sec:devops} we saw that the DevOps movement emerged in the software development\footnote{software development should be seen in this context as both the development, maintenance and any other tasks related with the creation of software} community. Having this factor into consideration and knowing that there is still a significant lack of scientific information regarding the subject, we choose to look for a solution within the development community. We believed, before conducting this study, that not only would they be able to provide us that information, but because they were using this techniques/tools in their daily activities, it would serve also an extra layer of assurance.
 
       \subsection{Collecting the information}
-      Taking into consideration the vastness of topics that DevOps \ref{chap:stateoftheheart:sec:devops:sec:movement} touches, we knew that it would not be hard to create a form that covered that extensively. Instead, the chosen approach was to do go for a more exploratory approach. This idea lead to the creation of a script rather than a form that would guide the interviews. This script had 5 major sections:
+      Taking into consideration the vastness of topics that DevOps \ref{chap:stateoftheart:sec:devops:sec:definition} touches, we knew that it would be hard to create a form that covered that extensively.\\
+      It was theorized, at this point, that not all startups would have similar levels of maturity(we will see this to be true later). This meant that even if we could create this form, it would be to extensive for some cases and we would still depend on the hability to create an all englobing form to capture all the information.
+      The chosen methodoly adopted, was a more exploratory type of interview. This idea lead to the creation of a script rather than a form that would guide the interviews. This script had 5 major sections:
       \begin{itemize}
-          \item \textbf{Product} - The product section would try to understand, first what did the company do and secondly if there were any kind of special requirements that would influence what followed.
+          \item \textbf{Product} - The product section would try to understand, first what did the company do and secondly if there were any kind of special requirements that would influence the choices made by the company.
           \item \textbf{Team Management} - Team sizes, interactions, project management techniques would be analyzed here.
           \item \textbf{Software delivery pipeline} - In this section, we identified if teams did Continuous Integration, how did they handled the creation of environments for each of the pipeline states and what teams did what in each state.
           \item \textbf{Infrastructure Management} - We tried to capture how the companies handled their infrastructer. Did they use the cloud? Which processes did they automate?
-          \item \textbf{Monitoring \& Error Handling} - With this section we aimed to understand if the companies were monitoring their infrastructure, how did they do it and, when errors were detected, how were they responding.
+          \item \textbf{Monitoring \& Error Handling} - With this section we aimed to understand if the companies were monitoring their infrastructure, how did they do it and, when errors were detected, how were they responding?
       \end{itemize}
 
       \subsection{Defining a sample} \label{chap:towardsdevops:sec:methodology:sec:sample}
-      As it was seen in \ref{sec:stateoftheart:sec:portuguesestartupscene}, Portugal as a rich startup community. Startups have strict contraints regarding the ammount of resources they have at their disposal and have, as a result, aditional incentive to automate as many tasks as they can. Being small companies(in terms of staff) communication and cultural aspects are usually guided towards cooperation as this is a key factor in allowing small teams to handle large projects. Finally, the fact that startups have as their objective to scale further highligh the need for automation and cooperation. This conjugation of factors meant the mindset of startups was aligned with the DevOps one and startups are therefore a good place to look for information that can be directly linked to DevOps.
+      As it was seen in \ref{sec:stateoftheart:sec:portuguesestartupscene}, Portugal as a rich startup community. Startups have strict contraints regarding the ammount of resources they have at their disposal and have, as a result, aditional incentive to automate as many tasks as they can. \\
+      Being small (in terms of staff), communication and cultural aspects are usually guided towards cooperation as this is a key factor in allowing small teams to handle large projects. \\
+      Finally, the fact that startups have as their objective to scale, further highlighs the need for automation and cooperation.\\
+      This conjugation of factors meant the mindset of startups was aligned with the DevOps one and startups are therefore a good place to look for information that can be directly linked to DevOps.\\
+      Having more than 300 startup companies \ref{sec:stateoftheart:sec:portuguesestartupscene} from which to choose, we needed a way to reduce the size of the sample. \\
+      With that objective we first created a list of all the startups companies we knew that operated in Portugal. This list was create by looking at some of the Portuguese startup incubators and by extracting the list of companies.
+      First, we attempted to identify if a startup was doing software development or not. To do so we looked to, when available, at the company web page and tried to determine if the company product was software related or not. This approach reduced the number of companies down to 155.
 
-      Having more than 300 startup companies \ref{sec:stateoftheart:sec:portuguesestartupscene} from which to choose, there needed to be a way to reduce the size of the sample. With that objective we listed and attempted to identify if a startup was doing software development or not. To do so we looked to, when available,at the company web page and tried to determine if the company had staff members working on software development task. When we could not find a team page, we also looked at the Linkedin\footnote{www.linkedin.com} companie profile and did the same thing. Companies that had software developers or software related productswould go to the next round. We were able to reduce the sample to 155 companies.
-
-      Because the ammount of time we had was limited, it would not be possible to interview those 155 companies. We choose, in this phase, to prioritize which companies were better or worst for our study. To do so we created a compound evaluation metric that would allow us to rank companies. We created 5 metrics to do so:
+      Then, we prioritize which companies were better or worst for our study. To do so we created a compound evaluation metric that would allow us to rank companies. We created 5 metrics to do so:
       \begin{itemize}
         \item \textbf{Cloud Usage} - We created three possible values for this metric. If a company used cloud services, we would give the company 2 points. If we were not sure if a company was using cloud services, we would give it 1 point. If we know the company was not using cloud services, we would give it 0 points. With this metric we attempted to distinguish between, for instance, companies that were developing hardware solutions from those that were developing more software oriented solutions.
 
@@ -27,15 +33,28 @@
 
         \item \textbf{Company Size} - We create four possible values for each metric. Companies could have 0,1,2,3 points if they had respectively less than 5 members, between 5 and 15 memebrs, more than fifteen members or more than fifteen members and several teams.
 
-        \item \textbf{Subjective Appreciation} - This metric would reflect the overall opinion of the company that we developed when searching for information for the other metrics. Some common factors that influenced this metric were for instance the fact that some companies had no software developers, or the company website was down.
+        \item \textbf{Subjective Appreciation} - This metric would reflect the overall opinion of the company that we developed when searching for information for the other metrics. Some common factors that influenced this metric were for instance the fact that some companies had listed staff members working on software development task, or if the company website was down.
       \end{itemize}
 
-      This ranking is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe more relevant than the second one, but rather as a way to prioritize them i.e.the first company surely is more intersting to study then the last one.
+      This ranking is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe as much or more relevant than the second one, but rather as a way to prioritize them, i.e. the first company surely is more intersting to study then the last one.
 
-      In the end of the study, we contacted 60 comapanies (of the remaining 155) from which we were able to interview 25.
+      In the end, we contacted a total of 60 comapanies from which we were able to interview 25.
 
-      \subsection{Processing the data}
-
-      After conducting the interviews the next task was to analyze and process the collected information.
-
-      We started by creating a set of concepts/techniques that were observed. This concepts/techniques were then analyzed and we extracted their frequency in the data set. It became clear at this point, that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified one or two times. This lead us to the next option that would be to identify the practices that were relevant to our study and that embodied the DevOps mindeset. Using this criteria we were able to identify a total of 13 practices.
+      \subsection{Sample Characterization}
+      The sample, as seen in fig. \ref{fig:companymembers} was mostly composed of small companies with no more than 35 employees and with half of the sample size to have less than 15 members. The companies also conducted a substancial amount of their business over the internet either through a browser application or a mobile app or a combination of both with the only exception being Streambolico.
+      \begin{figure}
+        \includegraphics[width=1\linewidth]{companymembers}
+        \caption{Studied companies size}
+        \label{fig:companymembers}
+      \end{figure}
+      \subsection{Data Processing \& Pattern Extraction}
+      After conducting the interviews, the next task was to analyze and process the collected information.\\
+      We started by creating a set of techniques/tools that were observed. We merged this tools and techniques into groups that would then represent patterns. This grouping can be found in \ref{fig:concepts}.\\
+      \begin{figure}
+        \includegraphics[width=1\linewidth]{concepts}
+        \caption{Identified concepts and subsequent refining}
+        \label{fig:concepts}
+      \end{figure}
+      As this was being done, it became clear that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified a couple of times. Nevertheless, the grouping of such practices was more frequent, e.g. some companies would run integration tests on their CI tool while others would only run unitary tests; both would, nevertheless, run tests. \\
+      Using this groupings, we were able to identify a set of problems that companies were solving using different approaches. We were able, as a result, to extract in total 13 patterns each representing a problem and providing a set of solutions that took into consideration the context of the company.
+      This set of patterns can be found in chapter \ref{chap:patterns}
