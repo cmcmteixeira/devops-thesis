@@ -10,7 +10,7 @@
 \usepackage{wrapfig}
 \usepackage{xcolor}
 \usepackage{framed}
-
+\usepackage{pdflscape}
 \definecolor{shadecolor}{RGB}{180,180,180}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
@@ -47,6 +47,25 @@
 	}
 }
 
+\newenvironment{companyreport}[1]{
+
+  \subsection*{#1}
+  \newcommand{\product}{
+  \begin{snugshade*}\noindent\textsc{Product} \end{snugshade*}
+  }
+  \newcommand{\teams}{
+    \begin{snugshade*}\noindent\textsc{Teams} \end{snugshade*}
+  }
+  \newcommand{\development}{
+    \begin{snugshade*}\noindent\textsc{Development} \end{snugshade*}
+  }
+  \newcommand{\operations}{
+    \begin{snugshade*}\noindent\textsc{Operations \& Infrastructure Management} \end{snugshade*}
+  }
+	\newcommand{\reportend}{
+		\pagebreak
+	}
+}
 
 \begin{document}
 
@@ -82,6 +101,10 @@
 
 \bibliographystyle{abbrv} % or try abbrvnat or unsrtnat
 \bibliography{references} % refers to example.bib
+
+\appendix
+\include{Anexes}
+
 
 
 \end{document}

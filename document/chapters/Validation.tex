@@ -1,68 +1,80 @@
 \chapter{ Validation } \label{chap:validation}
-	In this chapter we describe the validation method used to validate the collected patterns and then we described the work done.
+In this chapter we describe validation process for the pattern language presented in the chapter \ref{chap:patterns}.
 
-	 of some of the collected patterns at Ventureoak . In the beggining, we describe the Ventureoak core business and the methodology used to validate the identified patterns.\\
-	We then show, for each pattern, what were the measured changes.
-
-	\section{Ventureoak}
-	VentureOak\footnote{www.ventureoak.com} is a startup currently operating at UPTEC, Porto that started its activity in 2014. \\
-	Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases. \\
-	At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market. \\
-	Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually made up of only developers. \\
-	Operations at Ventureoak are mostly managed by one of the employees altough access is provided and used by the other members of the company. Usually, infrastruture is handled manually.\\
-
-	\section{Methodology} \label{chap:validation:sec:methodology}
-	In order to validate the collected patterns, there were two approaches used. \\
-	The first was to take advantage of some of the changes that were already ocurring at Ventureoak. This changes, like the \textit{Code Review} pattern were already being implemented when we arrived and in order to take advantage of that we tried to find, near the team what did they feel changed when this techniques were applied.\\
-	The second approach used consisted in applying the patterns and then measuring what changed.
-
-	\section{Application}
-
-
-	\section{Pattern Validation}
-		\subsection{Cloud}
-			\subsubsection*{Before}
-			The cloud pattern was already being used at Ventureoak. Ventureoak prefered to use the IaaS alternative which allowed them to fully control their infrastructure. This, however forced Ventureoak to handle their own infrastructure monitoring setup. At the time this study was made that meant that a New Relic instance was installed in the used servers. Elasticity was not a priority and so there was no automatic way of scalling.
-			\subsubsection*{Implementation}
-			Due to the choices made for \textit{Reproducible Environments} and \textit{Deploying new instances} as well as the objectives for \textit{Continuous Integration} , manually handling the deployment process was not desirable. As a result, we choose to use a PaaS alternative instead and used AWS Elastic Beanstalk.
-			\subsubsection*{After}
-			Because of the usage of AWS Elastic Beanstalk, we were able to have, without having to spend time implementing it:
-			\begin{itemize}
-					\item Automatic restart in case of error was already implemented.
-					\item Load balancing was enabled from the start.
-					\item Automatic scalling could also be configured from the start.
-					\item Automatic deployment management.
-					\item Automatic rollbacks.
+	\section{Methodology}
+	The methodology used to validate the pattern language defined in chapter \ref{chap:patterns} had 3 main steps. \\
+	The first step was to identify a company that wanted to incorporate some of the DevOps ideals into their workflow. Then, a process of identification of possible improvements would be done and a set of metrics would be created that would indicate if the process was successful or not. \\
+	The pattern language would then be used to try to improve the identified situations. \\
+	Finally, the indicators would be measured again. If the indicators improved, then the pattern language was able to guide a successful adoption of DevOps practices.
+       \subsection{Ventureoak}
+        We choose to do our validation at VentureOak.
+        Ventureoak is a startup currently operating at UPTEC, Porto that started its activity in 2014. Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases. \\
+        At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market. Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually composed of developers. \\
+        \subsection{Objecties \& Metrics}
+        Before beginning the study we identified what were the improvements we wanted to perform. By talking with the company we chose this ones:
+        \begin{itemize}
+            \item Reduction of the need for developers to handle deployments for the staging environment.
+            \item Reduction of the time it took to setup the project in the developers machines.
+            \item Improve consistency across the developers machines in order to reduce configuration errors.
+            \item The company wanted to start migrating projects to the newer version of PHP.
+        \end{itemize}
+        With these objectives in mind, we defined the follwoing metrics:
+        \begin{itemize}
+  			\item Deployment strategy
+				\item Deployment duration
+				\item Deployment cadency
+				\item Environment setup strategy
+				\item Environment setup time
+				\item Ease to make environment changes
+				\item Build errors frequency
 			\end{itemize}
-			\subsection{Code Review}
-			A code review process was already underway at Ventureoak. This process was conducted as a way for members to share opinions and help each other grow faster. \\
-			When we talked with Jorge Meireles, the Ventureoak Head of Development, he confessed that the process was not being adopted by the entire team and that the efectiveness of the process was therefore not being fully potentiated. Nonetheless, Jorge told us that by reviewing the code produced by the team he was able to reduce code duplication and have a broader view of the project.
-			\subsection{Team Orchestration}
-			Teams at Ventureoak are usually small (between two and six members). This meant that communication was facilitated and because this teams were usually multidisciplinar, members were able to be always active and always contributing to the final product. \\
-			When new projects were started, this also meant that no special members could be easily allocated.
-			\subsection{Reproducible Environments}
-					Environments were setup manually and in the developers machine. This meant that often, problems would arise everytime a developer changed the version of a dependency like the gulp version or nodejs version. This problem would usually be quickly solved once identified. In production environments, however, it had happen that a service was deployed and the required dependenies were not installed meaning that the application did not work correctly. \\
-					Also, newcomers, usually took, depending on their previous experience, one or two days to fully install all of the needed dependencies. \\
-					With the release of PHP7, a new problem was also starting to appear. Developers would want to use this new, more performant version but not all projects could be upgraded. For some developers, this meant that they would have to have in their machines two distinct installations which sometimes generated some errors.
-				\subsubsection*{Implementation}
-					In order to provide the team with a way to easily reproduce their environments we used containerization. This approach was used because we would need to run several services at the same time and because we would need different configurations for each service.\\
-					This was done by using Docker which provided a way to describe the environment through a Dockerfile.
-				\subsubsection*{Results}
-					With this approach we were able to give the team a way to share their environment. Everytime a change was made, they would just have to push the new file that descibed the environment and, when other team members would pull that file, the environment would be easily updated. \\
-					For newcomers, setting up a project was now a matter of minutes. They would just have to install Docker and then running a command in the shell, the entire environment would be created.
-					Additionally, developers could now have different services running different PHP versions without needing to manage the extra complexity of having two distinct versions running on the same machine
-			\subsection{Continuous Integration}
-					Ventureoak had no stagin environment setup. This environment would house different projects and would create
-					\subsubsection*{Implementation}
-					In order to implement a Continuous Integration pipeline we begun by choosing a CI tool. The choice fell upon GoCD. The creation of the pipeline took around 2 weeks. The time it took was mostly due to the fact that the pipeline included and automated deploy to a test environment in AWS which took around a week to fully automate. \\
-					The setup phase also took advantage from the \textit{Reproducible Environments} choice and by using containers we were able to setup the system and easily install it in a different machine. \\
-					The CI pipeline would run on every push to the project repository and would have three phases. The first would create/update the needed configurations in the AWS Elastic Beanstalk service .The second would consist in building an container image and pushing that container to a registry. The third and last would be to trigger a deployment in the AWS Elastic Beanstalk Service. \\
-					\subsubsection{Results}
-					Before the creation of the CI solution a normal deployment could take between 5 and 20 minutes depending on the need to install newer dependencies or run some assets minimization tasks. This deploy would be managed by a developer and done by manually accessing the server and updating the code. This task would be done every time an external clients or internal project manager wanted to check if a feature was correctly implemented. Sometimes, developers forgot to clean the server cache and/or compile some assets and would leave the application in a inconsistent state. \\
-					By implementing the CI pattern we were able to remove the need for developers to manually handle the deployment and to enabled project managers to choose what to deploy and when to deploy. This automated deployment would usually take 5 minutes if the build and push step was already previously done and around 15 to 20 minutes if the build and push process  had to be done.
-			\subsection{Deploying new instances}
-					The deployment process followed the \textit{Reproducible Environments} approach. We would not be able to measure any indicator of success for the application of this pattern.
-			\subsection{Scalling}
-					Taking advantage of the automatic scalling options provided by the choice for \textit{Cloud} we were able to setup a scalable application without the need for extra work.
-			\subsection{Auditability, Alerting, Error Handling}
-					Having only deployed to a stagin environment, we were not able to identify metrics or situations related with this patterns.
+			\subsection{Initial State}
+			The initial values for each metric were as follows:
+			\begin{table}[h!]
+				\begin{center}
+					\begin{tabular}{| c | c | c |}
+						\hline
+	 					\textbf{Metric} & \textbf{Observed Value} \\ \hline
+	 					Deployment strategy (staging) 		& Manual  \\ \hline
+						Deployment duration (staging) 		& 3 to 10 minutes \\ \hline
+						Deployment cadency (staging)  		& When needed \\ \hline
+						Environment setup strategy			& Manual \\ \hline
+						Environment setup time 				& 5 minutes to several hours depending on the developer level \\ \hline
+						Ease to make environment changes 	& Low \\ \hline
+						Build errors frequency				& Low \\ \hline
+					\end{tabular}
+				\end{center}
+				\caption{Initial metrics identified}
+			\end{table}
+			\subsection{Adoption Process}
+			The adoption process was done in a period of two weeks in one of the projects being developed at Ventureoak. The project was composed of three services. Two of the services used PHP and the remaining service used Javascript. There were additionally, two types of database being used: Redis and MongoDB. \\
+            \subsubsection*{Reproducible Environments}
+            Having defined that there was a need to reduce the time it took to configure new environments and to improve the consistency of environments, it was obvious that the \textit{Reproducible environment} pattern should be used as it was an exact fit. \\
+            This pattern presented us with three possible solutions. Wanting to have an environment as similar as possible with the production one were each service would run separately and because we had to have different versions of PHP running in different services we choose the Containerization option.
+            \subsubsection*{Continuous Integration}
+            Wanting to change the environment easily meant that there should be a way for developers to be sure that the environment was correctly specified and that when they changed something that would not arm the system. Additionally, having a need to decrease the time it took to deploy the code for the staging environment, it was determined that having a pre-built container image of the environment with the needed code was beneficial. \\
+            This lead us to apply the Continuous Integration pattern. \\
+            \subsubsection*{Deploying new instances}
+            In order to deploy the newer version, we used the \textit{Deploying new instances} pattern. The process was triggered by the CI tool and managed by the cloud provider that would pull the pre-built container image and run it.
+
+			\subsection{Final State}
+			In the end of the adoption process we measured the defined metrics again obtaining the following results:
+			\begin{table}[h!]
+				\begin{center}
+					\begin{tabular}{| c | c | c |}
+						\hline
+	 					\textbf{Metric} & \textbf{Observed Value}                       \\ \hline
+	 					Deployment strategy (staging) 	    & Automatic                 \\ \hline
+						Deployment duration (staging) 	    & 15 minutes                \\ \hline
+						Deployment cadency (staging)  	    & On every push             \\ \hline
+						Environment set up strategy		    & Automatic                 \\ \hline
+						Environment set up time 			    & Dependant on the connection speed, but usually less than 5 minutes  \\ \hline
+						Ease to make environment changes    & High                      \\ \hline
+						Build errors frequency			    & Medium                    \\ \hline
+					\end{tabular}
+				\end{center}
+				\caption{Results from the use of the pattern language}
+				\subsection{Discussion}
+				Except for the deployment duration, we observed a significant improvement between what was the initial state and the final one. Additionally, because we automated some of the processes, the ability to determine which version was running in the staging environment could be transferred to any one which could allow Project Managers to set up the staging environment with version the they wanted. \\
+				Unfortunately, the validation process only used three patterns from the 13 available. This means that we were only able to measure the effects of 23\% of our pattern language and because of that we considered this process to have been inconclusive.
+			\end{table}

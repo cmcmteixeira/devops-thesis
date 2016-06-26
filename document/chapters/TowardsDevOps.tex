@@ -6,8 +6,8 @@
 
       \subsection{Collecting the information}
       Taking into consideration the vastness of topics that DevOps \ref{chap:stateoftheart:sec:devops:sec:definition} touches, we knew that it would be hard to create a form that covered that extensively.\\
-      It was theorized, at this point, that not all startups would have similar levels of maturity(we will see this to be true later). This meant that even if we could create this form, it would be to extensive for some cases and we would still depend on the hability to create an all englobing form to capture all the information.
-      The chosen methodoly adopted, was a more exploratory type of interview. This idea lead to the creation of a script rather than a form that would guide the interviews. This script had 5 major sections:
+      It was theorized, at this point, that not all startups would have similar levels of maturity(we later observed this to be true \ref{anexes:interviews}). This meant that even if we could create this form, it would be too extensive for some cases and we would still have to create an all englobing form to capture all the information. \\
+      The chosen methodoly adopted was to do a more exploratory type of interview. This idea lead to the creation of a script rather than a form that would guide the interviews. This script \ref{anexes:interview} had 5 major sections:
       \begin{itemize}
           \item \textbf{Product} - The product section would try to understand, first what did the company do and secondly if there were any kind of special requirements that would influence the choices made by the company.
           \item \textbf{Team Management} - Team sizes, interactions, project management techniques would be analyzed here.
@@ -17,13 +17,14 @@
       \end{itemize}
 
       \subsection{Defining a sample} \label{chap:towardsdevops:sec:methodology:sec:sample}
-      As it was seen in \ref{sec:stateoftheart:sec:portuguesestartupscene}, Portugal as a rich startup community. Startups have strict contraints regarding the ammount of resources they have at their disposal and have, as a result, aditional incentive to automate as many tasks as they can. \\
+      As it was seen in \ref{sec:stateoftheart:sec:portuguesestartupscene}, Portugal has a rich startup community.\\
+       Startups have strict contraints regarding the ammount of resources they have at their disposal and have, as a result, aditional incentive to automate as many tasks as they can. \\
       Being small (in terms of staff), communication and cultural aspects are usually guided towards cooperation as this is a key factor in allowing small teams to handle large projects. \\
       Finally, the fact that startups have as their objective to scale, further highlighs the need for automation and cooperation.\\
-      This conjugation of factors meant the mindset of startups was aligned with the DevOps one and startups are therefore a good place to look for information that can be directly linked to DevOps.\\
-      Having more than 300 startup companies \ref{sec:stateoftheart:sec:portuguesestartupscene} from which to choose, we needed a way to reduce the size of the sample. \\
-      With that objective we first created a list of all the startups companies we knew that operated in Portugal. This list was create by looking at some of the Portuguese startup incubators and by extracting the list of companies.
-      First, we attempted to identify if a startup was doing software development or not. To do so we looked to, when available, at the company web page and tried to determine if the company product was software related or not. This approach reduced the number of companies down to 155.
+      This conjugation of factors meant that the mindset of startups was aligned with the DevOps one and startups are therefore a good place to look for information that can be directly linked to DevOps.\\
+      Having more than 300 startup companies \ref{sec:stateoftheart:sec:portuguesestartupscene} from which to choose, we needed a way to filter out companies that may not be relevant to our study. \\
+      With that objective we first created a list of all the startups companies we knew that operated in Portugal. This list was create by looking at some of the Portuguese startup incubators and by extracting the list of companies. \\
+      From those 300 startups, we attempted to identify which ones were doing software development. To do so we looked, when available, at the company web page and tried to determine if the company product was software related or not. This approach reduced the number of companies to 155.
 
       Then, we prioritize which companies were better or worst for our study. To do so we created a compound evaluation metric that would allow us to rank companies. We created 5 metrics to do so:
       \begin{itemize}
@@ -36,12 +37,12 @@
         \item \textbf{Subjective Appreciation} - This metric would reflect the overall opinion of the company that we developed when searching for information for the other metrics. Some common factors that influenced this metric were for instance the fact that some companies had listed staff members working on software development task, or if the company website was down.
       \end{itemize}
 
-      This ranking is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe as much or more relevant than the second one, but rather as a way to prioritize them, i.e. the first company surely is more intersting to study then the last one.
+      The resulting ranking, created by summing all the factors, is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe as relevant as the first one, but rather as a way to prioritize them, i.e. the first company surely is more intersting to study then the last one.
 
       In the end, we contacted a total of 60 comapanies from which we were able to interview 25.
 
       \subsection{Sample Characterization}
-      The sample, as seen in fig. \ref{fig:companymembers} was mostly composed of small companies with no more than 35 employees and with half of the sample size to have less than 15 members. The companies also conducted a substancial amount of their business over the internet either through a browser application or a mobile app or a combination of both with the only exception being Streambolico.
+      The sample, as seen in fig. \ref{fig:companymembers} was mostly composed of small companies with no more than 35 employees and with half of the sample size to have less than 15 members. The companies also conducted a substancial amount of their business over the internet either through a browser application or a mobile app or a combination of both.
       \begin{figure}
         \includegraphics[width=1\linewidth]{companymembers}
         \caption{Studied companies size}
@@ -49,12 +50,13 @@
       \end{figure}
       \subsection{Data Processing \& Pattern Extraction}
       After conducting the interviews, the next task was to analyze and process the collected information.\\
-      We started by creating a set of techniques/tools that were observed. We merged this tools and techniques into groups that would then represent patterns. This grouping can be found in \ref{fig:concepts}.\\
+      Fig. \ref{fig:concepts} shows how we merged some of the identified techniques into larger groups that would represent patterns. The full grouping can be found in \ref{anex:pat:group}.\\
       \begin{figure}
-        \includegraphics[width=1\linewidth]{concepts}
+        \centering
+        \includegraphics[width=0.4\linewidth]{concepts_partial}
         \caption{Identified concepts and subsequent refining}
         \label{fig:concepts}
       \end{figure}
-      As this was being done, it became clear that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified a couple of times. Nevertheless, the grouping of such practices was more frequent, e.g. some companies would run integration tests on their CI tool while others would only run unitary tests; both would, nevertheless, run tests. \\
-      Using this groupings, we were able to identify a set of problems that companies were solving using different approaches. We were able, as a result, to extract in total 13 patterns each representing a problem and providing a set of solutions that took into consideration the context of the company.
+      As this was being done, it became clear that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified few times. Nevertheless, the grouping of such practices was more frequent, e.g. some companies would run integration tests on their CI tool while others would only run unitary tests; both would, nevertheless, run tests. \\
+      Using this groupings, we were able to identify a set of problems that companies were solving using different approaches. We were able, as a result, to extract in total 13 patterns each representing a problem and providing a set of solutions that took into consideration the context of the company. The final list of practices and frequencies can be found in \ref{anex:pat:freq}.
       This set of patterns can be found in chapter \ref{chap:patterns}

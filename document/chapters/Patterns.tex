@@ -1,22 +1,12 @@
 \chapter{Patterns from the Portuguese Startup Scene} \label{chap:patterns}
-		Having discussed the patterns and how they were identified in \ref{chap:towardsdevops}, in this chapter they will be presented following what was statted in \ref{sec:stateoftheart:sec:patterns}.\\
+		Having discussed how patterns were identified in chapter \ref{chap:towardsdevops} and why they are a good way to convey information in \ref{sec:stateoftheart:sec:patterns}, we will present, in this chapter, the patterns identified during the interviews. A small report of each interview can be found in \ref{anex:interview}. \\
+		To allow for better read the chapter map provided in \ref{anex:pat:map} can be used.
 
 		%
 		%
 		% Team orchestration
 		%
 		%
-
-		% \begin{figure}[p]
-    % 		\makebox[\linewidth]{
-    %     	\includegraphics[width=1.3\linewidth]
-    %     	{./figures/map.png}
-    % 	}
-    % 	\caption{Pattern Map}
-		% 	\lable{fig:patternmap}
-		% \end{figure}
-
-
 		\begin{pattern}{Team orchestration}
 				\context{The environment were you are in can evolve at a fast pace. In order to be effective, you want your teams to be able to adapt and respond quickly to those changes.}
 				\problem{How do you orchestrate your team(s) so that they can handle new challenges and deliver results in a sustained manner ?}
@@ -50,7 +40,7 @@
 						\item You want to allow people to communicate easily.
 						\item When concentrated on a task some people do not like to be interrupted.
 						\item Some information (e.g. links and code) may not be easy to share verbally.
-						\item Sometimes you want the content of the communication to be made available.
+						\item Sometimes you want the content of the communication to be persisted.
 					\end{itemize}
 				}
 				\solution{
@@ -92,12 +82,12 @@
 				\begin{itemize}
 					\item \textbf{GitFlow} specifies that at any given time two branches should be active. This branches are the \textbf{master} and \textbf{develop} ones. The code present in the master only contains shippable code. The \textit{develop} branch contains the most recent working version of your code. This branch should not contain non working code but it may contain, for instance, features that have not been through a QA process. Adding to this two branches there are additional branches called \textit{feature branches}. This branches represent a new feature under development and there should be one \textit{feature branch} per feature. When a feature is implemented it should be merged into the \textit{develop} branch. If that feature and the previous ones are considered production ready then the \textit{develop} branch should be merged into the \textit{master} one.
 
-					Finally, if at some time you need to create an hotfix, you can do it by creating a new \textit{hotfix} branch with the content of the \textit{master} branch, applying the changes and merging it back into the \textit{master} branch.
+					Finally, if at some time you need to create a hotfix, you can do it by creating a new \textit{hotfix} branch with the content of the \textit{master} branch, applying the changes and merging it back into the \textit{master} branch.
 
 					\item \textbf{Feature Branches} can be seen as a subset of the \textbf{Gitflow} strategy. Instead of having a \textit{develop} branch, this strategy only uses the \textit{master} and \textit{feature} branches The \textit{master} branch holds tested and functioning code, the \textit{feature} branches (one for each feature) hold the code of the correspondant feature. When a feature is ready and tested it is merged from the \textit{feature} branch into the \textit{master} branch.
 				\end{itemize}
 			}
-			\related{It is possible to use the \textit{Code Review} pattern even without using any sort of version control. Using one, will nevertheless help organize the process.\\ In the same way, \textit{Error Handling} can also be improved by using the correct \textit{Version Control Organization} as it will allow you to for instance to traceback what was the last live version or what was the code introduced in an hotfix.}
+			\related{It is possible to use the \textit{Code Review} pattern even without using any sort of version control. Using one, will nevertheless help organize the process.\\ In the same way, \textit{Error Handling} can also be improved by using the correct \textit{Version Control Organization} as it will allow you to for instance to traceback what was the last live version or what was the code introduced in a hotfix.}
 		\end{pattern}
 		%
 		%
@@ -144,7 +134,7 @@
 		% Reproducibel environments
 		%
 		%
-		\begin{pattern}{Reproducibe Environments}
+		\begin{pattern}{Reproducible Environments}
 			\context{
 				When you have several environments (e.g. production,staging,devevlopment) or multiples instalations/instances of your software it is desirable to be able to guarantee that all instances work the same way. With this goal in mind you have identified that the environments where your instances run is a key factor when trying to antecipate how does the software behaves. \\
 				This consistency is important because it will allow you to have reproducibility and will give you some guarantees when you desire to increase the number of instances of your software.
@@ -254,7 +244,7 @@
 			\solution{
 				Use (or develop) an automatic continuous integration(CI) system. This system should detect when code is pushed to your repository and then run the following steps:
 				\begin{itemize}
-					\item \textbf{Build} . Building your software consists in, depending on your choice for  \textit{Reproducible Environments}, building your environment, then fetching all required dependencies and finally compiling the code(if needed).
+					\item \textbf{Build}ingyour software consists in, depending on your choice for  \textit{Reproducible Environments}, building your environment, then fetching all required dependencies and finally compiling the code(if needed).
 					\item \textbf{Test} your build. When your build is successfull you should run your test suite against that build in order to check if everything is running according to plan.
 					\item \textbf{Notify} If any of the previous steps fails you should notify the developer that checked the code and any other people to whom the build integration status is relevant.
 				\end{itemize}
@@ -373,7 +363,7 @@
 
 				When you can not roll back and/or the error you detected does not have a substancial impact you can try to find and fix the problem. Depending on your choice for \textit{Version Control Organization} you can create a newer \textbf{hotfix} branch and work on that. In the end, when you have found and fixed the problem merging that branch with master and deploying the version will have fixed your problem.
 			}
-			\related{ When you choose to rollback of to do an hotfix, you will be limited by the time it takes you to change the running version on your machines. If this change includes changing the environment you will need to update it. In order to do so, you will probably have to use the same method you defined for \textit{Deploying New Instances}.\\
+			\related{ When you choose to rollback of to do a hotfix, you will be limited by the time it takes you to change the running version on your machines. If this change includes changing the environment you will need to update it. In order to do so, you will probably have to use the same method you defined for \textit{Deploying New Instances}.\\
 			Additionally, rollbacks may depend on the fact that you can detect what your last working software version was. This information can be store in your version control system if you used tags for instance.\\
 			Information about the hotfix (if you chose to do one), can also be stored in you version control system(\textit{Version Control Organization})
 			}
