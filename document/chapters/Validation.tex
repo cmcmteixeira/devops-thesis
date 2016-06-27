@@ -2,23 +2,24 @@
 In this chapter we describe validation process for the pattern language presented in the chapter \ref{chap:patterns}.
 
 	\section{Methodology}
-	The methodology used to validate the pattern language defined in chapter \ref{chap:patterns} had 3 main steps. \\
-	The first step was to identify a company that wanted to incorporate some of the DevOps ideals into their workflow. Then, a process of identification of possible improvements would be done and a set of metrics would be created that would indicate if the process was successful or not. \\
-	The pattern language would then be used to try to improve the identified situations. \\
+	The methodology used to validate the pattern language defined in chapter \ref{chap:patterns} had three main steps. \\
+	The first step was to identify a company that wanted to incorporate some of the DevOps ideals into their workflow. Then, a process of identification of possible improvements would be done and a set of metrics would be identified and measured indicating if the process was successful or not. \\
+	By analysing the existent patterns and finding the best fit to the problems, the company would then be able to guide its adoption knowing beforehand which were the consequences and impact of their choise. \\
 	Finally, the indicators would be measured again. If the indicators improved, then the pattern language was able to guide a successful adoption of DevOps practices.
        \subsection{Ventureoak}
         We choose to do our validation at VentureOak.
         Ventureoak is a startup currently operating at UPTEC, Porto that started its activity in 2014. Having more than 20 employees, Ventureoak focus is on developing software products for other companies and in offering consultancy solutions both in the product idealization and developing phases. \\
         At Ventureoak projects have usually a short duration - 3 to 6 months - and they usually target the web market. Several projects are developed concurrently at Ventureoak by teams of 2 to 6 elements. This teams are self organizing and are usually composed of developers. \\
+        The infrastructure is managed manually by the development teams and hosted in the Cloud.
         \subsection{Objecties \& Metrics}
-        Before beginning the study we identified what were the improvements we wanted to perform. By talking with the company we chose this ones:
+        Ventureoak wanted to improve and automate its processes. Before beginning this study, Ventureoak set the following goals in order to guide the adoption of some of DevOps practices:
         \begin{itemize}
             \item Reduction of the need for developers to handle deployments for the staging environment.
             \item Reduction of the time it took to setup the project in the developers machines.
             \item Improve consistency across the developers machines in order to reduce configuration errors.
             \item The company wanted to start migrating projects to the newer version of PHP.
         \end{itemize}
-        With these objectives in mind, we defined the follwoing metrics:
+        With these objectives in mind, the follwoing metrics were collected:
         \begin{itemize}
   			\item Deployment strategy
 				\item Deployment duration
@@ -32,7 +33,7 @@ In this chapter we describe validation process for the pattern language presente
 			The initial values for each metric were as follows:
 			\begin{table}[h!]
 				\begin{center}
-					\begin{tabular}{| c | c | c |}
+					\begin{tabular}{| p{0.5\linewidth} | p{0.5\linewidth} |}
 						\hline
 	 					\textbf{Metric} & \textbf{Observed Value} \\ \hline
 	 					Deployment strategy (staging) 		& Manual  \\ \hline
@@ -61,16 +62,16 @@ In this chapter we describe validation process for the pattern language presente
 			In the end of the adoption process we measured the defined metrics again obtaining the following results:
 			\begin{table}[h!]
 				\begin{center}
-					\begin{tabular}{| c | c | c |}
+					\begin{tabular}{| p{0.33\linewidth} | p{0.33\linewidth} | p{0.33\linewidth} |}
 						\hline
-	 					\textbf{Metric} & \textbf{Observed Value}                       \\ \hline
-	 					Deployment strategy (staging) 	    & Automatic                 \\ \hline
-						Deployment duration (staging) 	    & 15 minutes                \\ \hline
-						Deployment cadency (staging)  	    & On every push             \\ \hline
-						Environment set up strategy		    & Automatic                 \\ \hline
-						Environment set up time 			    & Dependant on the connection speed, but usually less than 5 minutes  \\ \hline
-						Ease to make environment changes    & High                      \\ \hline
-						Build errors frequency			    & Medium                    \\ \hline
+	 					\textbf{Metric} & \textbf{Initial Value} & \textbf{Final Value}                     \\ \hline
+	 					Deployment strategy (staging) 	    & Manual            & Automatic                 \\ \hline
+						Deployment duration (staging) 	    & 3 to 10 minutes   & 15 minutes                \\ \hline
+						Deployment cadency (staging)  	    & When needed       & On every push             \\ \hline
+						Environment set up strategy		    & Manual            & Automatic                 \\ \hline
+						Environment set up time 			& 5 minutes to several hours depending on the developer level  & Dependant on the connection speed, but usually less than 5 minutes  \\ \hline
+						Ease to make environment changes    & Low               & High                      \\ \hline
+						Build errors frequency			    & Low               & Medium                    \\ \hline
 					\end{tabular}
 				\end{center}
 				\caption{Results from the use of the pattern language}

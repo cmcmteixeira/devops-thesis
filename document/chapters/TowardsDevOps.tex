@@ -4,6 +4,12 @@
     \section{Methodology} \label{chap:towardsdevops:sec:methodology}
       In \ref{chap:stateoftheart:sec:devops} we saw that the DevOps movement emerged in the software development\footnote{software development should be seen in this context as both the development, maintenance and any other tasks related with the creation of software} community. Having this factor into consideration and knowing that there is still a significant lack of scientific information regarding the subject, we choose to look for a solution within the development community. We believed, before conducting this study, that not only would they be able to provide us that information, but because they were using this techniques/tools in their daily activities, it would serve also an extra layer of assurance.
 
+      \subsection{Adjusting Granularity}
+        The vast number of existing tool categories \label{chap:stateoftheart:sec:devops:sec:tools} as well as the fact that there are a lot of possible practices that can be considered part of DevOps \ref{chap:stateoftheart:sec:devops:sec:definition} means that fully capturing the ideals and ideas related with it would not only be a tremendously hard task but would also not fit in the length of this thesis. \\
+        Taking this into consideration and in order to avoid over specializing this thesis in some particular area, we set the desired granularity for the study by defining that we would only focus on categories of practices and if needed tools e.g. we wanted to know what steps did the Continuous Integration server run, but we were not interested in fully documenting the tool or measuring the time it took to run a full integration cycle. \\
+
+
+
       \subsection{Collecting the information}
       Taking into consideration the vastness of topics that DevOps \ref{chap:stateoftheart:sec:devops:sec:definition} touches, we knew that it would be hard to create a form that covered that extensively.\\
       It was theorized, at this point, that not all startups would have similar levels of maturity(we later observed this to be true \ref{anexes:interviews}). This meant that even if we could create this form, it would be too extensive for some cases and we would still have to create an all englobing form to capture all the information. \\
@@ -39,7 +45,7 @@
 
       The resulting ranking, created by summing all the factors, is not supposed to be seen as a precise way to accurately compare companies i.e. the second company maybe as relevant as the first one, but rather as a way to prioritize them, i.e. the first company surely is more intersting to study then the last one.
 
-      In the end, we contacted a total of 60 comapanies from which we were able to interview 25.
+      In the end, we contacted a total of 60 companies from which we were able to interview 25.
 
       \subsection{Sample Characterization}
       The sample, as seen in fig. \ref{fig:companymembers} was mostly composed of small companies with no more than 35 employees and with half of the sample size to have less than 15 members. The companies also conducted a substancial amount of their business over the internet either through a browser application or a mobile app or a combination of both.
@@ -48,6 +54,7 @@
         \caption{Studied companies size}
         \label{fig:companymembers}
       \end{figure}
+
       \subsection{Data Processing \& Pattern Extraction}
       After conducting the interviews, the next task was to analyze and process the collected information.\\
       Fig. \ref{fig:concepts} shows how we merged some of the identified techniques into larger groups that would represent patterns. The full grouping can be found in \ref{anex:pat:group}.\\
@@ -57,6 +64,37 @@
         \caption{Identified concepts and subsequent refining}
         \label{fig:concepts}
       \end{figure}
-      As this was being done, it became clear that, because of the size of the sample (25 companies), it would be difficult for most observations to be statistically significant as some practices were only identified few times. Nevertheless, the grouping of such practices was more frequent, e.g. some companies would run integration tests on their CI tool while others would only run unitary tests; both would, nevertheless, run tests. \\
+      As this was being done, it became clear that, because of the size of the sample (25 companies), this study would not be statistically significant. Nevetheless we found that the information we gathered had value and would be able to provide future studies with usefull pointers on how to approach the problem.\\
+       Due to the fact that some practices were rare, we had to group them into categories in order to have a representative value inside the sample, e.g. some companies would run integration tests on their CI tool while others would only run unitary tests; both would, nevertheless, run tests. \\
       Using this groupings, we were able to identify a set of problems that companies were solving using different approaches. We were able, as a result, to extract in total 13 patterns each representing a problem and providing a set of solutions that took into consideration the context of the company. The final list of practices and frequencies can be found in \ref{anex:pat:freq}.
       This set of patterns can be found in chapter \ref{chap:patterns}
+
+     \subsection{Patterns}
+      Throughout the interviews we noted several tendencies. \\
+      The first was the widespread use of Cloud computing with 76\% of the interviewed companies using it. Then there was the dominance of Git as the version control system with 80\% of the interviewees using it as their version control system. Chat and direct communication were also the main ways chose by companies to communicate (100\%). \\
+      Being able to measure some of the key business metrics like the health of the system is also a concern for most companies with almost 70\% of them having some sort of system to do so. \\
+      Having a way to replicate environments was also a major trend among companies with 60\% of companies already adopting one way to do so. \\
+      The following table(tab. \ref{table:categories}) enumerates the categories of problems identified with the percentage of interviewed companies that were handling that problem. These problems will be further developed in chapter \ref{chap:patterns}
+
+      \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{| p{0.5\linewidth} | p{0.5\linewidth} |}
+            \hline
+            \textbf{Categories} & \textbf{\% of companies that solved the problem} \\ \hline
+                  Version Control                       & 100\% \\ \hline
+                  Communication                         & 100\% \\ \hline
+                  Cloud                                 & 84\%  \\ \hline
+                  Auditability                          & 68\%  \\ \hline
+                  Continuous Integration                & 64\%  \\ \hline
+                  Error Handling                        & 60\%  \\ \hline
+                  Reproducible Environments             & 60\%  \\ \hline
+                  Scalling                              & 48\%  \\ \hline
+                  Code Review                           & 44\%  \\ \hline
+                  New Computing Instances Deployment    & 44\%  \\ \hline
+                  Error Alerting                        & 36\%  \\ \hline
+                  Job Scheduling                        & 12\%  \\ \hline
+            \end{tabular}
+        \end{center}
+        \caption{Categories frequency}
+        \label{table:categories}
+      \end{table}

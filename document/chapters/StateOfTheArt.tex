@@ -1,11 +1,11 @@
 \chapter{State of The Art} \label{chap:stateoftheart}
-DevOps is usually associated with different types of technologies and practices. Effectively applying DevOps means not only to understand the cultural aspects but also the technological aspects that enabled some of its practices. \\
+DevOps is usually associated with different types of technologies and practices. Effectively practicing DevOps means not only to understand the cultural aspects but also the technological aspects that enabled some of its practices. \\
 In this chapter an introduction to cloud computing will be presented, providing the needed context for the following section where a description of the DevOps movement is presented. After this, both a small characterization of the Portuguese startup scene and of pattern languages will be presented in order to justify some of the choices presented in the next chapters.
 
     \section{Cloud Computing} \label{chap:stateoftheart:sec:cloud}
-    Paraphrasing \cite{Bass}, imagine  wanting to use electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network. In the common scenario, charges are calculated based on the usage amount and no special knowledge of how the network setup is needed.\\
+    Paraphrasing \cite{Bass}, consider the need for electricity. Rather than building an entire grid and a power plant, one only needs to connect to the public network. In the common scenario, charges are calculated based on the usage amount and no special knowledge of how the network setup is needed.\\
     Clouds follow exactly the same rationale, rather than having to build/purchase the computing resources, one needs only to connect to a provider and the resources are available to be used. Charges, like in the electric grid, are calculated based on the usage and clients do not need to know how the resources are managed or setup.
-        \subsection{Definition}
+        \subsection{Definition} \label{chap:stateoftheart:sec:cloud:sec:definition}
         In \cite{Mell2011}, NIST\footnote{National Institute of Standarts and Technologie} defines Cloud computing as \textit{a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.}
 
         NIST also defines the following essential characteristics of cloud computing:
@@ -50,11 +50,11 @@ In this chapter an introduction to cloud computing will be presented, providing 
       In \textit{Why DevOps Is Like An Onion} \cite{DaveSayers2013}, Dave Sayers chooses to use the analogy of peeling an onion, with each layer representing a different concept, in order to describe DevOps. Further developing upon his initial idea, in this section, we will try to introduce DevOps using that same analogy.
 
       \subsection{The cultural layer} \label{chap:stateoftheart:sec:devops:sec:culture}
-      Looking at some of the first DevOps efforts we see that a lot of them aimed to create a better articulation between Developers and Operations \cite{Debois2008} \cite{Allspaw}.\\
+      Looking at some of the first DevOps efforts we see that a lot of them aimed to create a better articulation between Developers and Operations \cite{Debois2008,Allspaw}.\\
       Being two distinct departments with different work methodologies and objectives, this meant that some cultural changes had to happen in order for the two departments to be able to create a common understanding of each other worlds \cite{Allspaw}.\\
       The main cultural values associated with DevOps are, as a result, values that promote cooperation and communication. These are some of the ones that we identified:
       \begin{itemize}
-          \item Respect \cite{Davis2015} \cite{Allspaw}
+          \item Respect \cite{Davis2015,Allspaw}
           \item Trust \cite{Huttermann2012}
           \item Collaboration \cite{Davis2015}
           \item Sharing \cite{Willis2010}
@@ -108,8 +108,8 @@ In this chapter an introduction to cloud computing will be presented, providing 
             \caption{The DevOps onion \cite{DaveSayers2013}}
             \label{fig:onion}
         \end{wrapfigure}
-        As it was stated by Paul Hammon and John Allspawn at their \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} presentation, tools and processes alone are not enough and the cultural change should be the first step to take towards DevOps. \\
-        Because of this, the outermost layer in the onion (fig. \ref{fig:onion}) represents the most important layer and without \textit{peeling} it will not be possible to take advantage of the  inner layers.
+        As it was stated by Paul Hammon and John Allspawn at their \textit{10+ Deploys Per Day: Dev and Ops Cooperation at Flickr} \cite{Allspaw} presentation, tools and processes alone are not enough and the cultural change should be the first step to take towards DevOps. \\
+        Because of this, the outermost layer in the onion (fig. \ref{fig:onion}) represents the most important layer and without \textit{peeling} it will not be possible to take advantage of the  inner layers \cite{Allspaw}.
 
         \subsection{A DevOps definition} \label{chap:stateoftheart:sec:devops:sec:definition}
         DevOps vastness can be seen in the enormous amounts of tools categories identified in \ref{chap:stateoftheart:sec:devops:sec:tools} related with DevOps.\\
@@ -122,9 +122,9 @@ In this chapter an introduction to cloud computing will be presented, providing 
         The CAMS acronym \cite{Willis2010} defines DevOps as being a \textbf{C}ultural movement where \textbf{A}utomation and continuous \textbf{M}easurement of processes and people are promoted and where the later can serve as an input for the \textbf{S}haring of problems and new ideas. As new ideas appear to solve the identified problems, new measurements can be made to further identify problems further improving the overall process.
 
         \subsection{DevOps Benefits}
-        In a recent study \cite{Elliot2015} some of the DevOps benefits were identified:
+        In a recent study \cite{Elliot2015} the following benefits were identified:
   		  \begin{itemize}
-  			    \item DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client
+            \item DevOps projects are believed to accelerate in 15\%-20\% the ability to delivery of capabilities to the client
             \item Adopting DevOps allows business to practice Continuous Delivery.
             \item The average cost of a critical application failure per hour is \$500,000 to \$1 million (DevOps can help reduce application failures).
             \item The average cost percentage (per year) of a single application's development, testing, deployment, and operations life cycle considered wasteful and unnecessary is 25\% (DevOps can help automate some repetitive tasks and by doing so reducing some of the waste associated with those tasks)
@@ -150,11 +150,11 @@ In this chapter an introduction to cloud computing will be presented, providing 
   	\section{The Portuguese startup scene} \label{sec:stateoftheart:sec:portuguesestartupscene}
     Motivated by a recent investment in innovation and entrepreneurship, Portugal startups have been growing their position in the global startup scene \cite{Coleman2015}.
 
-    A study from 2015 \citet{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country like UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.
+    A study from 2015 \cite{StartupEuropePartnership2015} in which the Portuguese startup scene was analyzed, revealed that there were already 40 technology scaleups \footnote{Scaleups are companies that raised more than \$1M funding (since foundation) and had at least one funding event in the last five-year period } operating in Portugal at the time. The same study stated that this startups were able to raise a large portion of the received investment from international investors indicating, therefore, that the reach and scale of this startups was broader than just the national arena. Additionally, it is also indicated in the study that Porto and Lisbon are the main centers of innovation, encompassing 70\% of the total of existing scaleups. In addition to the scaleups identified other smaller scale startups exist. Some of this startups are currently being incubated in incubators around the country like UPTEC \footnote{Science and Technology Park of University of Porto} and Startup Lisboa. This incubators had, at the time of this study more than 300 companies \cite{Uptec,StartupLisboa} under their wing.
 
 
     \section{A pattern language} \label{sec:stateoftheart:sec:patterns}
-    Pattern languages have been used in the software development area in the past for describing common architectural solutions \cite{kircher2013pattern}, recurring software design choices \cite{johnson1995design} and even describing pattern languages themselves \cite{Meszaros1998}.\\
+    Cristopher Alexander wrote \textit{A Pattern Language}\cite{alexander1977pattern} in 1977 and in doing so, introduced the idea of representing knowledge on the form of a pattern language. Since then, pattern languages have been used in several areas \cite{Meszaros1998} including software development where they were used to describe common architectural solutions \cite{kircher2013pattern} or recurring software design choices \cite{johnson1995design}.  \\
     A pattern is a recurring solution to a problem that lives inside a specific context \cite{Meszaros1998}. Pattern languages are \textit{collections of patterns that are related to each other by virtue of solving the same problems or parts of a solution to a larger, partitioned problem.} \cite{Meszaros1998}.\\
     There are some key characteristics that should be taken in consideration when writing patterns. In \textit{A pattern language for pattern writing} \cite{Meszaros1998}, some of this characteristics are presented in a form of patterns themselves, they can be summed up as follows:
     \begin{itemize}

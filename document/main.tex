@@ -1,16 +1,25 @@
-\documentclass[11pt]{report}
+\documentclass[11pt,a4paper,twoside,openright]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[mieic]{feupteses}
 \usepackage{color}
 \usepackage[english]{babel}
 \usepackage{dirtytalk}
 \usepackage{titlesec}
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
 \usepackage{epigraph}
 \usepackage{multicol}
 \usepackage{wrapfig}
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{pdflscape}
+
+
 \definecolor{shadecolor}{RGB}{180,180,180}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 \graphicspath{{figures/}}
@@ -18,32 +27,31 @@
 \newcommand{\TODO}[1]{
 	 \textcolor{red}{#1}
 }
-
 \newenvironment{pattern}[1]{
   \section{#1}
-  \newcommand{\context}[1]{
+  \newcommand{\context}{
   \begin{snugshade*}\noindent\textsc{Context} \end{snugshade*}
-    ##1
+
     }
-  \newcommand{\problem}[1]{
+  \newcommand{\problem}{
     \begin{snugshade*}\noindent\textsc{Problem} \end{snugshade*}
-    ##1
+
   }
-  \newcommand{\forces}[1]{
+  \newcommand{\forces}{
     \begin{snugshade*}\noindent\textsc{Forces} \end{snugshade*}
-    ##1
+
   }
-  \newcommand{\solution}[1]{
+  \newcommand{\solution}{
     \begin{snugshade*}\noindent\textsc{Solution} \end{snugshade*}
-    ##1
+
   }
-  \newcommand{\rationale}[1]{
+  \newcommand{\rationale}{
     \begin{snugshade*}\noindent\textsc{Rationale} \end{snugshade*}
-    ##1
+
   }
-	\newcommand{\related}[1]{
+	\newcommand{\related}{
 		\begin{snugshade*}\noindent\textsc{Related Patterns} \end{snugshade*}
-		##1
+
 	}
 }
 
